@@ -1,7 +1,15 @@
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+
+import { Container } from "./styles";
 
 const App = () => {
   return (
-    <h1>KnnSystem</h1>
+    <Container>
+      <Header>KnnSystem</Header>
+      <Footer />
+    </Container>
+    
   );
 }
 
