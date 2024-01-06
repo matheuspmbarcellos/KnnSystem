@@ -6,12 +6,12 @@ const Navbar = () => {
     <>
       <hr /> 
       <NavbarContainer>           
-        <Link>Fornecedor</Link>
-        <Link>Extrato Financeiro</Link>
-        <Link>Pagamento</Link>
-        <Link>Contratos</Link>
-        <Link>Apartamentos</Link>
-        <Link>Relatórios</Link>
+        <Link to={"/Fornecedores"}>Fornecedores</Link>
+        <Link to={"/ExtratosFinanceiros"}>Extratos Financeiros</Link>
+        <Link to={"/Pagamento"}>Pagamento</Link>
+        <Link to={"/Contratos"}>Contratos</Link>
+        <Link to={"/Apartamentos"}>Apartamentos</Link>
+        <Link to={"/Relatorios"}>Relatórios</Link>
       </NavbarContainer>
     </>  
   )
