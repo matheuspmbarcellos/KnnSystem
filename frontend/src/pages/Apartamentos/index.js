@@ -3,8 +3,8 @@ import { ApartamentosContainer } from "./styles";
 const Apartamentos = () => {
   return (
     <ApartamentosContainer>
-        Apartamentos
-    </ApartamentosContainer>
+  oi
+       </ApartamentosContainer>
   )
 }
 

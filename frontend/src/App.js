@@ -8,7 +8,6 @@ import { Container, Content } from "./styles";
 
 import Routes from './routes';
 
-
 const App = () => {
   return (
     <Container>

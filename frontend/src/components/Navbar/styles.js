@@ -14,5 +14,12 @@ export const NavbarContainer = styled.div`
         color: #f2f2f4;
         font-weight: bold;
         font-size: 12px;
+        
+        &:hover {
+            color: limegreen;
+          }
     }
+
+
+
 `
