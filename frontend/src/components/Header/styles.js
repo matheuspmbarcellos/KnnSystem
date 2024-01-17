@@ -1,5 +1,4 @@
 import styled from "styled-components";
-/* import logo from "./KNNlogo.png"; */
 
 export const HeaderContainer = styled.div`
     width: 100%;
@@ -10,15 +9,16 @@ export const HeaderContainer = styled.div`
     align-items: center;
 
     h1 {
-        padding-left: 50px;
+        padding-left: 5px;
+        font-size: 15px;
+        margin: auto 0px 3px ;
     }
 
 `
-
 export const KNNlogo = styled.button`
 padding-left: 100px;
 height:70px;
-width: 250px;
+width: 200px;
 background: url(./KNNlogo.png);
 background-size: 90%;
 position: relative;
@@ -27,10 +27,20 @@ background-position: center;
 border: none;
 `;
 
-/*
-export const KNNlogo = styled.img`
-padding-left: 30px;
-height:30%;
-`;
-*/
+
+export const Usuario = styled.button`
+height:30px;
+width: 30px;
+color: white;
+background: url(./person-circle.svg);
+background-size: 100%;
+border: none;
+margin: auto 20px auto auto;
+
+&:hover {
+    transform: scale(1.1);
+  }
+`
+;
+
 

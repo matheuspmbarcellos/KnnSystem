@@ -17,7 +17,7 @@ const Button = styled.button`
     `: css`
     text-decoration: none;
     background: #131129;
-    font-size: 1em;
+    font-size: 0.9em;
     color: white;
     width: fit-content;
     padding: 7px;
