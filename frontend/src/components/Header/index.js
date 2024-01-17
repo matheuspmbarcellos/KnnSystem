@@ -1,15 +1,17 @@
 import { HeaderContainer } from "./styles";
 import {KNNlogo} from "./styles";
-import logo from "./KNNlogo.png";
 
 
 const Header = () => {
   return (
 
     <HeaderContainer>
-      <KNNlogo src={logo} alt="logo"/>
+=      <KNNlogo as="a" href="./Home"></KNNlogo> 
+
     </HeaderContainer>
   )
 }
 
 export default Header;
+
+// <KNNlogo src={logo} alt="logo"/> 

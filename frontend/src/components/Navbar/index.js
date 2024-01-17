@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <hr /> 
-      <NavbarContainer>           
+      <NavbarContainer>   
         <Link to={"/Fornecedores"}>Fornecedores</Link>
         <Link to={"/ExtratosFinanceiros"}>Extratos Financeiros</Link>
         <Link to={"/Pagamento"}>Pagamento</Link>
