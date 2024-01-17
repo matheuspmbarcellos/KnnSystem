@@ -13,4 +13,8 @@ export const HeaderContainer = styled.div`
     }
 
 `
+export const KNNlogo = styled.img`
+padding-left: 30px;
+height:30%;
+`;
 

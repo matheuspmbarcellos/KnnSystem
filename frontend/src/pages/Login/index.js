@@ -11,7 +11,7 @@ const Login = () => {
 
         <ButtonContainer>
              <Button secondary>Esqueci minha senha</Button> 
-            <Button>Entrar</Button> 
+            <Button as="a" href="./Home">Entrar</Button> 
         </ButtonContainer>
 
     </LoginContainer>
