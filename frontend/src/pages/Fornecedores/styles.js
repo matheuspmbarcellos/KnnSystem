@@ -25,9 +25,6 @@ input {
 h1 {
     font-size: 35px;
     color: #131129;
-    margin: 50px ;
+    margin: 50px auto 20px;
 }
-`
-export const ButtonContainer = styled.div`
-margin: 3% auto auto auto;
 `
