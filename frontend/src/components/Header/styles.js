@@ -8,14 +8,8 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
 
-    h1 {
-        padding-left: 5px;
-        font-size: 15px;
-        margin: auto 0px 3px ;
-    }
-
 `
-export const KNNlogo = styled.button`
+export const KNNlogo = styled.a`
 padding-left: 100px;
 height:70px;
 width: 200px;

@@ -2,11 +2,10 @@ import { HeaderContainer, Usuario, KNNlogo } from "./styles";
 
 const Header = () => {
   return (
-
+    
     <HeaderContainer>
-             <KNNlogo as="a" href="./Home"></KNNlogo> 
-                <Usuario as= "a" href="./Login">
-                </Usuario>
+        <KNNlogo as= "a" href="/"/> 
+        <Usuario as= "a" href="/Login" />
     </HeaderContainer>
 
   )

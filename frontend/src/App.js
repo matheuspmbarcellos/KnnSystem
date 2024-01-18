@@ -7,15 +7,19 @@ import Navbar from './components/Navbar';
 import { Container, Content } from "./styles";
 
 import Routes from './routes';
+import { AuthProvider } from './context/AuthContext';
 
 const App = () => {
   return (
     <Container>
-      <Header>KnnSystem</Header>
-      <Router>
-        <Navbar />
+      <Header />
+      <Router>        
         <Content>
-          <Routes />
+          <AuthProvider>            
+            <Routes>
+              <Navbar />
+            </Routes>
+          </AuthProvider>          
         </Content>        
       </Router>
       <Footer />
