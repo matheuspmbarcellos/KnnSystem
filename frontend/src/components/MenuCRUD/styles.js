@@ -9,14 +9,15 @@ font-size: 0.8em;
 padding: 3%;
 
 &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
+    font-weight: bold; 
     cursor: pointer;
 }
 `;
 
 export const ButtonContainer = styled.div`
 width: 80%;
-height: 12%;
+height: 0.8em;
 display: flex;
 flex-direction: row;
 justify-content: center;

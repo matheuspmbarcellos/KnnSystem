@@ -7,6 +7,21 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
+}
+
+h1 {
+    font-size: 35px;
+    color: #131129;
+    margin: 45px 10px 10px 10px;
+}
+`
+export const InputContainer = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 3%;
 input {
     color: #131129;
     background-color: #131129;
@@ -20,11 +35,4 @@ input {
     &:focus {
         color: white;
     }
-}
-
-h1 {
-    font-size: 35px;
-    color: #131129;
-    margin: 50px auto 20px;
-}
 `
