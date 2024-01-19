@@ -1,9 +1,25 @@
-import { RelatoriosContainer } from "./styles";
+import { RelatoriosContainer, ButtonContainer } from "./styles";
+import Button from "../../components/Button/Button";
 
 const Relatorios = () => {
   return (
     <RelatoriosContainer>
-        Relatórios
+        <h1>RELATÓRIOS</h1> 
+        <ButtonContainer>
+          <Button>Apartamentos</Button>
+          <Button>Boletos em aberto</Button>
+          <Button>Fornecedores ativos</Button>
+          <hr/>
+        </ButtonContainer>
+        <ButtonContainer>
+          <Button>Despesas por competência</Button>
+          <Button>Receitas por competência</Button>
+          <hr/>
+        </ButtonContainer>
+        <ButtonContainer>
+          <Button>Contratos vigentes</Button>
+          <Button>Contratos vencidos</Button>
+        </ButtonContainer>
     </RelatoriosContainer>
   )
 }

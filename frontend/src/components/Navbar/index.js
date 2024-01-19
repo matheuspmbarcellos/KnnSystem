@@ -4,7 +4,7 @@ import { NavbarContainer } from './styles'
 const Navbar = () => {
   return (
     <>
-      <hr /> 
+      <hr/> 
       <NavbarContainer>   
         <Link to={"/Fornecedores"}>Fornecedores</Link>
         <Link to={"/ExtratosFinanceiros"}>Extratos Financeiros</Link>

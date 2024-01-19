@@ -19,6 +19,7 @@ export const NavbarContainer = styled.div`
         &:hover {
             color: limegreen;
           }
+        
     }
 
 
