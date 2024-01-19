@@ -30,7 +30,7 @@ input {
     width: 30%;
     padding: 6px;
     border: solid 0.6px;
-    margin: 5px;
+    margin: 0.7%;
 
     &:focus {
         color: white;
