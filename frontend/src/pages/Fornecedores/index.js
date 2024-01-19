@@ -1,5 +1,6 @@
 import { FornecedoresContainer, InputContainer} from "./styles";
 import MenuCRUD from "../../components/MenuCRUD";
+import Button from "../../components/Button/Button";
 
 const Fornecedores = () => {
   return (
@@ -12,6 +13,7 @@ const Fornecedores = () => {
         <input type='text' placeholder=' Razão Social'/>
         <input type='text' placeholder=' Número do Contrato'/>
         </InputContainer>
+        <Button>Exibir</Button>
     </FornecedoresContainer>
   )
 }

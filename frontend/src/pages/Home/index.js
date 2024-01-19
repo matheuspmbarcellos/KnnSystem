@@ -1,4 +1,4 @@
-import { HomeContainer } from "./styles";
+import { HomeContainer, InfosContainer } from "./styles";
 import Button from "../../components/Button/Button";
 
 
@@ -8,9 +8,10 @@ const Home = () => {
       <center> 
       <Button>Informações</Button> 
       <Button>Quem Somos</Button> 
-      
       </center>
-
+      <InfosContainer>
+        d
+      </InfosContainer>
           </HomeContainer>
   
   )
