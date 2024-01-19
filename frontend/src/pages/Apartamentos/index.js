@@ -13,6 +13,7 @@ const Apartamentos = () => {
         <input type='text' placeholder=' Bloco'/>
         </InputContainer> 
         <Button>Exibir</Button>
+
     </ApartamentosContainer>
   )
 }

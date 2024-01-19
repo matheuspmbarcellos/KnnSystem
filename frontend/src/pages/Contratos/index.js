@@ -13,6 +13,7 @@ const Contratos = () => {
         <input type='text' placeholder=' CPNJ do Fornecedor'/>
         </InputContainer> 
         <Button>Exibir</Button>
+
     </ContratosContainer>
   )
 }

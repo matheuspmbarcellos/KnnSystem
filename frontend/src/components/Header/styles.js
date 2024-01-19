@@ -16,11 +16,11 @@ export const HeaderContainer = styled.div`
 
 `
 export const KNNlogo = styled.button`
-padding-left: 100px;
+padding-left: 95px;
 height:70px;
 width: 200px;
 background: url(./KNNlogo.png);
-background-size: 90%;
+background-size: 85%;
 position: relative;
 background-repeat: no-repeat;
 background-position: center;
@@ -33,9 +33,10 @@ height:30px;
 width: 30px;
 color: white;
 background: url(./person-circle.svg);
-background-size: 100%;
+background-size: 95%;
+background-repeat: no-repeat;
 border: none;
-margin: auto 20px auto auto;
+margin: auto 30px 22px auto;
 
 &:hover {
     transform: scale(1.1);

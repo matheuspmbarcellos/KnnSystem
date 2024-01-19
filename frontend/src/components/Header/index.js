@@ -4,7 +4,7 @@ const Header = () => {
   return (
 
     <HeaderContainer>
-             <KNNlogo as="a" href="./Home"></KNNlogo> 
+             <KNNlogo as="a" href="./"></KNNlogo> 
                 <Usuario as= "a" href="./Login">
                 </Usuario>
     </HeaderContainer>
@@ -15,4 +15,3 @@ const Header = () => {
 
 export default Header;
 
-// <KNNlogo src={logo} alt="logo"/> 
