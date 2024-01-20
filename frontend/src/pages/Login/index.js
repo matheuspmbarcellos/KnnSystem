@@ -23,26 +23,26 @@ const Login = () => {
     return <Navigate to="/Home"/>
   } else {
     return (
-      <LoginContainer>
-          <h1>Login</h1>
+      <LoginContainer>      
+        <h1>Login</h1>
+        <form onSubmit={handleSignIn}>
           <input 
-            type='text' 
-            placeholder=' Login:'
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
-            />
-          <input 
-            type='password' 
-            placeholder=' Senha:'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}          
-            />
-
-          <ButtonContainer>
-              <Button secondary>Esqueci minha senha</Button> 
-              <Button onSubmit={handleSignIn} >Entrar</Button> 
-          </ButtonContainer>
-          
+          type='text' 
+          placeholder=' Login:'
+          value={login}
+          onChange={(e) => setLogin(e.target.value)}
+          />
+        <input 
+          type='password' 
+          placeholder=' Senha:'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}          
+          />
+        <ButtonContainer>
+            <Button secondary>Esqueci minha senha</Button> 
+            <Button type="submit">Entrar</Button> 
+        </ButtonContainer>
+        </form>
       </LoginContainer>
       
     )

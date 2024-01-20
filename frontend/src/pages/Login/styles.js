@@ -9,6 +9,14 @@ export const LoginContainer = styled.div`
     justify-content: center;
     border-radius: 12px;
 
+    form {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     input {
         margin: 5px;
         border-radius: 15px;    
@@ -29,7 +37,8 @@ export const LoginContainer = styled.div`
     }
 `
 export const ButtonContainer = styled.div`
-margin: 3%;
-
+    display:flex;
+    flex-direction: row;
+    margin: 3%;
 `
 
