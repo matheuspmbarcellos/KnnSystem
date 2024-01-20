@@ -23,8 +23,8 @@ export const AuthProvider = ({children}) => {
 
     const signIn = async (login, password) => {
         const response = await api.post('/auth/api/login', {
-            login,
-            password,
+            "cpf": login,
+            "senha": password,
         })
 
         if (response.data.error) {
