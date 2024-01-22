@@ -3,9 +3,12 @@ import MenuCRUD from "../../components/MenuCRUD";
 import Button from "../../components/Button/Button";
 
 const Apartamentos = () => {
+
   return (
     <ApartamentosContainer>
         <h1>APARTAMENTOS</h1>
+
+
        <MenuCRUD/>
         <InputContainer> 
         <input type='text' placeholder=' Número de Controle'/> 
