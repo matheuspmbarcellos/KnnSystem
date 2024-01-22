@@ -8,6 +8,7 @@ import ExtratosFinanceiros from './pages/ExtratoFinanceiros';
 import Contratos from './pages/Contratos';
 import Apartamentos from './pages/Apartamentos';
 import Relatorios from './pages/Relatorios';
+import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
 
 const MainRoutes = () => {
     return (
@@ -23,6 +24,10 @@ const MainRoutes = () => {
             <Route 
                 path="/Fornecedores"
                 element={<Fornecedores />}
+            />
+            <Route 
+                path="/Fornecedores/Cadastrar"
+                element={<CadastrarFornecedor />}
             />
             <Route 
                 path="/Pagamento"
