@@ -20,7 +20,7 @@ export const BodyContainer = styled.div`
 width: 50%;
 display: flex;
 flex-direction: row;
-align-items: center;
+align-items: start;
 margin: 3%;
 `
 
@@ -28,7 +28,6 @@ export const InputContainer = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
-align-items: center;
 margin-top: 1%;
 
 input {

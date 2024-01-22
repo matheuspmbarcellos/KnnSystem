@@ -11,6 +11,7 @@ import Relatorios from './pages/Relatorios';
 import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
 import ResultadoFornecedor from './pages/Fornecedores/Resultado';
 import Esqueci from './pages/Login/Esqueci';
+import CadastrarContrato from './pages/Contratos/Cadastrar';
 
 const MainRoutes = () => {
     return (
@@ -56,6 +57,11 @@ const MainRoutes = () => {
                 path="/Contratos"
                 element={<Contratos />}
             />
+            <Route 
+                path="/CadastrarContrato"
+                element={<CadastrarContrato />}
+            />
+
             <Route 
                 path="/Apartamentos"
                 element={<Apartamentos />}
