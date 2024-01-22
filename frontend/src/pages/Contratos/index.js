@@ -1,12 +1,12 @@
 import { ContratosContainer, InputContainer } from "./styles";
 import Button from "../../components/Button/Button";
-import MenuCRUD from "../../components/MenuCRUD";
+import MenuContratos from "../../components/MenuCRUD/MenuContratos";
 
 const Contratos = () => {
   return (
     <ContratosContainer>
         <h1>CONTRATOS</h1>
-        <MenuCRUD/>
+        <MenuContratos/>
         <InputContainer> 
         <input type='text' placeholder=' Número de Controle'/> 
         <input type='text' placeholder=' Razão Social do Fornecedor'/>

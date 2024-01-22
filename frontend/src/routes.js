@@ -9,6 +9,8 @@ import Contratos from './pages/Contratos';
 import Apartamentos from './pages/Apartamentos';
 import Relatorios from './pages/Relatorios';
 import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
+import ResultadoFornecedor from './pages/Fornecedores/Resultado';
+import Esqueci from './pages/Login/Esqueci';
 
 const MainRoutes = () => {
     return (
@@ -21,14 +23,27 @@ const MainRoutes = () => {
                 path="/Login"
                 element={<Login />}
             />
+
+            <Route 
+                path="/Esqueci"
+                element={<Esqueci />}
+            />
+
             <Route 
                 path="/Fornecedores"
                 element={<Fornecedores />}
             />
+
             <Route 
-                path="/Fornecedores/Cadastrar"
+                path="/CadastrarFornecedor"
                 element={<CadastrarFornecedor />}
-            />
+            /> 
+
+            <Route 
+                path="/ResultadoFornecedor"
+                element={<ResultadoFornecedor />}
+            /> 
+
             <Route 
                 path="/Pagamento"
                 element={<Pagamento />}

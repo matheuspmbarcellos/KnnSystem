@@ -20,7 +20,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 3%;
+margin-top: 3%;
 
 input {
     color: #131129;

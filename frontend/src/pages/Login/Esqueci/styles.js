@@ -8,7 +8,7 @@ export const LoginContainer = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-
+    
     input {
         margin: 5px;
         border-radius: 15px;    
@@ -18,11 +18,11 @@ export const LoginContainer = styled.div`
         border: solid 0.6px;
     }
 
-
     h1 {
-        margin: 10px;
+        font-size: 17px;
         font-weight: lighter;
-        height: 12%
+        font-stretch: condensed;
+        height: 10%
     }
 `
 export const ButtonContainer = styled.div`

@@ -8,13 +8,24 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
 
-    h1 {
-        padding-left: 5px;
-        font-size: 15px;
-        margin: auto 0px 3px ;
-    }
-
 `
+
+export const LoginContainer = styled.div`
+height:50%;
+width: fit-content;
+margin: 30px auto auto 29%;
+
+button1 {
+    padding-left: 5px;
+    font-size: 9px;
+}
+
+button2 {
+    padding-left: 5px;
+    font-size: 9px;
+}
+`
+
 export const KNNlogo = styled.button`
 padding-left: 95px;
 height:70px;

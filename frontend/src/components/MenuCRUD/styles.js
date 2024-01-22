@@ -6,7 +6,8 @@ color: #131129;
 background: none;
 font-weight: lighter;
 font-size: 0.8em;
-padding: 3%;
+padding: 1%;
+margin-bottom: 3%;
 
 &:hover {
     text-decoration: underline;

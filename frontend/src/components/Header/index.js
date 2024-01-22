@@ -1,12 +1,15 @@
-import { HeaderContainer, Usuario, KNNlogo } from "./styles";
+import { HeaderContainer, Usuario, KNNlogo, LoginContainer } from "./styles";
 
 const Header = () => {
   return (
 
     <HeaderContainer>
              <KNNlogo as="a" href="./"></KNNlogo> 
-                <Usuario as= "a" href="./Login">
-                </Usuario>
+                <LoginContainer>
+            
+                  </LoginContainer> 
+                  <Usuario as= "a" href="./Login"/>
+
     </HeaderContainer>
 
   )

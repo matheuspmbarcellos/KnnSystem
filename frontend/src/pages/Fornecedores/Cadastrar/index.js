@@ -1,5 +1,5 @@
 import { CadastrarContainer, InputContainer, BodyContainer } from "./styles";
-import MenuCRUD from "../../../components/MenuCRUD";
+import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
 
 const CadastrarFornecedor = () => {
@@ -7,7 +7,7 @@ const CadastrarFornecedor = () => {
   return (
     <CadastrarContainer>
         <h1>FORNECEDORES</h1>
-       <MenuCRUD/>
+        <MenuFornecedores/>
        <BodyContainer>
         <InputContainer> 
         <input type='text' placeholder='CNPJ'/>

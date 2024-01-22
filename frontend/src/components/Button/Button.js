@@ -12,7 +12,7 @@ const Button = styled.button`
     font-size: 0.7em;
     color: #131129;
     font-weight: lighter;
-    width: 12em;
+    width: fit-content;
 
     `: css`
     text-decoration: none;

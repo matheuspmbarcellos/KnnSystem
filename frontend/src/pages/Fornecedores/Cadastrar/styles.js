@@ -29,7 +29,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 3%;
+margin-top: 3%;
 
 input {
     width: 100%;
@@ -43,6 +43,7 @@ input {
     margin: 1%;
 
     &:focus {
-        color: #131129;
+        color: limegreen;
+        outline: none;
     }
 `

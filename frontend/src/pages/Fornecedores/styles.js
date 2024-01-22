@@ -13,6 +13,7 @@ h1 {
     font-size: 35px;
     color: #131129;
     margin: 45px 10px 10px 10px;
+    font-style: normal;
 }
 `
 export const InputContainer = styled.div`
@@ -20,9 +21,9 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 3%;
+margin-top: 3%;
 
-input {
+input{
     color: #131129;
     background-color: #131129;
     border-radius: 5px;    

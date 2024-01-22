@@ -1,19 +1,19 @@
 import { FornecedoresContainer, InputContainer} from "./styles";
-import MenuCRUD from "../../components/MenuCRUD";
+import MenuFornecedores from "../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../components/Button/Button";
 
 const Fornecedores = () => {
   return (
     <FornecedoresContainer>
         <h1>FORNECEDORES</h1>
-        <MenuCRUD/>
+        <MenuFornecedores/>
         <InputContainer> 
         <input type='text' placeholder=' CNPJ'/>
         <input type='text' placeholder=' Código'/>
         <input type='text' placeholder=' Razão Social'/>
         <input type='text' placeholder=' Número do Contrato'/>
         </InputContainer>
-        <Button>Exibir</Button>
+        <Button as="a" href="/ResultadoFornecedor">Exibir</Button>
     </FornecedoresContainer>
   )
 }

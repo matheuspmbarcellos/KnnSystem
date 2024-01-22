@@ -10,7 +10,7 @@ const Login = () => {
         <input type='password' placeholder=' Senha:'/>
 
         <ButtonContainer>
-             <Button secondary>Esqueci minha senha</Button> 
+             <Button secondary as="a" href="/Esqueci"> Esqueci minha senha</Button> 
             <Button as="a" href="./Home">Entrar</Button> 
         </ButtonContainer>
 

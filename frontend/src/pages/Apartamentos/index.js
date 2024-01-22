@@ -1,5 +1,5 @@
 import { ApartamentosContainer, InputContainer } from "./styles";
-import MenuCRUD from "../../components/MenuCRUD";
+import MenuApartamentos from "../../components/MenuCRUD/MenuApartamentos";
 import Button from "../../components/Button/Button";
 
 const Apartamentos = () => {
@@ -7,9 +7,7 @@ const Apartamentos = () => {
   return (
     <ApartamentosContainer>
         <h1>APARTAMENTOS</h1>
-
-
-       <MenuCRUD/>
+       <MenuApartamentos/>
         <InputContainer> 
         <input type='text' placeholder=' Número de Controle'/> 
         <input type='text' placeholder=' Número do Apartamento'/>
