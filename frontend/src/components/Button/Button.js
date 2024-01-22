@@ -5,6 +5,7 @@ const Button = styled.button`
     padding: 1.5%;
     border-style: none;
     border-radius: 12px;
+    margin-left: 15px;
 
     ${p => p.secondary ? css `
     background: #FFFFFF;
