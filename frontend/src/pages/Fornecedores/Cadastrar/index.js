@@ -20,8 +20,8 @@ const CadastrarFornecedor = () => {
         <InputContainer> 
         <input type='text' placeholder='Nome do Responsável'/>
         <input type='text' placeholder='Telefone do Responsável'/>
-        <input type='text' placeholder='E-mail do Responsável'/>
-        <input type='text' placeholder='E-mail corporativo'/>
+        <input type='email' placeholder='E-mail do Responsável'/>
+        <input type='email' placeholder='E-mail corporativo'/>
         <input type='text' placeholder='Endereço'/>
         </InputContainer> 
         </BodyContainer>
