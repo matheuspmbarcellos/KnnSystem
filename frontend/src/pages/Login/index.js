@@ -10,17 +10,17 @@ const Login = () => {
   const { signIn, signed } = useContext(AuthContext)
 
   const handleSignIn = async (e) => {
-    e.preventDefault()
+    
     const data = {
       login,
       password
     };
 
-    await signIn(data);
+    await signIn(data.login,data.password);
   }
 
   if (signed) {
-    return <Navigate to="/Home"/>
+    return <Navigate to="/"/>
   } else {
     return (
       <LoginContainer>      
@@ -39,7 +39,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}          
           />
         <ButtonContainer>
-            <Button secondary>Esqueci minha senha</Button> 
+            <Button secondary="true">Esqueci minha senha</Button> 
             <Button type="submit">Entrar</Button> 
         </ButtonContainer>
         </form>
