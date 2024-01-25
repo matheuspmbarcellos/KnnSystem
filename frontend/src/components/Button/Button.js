@@ -4,7 +4,6 @@ const Button = styled.button`
     font-weight: bold;
     padding: 1.5%;
     border-style: none;
-    border-radius: 12px;
     margin-left: 15px;
 
     ${p => p.secondary ? css `
@@ -13,9 +12,10 @@ const Button = styled.button`
     font-size: 0.7em;
     color: #131129;
     font-weight: lighter;
-    width: fit-content;
+    width: 140px;
 
     `: css`
+    border-radius: 12px;
     text-decoration: none;
     background: #131129;
     font-size: 0.9em;

@@ -7,7 +7,6 @@ export const LoginContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
 
     input {
         margin: 5px;
@@ -26,6 +25,7 @@ export const LoginContainer = styled.div`
     }
 `
 export const ButtonContainer = styled.div`
-margin: 5%;
+    display: flex;
+    margin: 5%;
 `
 
