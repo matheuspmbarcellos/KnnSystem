@@ -1,22 +1,40 @@
 import { ApartamentosContainer, InputContainer } from "./styles";
-import MenuApartamentos from "../../components/MenuCRUD/MenuApartamentos";
-import Button from "../../components/Button/Button";
-
+import MenuCRUD
+ from "../../components/MenuCRUD";
 const Apartamentos = () => {
 
   return (
     <ApartamentosContainer>
         <h1>APARTAMENTOS</h1>
-       <MenuApartamentos/>
+        <MenuCRUD/>
+      
         <InputContainer> 
-        <input type='text' placeholder=' Número de Controle'/> 
-        <input type='text' placeholder=' Número do Apartamento'/>
-        <input type='text' placeholder=' Bloco'/>
         </InputContainer> 
-        <Button>Exibir</Button>
 
     </ApartamentosContainer>
   )
 }
+
+
+MenuCRUD.defaultProps = {
+  menuArr: [
+      {
+          acao: "BUSCAR",
+          link: "./BuscarApartamentos",
+      },
+      {
+        acao: "CADASTRAR",
+        link: "./CadastrarApartamentos",
+    },
+    {
+      acao: "ALTERAR",
+      link: "./AlterarApartamentos",
+  },
+  {
+    acao: "INATIVAR",
+    link: "./InativarApartamentos",
+},
+  ],
+};
 
 export default Apartamentos;

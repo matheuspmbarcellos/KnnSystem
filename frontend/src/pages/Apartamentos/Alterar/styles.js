@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ApartamentosContainer = styled.div`
 width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -20,18 +21,15 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 3%;
 
-input {
-    color: #131129;
-    background-color: #131129;
-    border-radius: 5px;    
-    height: 5%;
-    width: 30%;
-    padding: 6px;
-    border: solid 0.6px;
-    margin: 1%;
-
-    &:focus {
-        color: white;
-    }
+h1 {
+    font-size:15px;
+}
+h2 {
+    font-size:10px;
+}
+h3 {
+    font-size:5px;
+}
 `

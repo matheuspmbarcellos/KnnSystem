@@ -1,21 +1,39 @@
 import { ContratosContainer, InputContainer } from "./styles";
 import Button from "../../components/Button/Button";
-import MenuContratos from "../../components/MenuCRUD/MenuContratos";
+import MenuCRUD from "../../components/MenuCRUD";
 
 const Contratos = () => {
   return (
     <ContratosContainer>
         <h1>CONTRATOS</h1>
-        <MenuContratos/>
+        <MenuCRUD/>
         <InputContainer> 
-        <input type='text' placeholder=' Número de Controle'/> 
-        <input type='text' placeholder=' Razão Social do Fornecedor'/>
-        <input type='text' placeholder=' CPNJ do Fornecedor'/>
         </InputContainer> 
         <Button>Exibir</Button>
 
     </ContratosContainer>
   )
 }
+
+MenuCRUD.defaultProps = {
+  menuArr: [
+      {
+          acao: "BUSCAR",
+          link: "./BuscarContratos",
+      },
+      {
+        acao: "CADASTRAR",
+        link: "./CadastrarContratos",
+    },
+    {
+      acao: "ALTERAR",
+      link: "./AlterarContratos",
+  },
+  {
+    acao: "INATIVAR",
+    link: "./InativarContratos",
+},
+  ],
+};
 
 export default Contratos;

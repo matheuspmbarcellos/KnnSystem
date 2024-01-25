@@ -12,6 +12,10 @@ import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
 import ResultadoFornecedor from './pages/Fornecedores/Resultado';
 import Esqueci from './pages/Login/Esqueci';
 import CadastrarContrato from './pages/Contratos/Cadastrar';
+import BuscarApartamentos from './pages/Apartamentos/Buscar';
+import CadastrarApartamentos from './pages/Apartamentos/Cadastrar';
+import InativarApartamentos from './pages/Apartamentos/Inativar';
+import AlterarApartamentos from './pages/Apartamentos/Alterar';
 
 const MainRoutes = () => {
     return (
@@ -65,6 +69,22 @@ const MainRoutes = () => {
             <Route 
                 path="/Apartamentos"
                 element={<Apartamentos />}
+            />
+         <Route 
+                path="/BuscarApartamentos"
+                element={<BuscarApartamentos />}
+            />
+              <Route 
+                path="/CadastrarApartamentos"
+                element={<CadastrarApartamentos />}
+            />
+              <Route 
+                path="/InativarApartamentos"
+                element={<InativarApartamentos />}
+            />
+            <Route 
+                path="/AlterarApartamentos"
+                element={<AlterarApartamentos />}
             />
             <Route 
                 path="/Relatorios"

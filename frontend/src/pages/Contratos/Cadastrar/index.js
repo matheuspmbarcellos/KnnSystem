@@ -1,13 +1,11 @@
 import { CadastrarContainer, InputContainer, BodyContainer } from "./styles";
 import Button from "../../../components/Button/Button";
-import MenuContratos from "../../../components/MenuCRUD/MenuContratos";
-
+import Contratos from "..";
 const CadastrarContrato = () => {
 
   return (
     <CadastrarContainer>
-        <h1>CONTRATOS</h1>
-        <MenuContratos/>
+      <Contratos/>
 
        <BodyContainer>
         <InputContainer> 
