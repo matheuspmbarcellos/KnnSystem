@@ -1,6 +1,6 @@
 import { FornecedoresContainer, InputContainer} from "./styles";
-import MenuFornecedores from "../../components/MenuCRUD/MenuFornecedores";
-import Button from "../../components/Button/Button";
+import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
+import Button from "../../../components/Button/Button";
 
 const Fornecedores = () => {
   return (
