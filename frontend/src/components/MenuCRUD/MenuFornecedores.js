@@ -1,12 +1,21 @@
+import { Link } from "react-router-dom";
 import { ButtonContainer, MenuButton } from "./styles";
 
 const MenuFornecedores = () => {
   return (
           <ButtonContainer>
-           <MenuButton as="a" href="/Fornecedores">BUSCAR</MenuButton>
-           <MenuButton as="a" href="/CadastrarFornecedor">CADASTRAR</MenuButton>
-           <MenuButton as="a" href="/AlterarFornecedor">ALTERAR</MenuButton>
-           <MenuButton as="a" href="/InativarFornecedor">INATIVAR</MenuButton>
+           <Link to={"/Fornecedores"}>
+              <MenuButton>BUSCAR</MenuButton>
+            </Link>
+            <Link to={"/CadastrarFornecedor"}>
+              <MenuButton>CADASTRAR</MenuButton>
+            </Link>
+            <Link to={"/AlterarFornecedor"}>
+              <MenuButton>ALTERAR</MenuButton>
+            </Link>
+            <Link to={"/InativarFornecedor"}>
+              <MenuButton>INATIVAR</MenuButton>
+            </Link>
 
         </ButtonContainer>
   )

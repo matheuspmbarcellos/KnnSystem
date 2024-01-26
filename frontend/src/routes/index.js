@@ -12,9 +12,6 @@ import Contratos from '../pages/Contratos';
 import CadastrarContrato from '../pages/Contratos/Cadastrar'
 import Apartamentos from '../pages/Apartamentos';
 import Relatorios from '../pages/Relatorios';
-
-
-
 import { PrivateRoutes } from './privateRoutes';
 
 const MainRoutes = () => {

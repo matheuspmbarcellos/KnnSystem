@@ -15,13 +15,17 @@ h1 {
     margin: 45px 10px 10px 10px;
     font-style: normal;
 }
+
+form {
+    width: 100%;    
+}
 `
 export const InputContainer = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 3%;
+margin-top: 15px;
 
 input{
     color: #131129;
@@ -31,7 +35,7 @@ input{
     width: 30%;
     padding: 6px;
     border: solid 0.6px;
-    margin: 0.7%;
+    margin-bottom:14px;
 
     &:focus {
         color: white;
