@@ -1,5 +1,6 @@
 import { ButtonContainer, LoginContainer } from './styles';
 import Button from '../../components/Button/Button';
+import ButtonSecondary from '../../components/Button/ButtonSecondary';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { Navigate } from 'react-router-dom';
@@ -10,6 +11,7 @@ const Login = () => {
   const { signIn, signed } = useContext(AuthContext)
 
   const handleSignIn = async (e) => {
+    e.preventDefault()
     
     const data = {
       login,
@@ -32,16 +34,18 @@ const Login = () => {
           value={login}
           onChange={(e) => setLogin(e.target.value)}
           required
+          autoComplete='username'
           />
         <input 
           type='password' 
           placeholder=' Senha:'
           value={password}
           onChange={(e) => setPassword(e.target.value)}  
-          required        
+          required   
+          autoComplete='current-password'    
           />
         <ButtonContainer>
-            <Button secondary="true" as="a" href="/Esqueci">Esqueci minha senha</Button> 
+            <ButtonSecondary as="a" href="/Esqueci">Esqueci minha senha</ButtonSecondary> 
             <Button type="submit">Entrar</Button> 
         </ButtonContainer>
         </form>

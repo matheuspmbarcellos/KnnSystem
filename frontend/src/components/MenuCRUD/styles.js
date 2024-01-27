@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "../../components/Button/Button";
+import Button from "../Button/Button";
 
 export const MenuButton = styled(Button)`
 color: #131129;

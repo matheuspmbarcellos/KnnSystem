@@ -17,8 +17,7 @@ const App = () => {
         <Content>
           <AuthProvider>            
             <Navbar />
-            <Routes>
-            </Routes>
+            <Routes />
           </AuthProvider>          
         </Content>        
       </Router>

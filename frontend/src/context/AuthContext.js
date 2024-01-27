@@ -5,15 +5,15 @@ import { Navigate } from "react-router-dom";
 export const AuthContext = createContext()
 
 export const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null)
+    const [usuario, setUsuario] = useState(null)
 
     useEffect(() => {
         const LoadingStoreData = async () => {
-            const storageUser = localStorage.getItem("@Auth:user")
+            const storageUsuario = localStorage.getItem("@Auth:usuario")
             const storageToken = localStorage.getItem("@Auth:token")
 
-            if (storageUser && storageToken) {
-                setUser(storageUser)
+            if (storageUsuario && storageToken) {
+                setUsuario(storageUsuario)
             }
         }
         LoadingStoreData();
@@ -30,26 +30,26 @@ export const AuthProvider = ({children}) => {
         if (response.data.error) {
             alert(response.data.error)
         } else {
-            setUser(response.data.user);
+            setUsuario(response.data);
             api.defaults.headers.common[
                 "Authorization"
             ] = `Bearer ${response.data.token}`
             localStorage.setItem("@Auth:token", response.data.token);
-            localStorage.setItem("@Auth:user", JSON.stringify(response.data.user));
+            localStorage.setItem("@Auth:usuario", JSON.stringify(response.data));
         }  
     }
 
     const signOut = () => {
         localStorage.clear();
-        setUser(null);
+        setUsuario(null);
         return <Navigate to="/" />
     }
 
     return (
         <AuthContext.Provider 
             value={{
-                user,
-                signed: !!user,
+                usuario,
+                signed: !!usuario,
                 signIn,
                 signOut,
             }}
