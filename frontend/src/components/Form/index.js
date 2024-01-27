@@ -9,7 +9,7 @@ const Form = ({ formArr, submitBtn, linkSubmit }) => {
        
        <FormContainer key={index}>
 
-           <FInput id={name} name={name} type={type} 
+           <FInput name={name} type={type} 
              placeholder={placeholder}
             />
 

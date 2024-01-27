@@ -1,17 +1,13 @@
-import { ResultadoContainer, Resultado } from "./styles";
+import * as React from "react";
+import { ResultadoContainer } from "./styles";
 import Button from "../../../components/Button/Button";
+import Table from "../../../components/Table";
 
 const ResultadoFornecedor = () => {
   return (
     <ResultadoContainer>
       <h1>Resultado</h1>
-      <Resultado>
-<td>Razão Social</td>
-<td>CNPJ</td>
-<td>Categoria</td>
-<td>Código</td>
-<td>Detalhar</td>
-      </Resultado>
+      <Table/>
       <Button as="a" href="/Fornecedores">Voltar</Button>
     </ResultadoContainer>
   )
