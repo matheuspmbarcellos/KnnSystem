@@ -16,6 +16,8 @@ import BuscarApartamentos from './pages/Apartamentos/Buscar';
 import CadastrarApartamentos from './pages/Apartamentos/Cadastrar';
 import InativarApartamentos from './pages/Apartamentos/Inativar';
 import AlterarApartamentos from './pages/Apartamentos/Alterar';
+import ResultadoApartamento from './pages/Apartamentos/Resultado';
+import AlterarApt from './pages/Apartamentos/AlterarApt';
 
 const MainRoutes = () => {
     return (
@@ -86,6 +88,16 @@ const MainRoutes = () => {
                 path="/AlterarApartamentos"
                 element={<AlterarApartamentos />}
             />
+
+            <Route 
+                path="/AlterarApt"
+                element={<AlterarApt />}
+            />
+
+            <Route 
+                path="/ResultadoApartamento"
+                element={<ResultadoApartamento />}
+            /> 
             <Route 
                 path="/Relatorios"
                 element={<Relatorios />}

@@ -1,20 +1,42 @@
 import Apartamentos from "..";
 import { ApartamentosContainer, InputContainer } from "../styles";
+import Form from "../../../components/Form";
 
 const AlterarApartamentos = () => {
 
   return (
     <ApartamentosContainer>
         <Apartamentos/>
-        <InputContainer> 
-        <h1>Razão Social</h1>
-        <h2>Nome</h2>
-        <h3>Dados</h3>
 
+        <InputContainer> 
+        <Form
+          formArr={formArr}
+          submitBtn={"Exibir"}   
+          linkSubmit={"./AlterarApt"} 
+        />
         </InputContainer> 
     </ApartamentosContainer>
   )
 }
+
+
+const formArr = [
+
+{
+  name: "Número",
+  placeholder: "Número de controle",
+},
+{ 
+  name: "Apt",
+  placeholder: "Número do apartamento",
+},
+{ 
+  name: "Bloco",
+  placeholder: "Bloco",
+},
+
+];  
+    
 
 
 export default AlterarApartamentos;

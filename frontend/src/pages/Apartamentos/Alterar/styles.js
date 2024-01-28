@@ -15,21 +15,25 @@ h1 {
     margin: 45px 10px 10px 10px;
 }
 
+
 `
-export const InputContainer = styled.div`
+export const Subtitulo = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 3%;
+margin-top: 10%;
 
-h1 {
-    font-size:15px;
-}
-h2 {
-    font-size:10px;
-}
-h3 {
-    font-size:5px;
-}
+input {
+    color: #131129;
+    background-color: #131129;
+    border-radius: 6px;    
+    width: 30%;
+    padding: 6px;
+    border: solid 0.6px;
+    margin: 1%;
+
+    &:focus {
+        color: white;
+    }
 `
