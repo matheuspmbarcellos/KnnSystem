@@ -29,7 +29,7 @@ button2 {
 export const KNNlogo = styled.button`
 padding-left: 95px;
 height:70px;
-width: 200px;
+width: 350px;
 background: url(./KNNlogo.png);
 background-size: 85%;
 position: relative;

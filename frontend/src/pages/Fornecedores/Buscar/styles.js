@@ -28,7 +28,7 @@ align-items: center;
 margin-top: 15px;
 
 input{
-    color: #131129;
+    color: white;
     background-color: #131129;
     border-radius: 5px;    
     height: 5%;

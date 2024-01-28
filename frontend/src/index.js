@@ -1,13 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-import GlobalStyle from './global'
+import { AuthProvider } from './context/AuthContext';
+import { QueryClientProvider } from 'react-query';
+import { queryClient } from './services/queryClient';
+
+import GlobalStyle from './assets/global'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <GlobalStyle />
+        <Router>
+          <App />
+        </Router>        
+      </QueryClientProvider>      
+    </AuthProvider>
   </React.StrictMode>
 );

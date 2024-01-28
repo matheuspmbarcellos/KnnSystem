@@ -1,19 +1,18 @@
-import { HeaderContainer, Usuario, KNNlogo, LoginContainer } from "./styles";
+import { useNavigate } from 'react-router-dom';
+import { HeaderContainer, Usuario, KNNlogo, LoginContainer } from './styles';
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
-    
     <HeaderContainer>
-            <KNNlogo as="a" href="./" /> 
-            <LoginContainer>
-                
-            </LoginContainer> 
-            <Usuario as="a" href="./Login" />
+      <KNNlogo onClick={() => {navigate("/")}} />
+      <LoginContainer>
+
+      </LoginContainer>
+      <Usuario onClick={() => {navigate("/Login")}} />
     </HeaderContainer>
-
-  )
-}
-
+  );
+};
 
 export default Header;
-
