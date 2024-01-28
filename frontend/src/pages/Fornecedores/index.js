@@ -1,19 +1,11 @@
-import { FornecedoresContainer, InputContainer} from "./styles";
+import { FornecedoresContainer } from "./styles";
 import MenuCRUD from "../../components/MenuCRUD";
-import Button from "../../components/Button/Button";
 
 const Fornecedores = () => {
   return (
     <FornecedoresContainer>
         <h1>FORNECEDORES</h1>
         <MenuCRUD/>
-        <InputContainer> 
-        <input type='text' placeholder=' CNPJ'/>
-        <input type='text' placeholder=' Código'/>
-        <input type='text' placeholder=' Razão Social'/>
-        <input type='text' placeholder=' Número do Contrato'/>
-        </InputContainer>
-        <Button as="a" href="/ResultadoFornecedor">Exibir</Button>
     </FornecedoresContainer>
   )
 }
@@ -23,19 +15,19 @@ MenuCRUD.defaultProps = {
   menuArr: [
       {
           acao: "BUSCAR",
-          link: "./BuscarFornecedores",
+          link: "./BuscarFornecedor",
       },
       {
         acao: "CADASTRAR",
-        link: "./CadastrarFornecedores",
+        link: "./CadastrarFornecedor",
     },
     {
       acao: "ALTERAR",
-      link: "./AlterarFornecedores",
+      link: "./AlterarFornecedor",
   },
   {
     acao: "INATIVAR",
-    link: "./InativarFornecedores",
+    link: "./InativarFornecedor",
 },
   ],
 };

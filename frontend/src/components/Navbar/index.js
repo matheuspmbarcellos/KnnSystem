@@ -9,12 +9,12 @@ const Navbar = () => {
       <NavbarContainer>   
    
       <div class="dropdown">
-        <button class="dropbtn">Fornecedores</button>
+        <button class="dropbtn"><a href="./BuscarFornecedor">Fornecedores</a></button>
          <div class="dropdown-content">
-            <a href="#">Buscar</a><hr/>
-            <a href="#">Cadastrar</a><hr/>
-            <a href="#">Alterar</a><hr/>
-            <a href="#">Inativar</a><hr/>
+            <a href="./BuscarFornecedor">Buscar</a><hr/>
+            <a href="./CadastrarFornecedor">Cadastrar</a><hr/>
+            <a href="./">Alterar</a><hr/>
+            <a href="./">Inativar</a><hr/>
          </div>
     </div>
 
@@ -22,27 +22,27 @@ const Navbar = () => {
 
 
     <div class="dropdown">
-        <button class="dropbtn">Pagamento</button>
+        <button class="dropbtn"><a href="./BuscarPagamentos">Pagamento</a></button>
          <div class="dropdown-content">
-            <a href="#">Buscar</a><hr/>
-            <a href="#">Cadastrar</a><hr/>
-            <a href="#">Alterar</a><hr/>
-            <a href="#">Inativar</a><hr/>
+            <a href="./BuscarPagamentos">Buscar</a><hr/>
+            <a href="./">Cadastrar</a><hr/>
+            <a href="./">Alterar</a><hr/>
+            <a href="./">Inativar</a><hr/>
          </div>
     </div>
     
     <div class="dropdown">
-        <button class="dropbtn">Contratos</button>
+        <button class="dropbtn"><a href="./BuscarContratos">Contratos</a></button>
          <div class="dropdown-content">
-            <a href="#">Buscar</a><hr/>
-            <a href="#">Cadastrar</a><hr/>
-            <a href="#">Alterar</a><hr/>
-            <a href="#">Inativar</a><hr/>
+            <a href="./BuscarContratos">Buscar</a><hr/>
+            <a href="./">Cadastrar</a><hr/>
+            <a href="./">Alterar</a><hr/>
+            <a href="./">Inativar</a><hr/>
          </div>
     </div>
 
     <div class="dropdown">
-        <button class="dropbtn">Apartamentos</button>
+        <button class="dropbtn"><a href="./BuscarApartamentos">Apartamentos</a></button>
          <div class="dropdown-content">
             <a href="./BuscarApartamentos">Buscar</a><hr/>
             <a href="./CadastrarApartamentos">Cadastrar</a><hr/>

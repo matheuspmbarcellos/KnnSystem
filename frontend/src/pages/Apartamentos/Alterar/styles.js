@@ -6,7 +6,6 @@ height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-
 }
 
 h1 {
@@ -17,12 +16,12 @@ h1 {
 
 
 `
-export const Subtitulo = styled.div`
+export const InputContainer = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 10%;
+margin-top: 3%;
 
 input {
     color: #131129;

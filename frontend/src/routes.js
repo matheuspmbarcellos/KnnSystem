@@ -9,6 +9,7 @@ import Contratos from './pages/Contratos';
 import Apartamentos from './pages/Apartamentos';
 import Relatorios from './pages/Relatorios';
 import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
+import BuscarFornecedor from './pages/Fornecedores/Cadastrar copy';
 import ResultadoFornecedor from './pages/Fornecedores/Resultado';
 import Esqueci from './pages/Login/Esqueci';
 import CadastrarContrato from './pages/Contratos/Cadastrar';
@@ -40,7 +41,10 @@ const MainRoutes = () => {
                 path="/Fornecedores"
                 element={<Fornecedores />}
             />
-
+            <Route 
+                path="/BuscarFornecedor"
+                element={<BuscarFornecedor />}
+            /> 
             <Route 
                 path="/CadastrarFornecedor"
                 element={<CadastrarFornecedor />}

@@ -6,14 +6,8 @@ height: 90%;
 display: flex;
 flex-direction: column;
 align-items: center;
-
 }
 
-h1 {
-    font-size: 35px;
-    color: #131129;
-    margin: 45px 10px 10px 10px;
-}
 
 `
 export const BodyContainer = styled.div`
@@ -31,15 +25,13 @@ flex-direction: column;
 align-items: center;
 
 input {
-    width: 90%;
-    color: #131129;
-    height: 5%;
+    margin: 6px;
+    border-radius: 15px;    
+    color:white;
+    background-color:#131129;
+    width: 70%;
     padding: 6px;
-    border-bottom: 1px solid #131129;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin: 1%;
+    border: solid 0.6px;
 
     &:focus {
         color: limegreen;

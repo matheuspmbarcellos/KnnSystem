@@ -7,7 +7,6 @@ const AlterarApartamentos = () => {
   return (
     <ApartamentosContainer>
         <Apartamentos/>
-
         <InputContainer> 
         <Form
           formArr={formArr}
