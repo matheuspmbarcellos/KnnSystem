@@ -1,6 +1,5 @@
 import { ApartamentosContainer, InputContainer } from "./styles";
-import MenuCRUD
- from "../../components/MenuCRUD";
+import MenuCRUD from "../../components/MenuCRUD";
 const Apartamentos = () => {
 
   return (
@@ -21,6 +20,7 @@ MenuCRUD.defaultProps = {
       {
           acao: "BUSCAR",
           link: "./BuscarApartamentos",
+          
       },
       {
         acao: "CADASTRAR",

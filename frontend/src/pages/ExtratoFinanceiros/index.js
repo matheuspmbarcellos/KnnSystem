@@ -1,10 +1,11 @@
-import { ExtratosFinanceirosContainer } from "./styles";
+import { ExtratosContainer } from "./styles";
+import Button from "../../components/Button/Button";
 
 const ExtratosFinanceiros = () => {
   return (
-    <ExtratosFinanceirosContainer>
-        ExtratosFinanceiros
-    </ExtratosFinanceirosContainer>
+    <ExtratosContainer>
+      <Button>Buscar</Button>
+    </ExtratosContainer>
   )
 }
 

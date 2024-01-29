@@ -9,13 +9,13 @@ const Relatorios = () => {
           <Button>Apartamentos</Button>
           <Button>Boletos em aberto</Button>
           <Button>Fornecedores ativos</Button>
-          <hr/>
         </ButtonContainer>
+        <hr/>
         <ButtonContainer>
           <Button>Despesas por competência</Button>
           <Button>Receitas por competência</Button>
-          <hr/>
         </ButtonContainer>
+        <hr/>
         <ButtonContainer>
           <Button>Contratos vigentes</Button>
           <Button>Contratos vencidos</Button>

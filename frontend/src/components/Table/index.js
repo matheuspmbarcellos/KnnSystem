@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Editar, ResultadoContainer, Deletar, Detalhar } from "./styles";
+import { ResultadoContainer, Deletar, Detalhar, Editar } from "./styles";
 import resultado from "./mock-resultado.json";
 import { useTable } from "react-table";
 
@@ -36,7 +36,6 @@ return (
     <ResultadoContainer>
 
       <table {...getTableProps()}>
-
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -60,9 +59,9 @@ return (
                       {cell.render("Cell")}
                     </td>
                  ))} 
-                   <Detalhar>detalhar</Detalhar>
-                    <Editar>editar</Editar>
-                    <Deletar>deletar</Deletar> 
+                   <Detalhar/>
+                    <Editar/>
+                    <Deletar/>
                </tr>
             );
             })}

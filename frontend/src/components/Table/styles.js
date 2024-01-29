@@ -26,7 +26,7 @@ table {
 
 
 .close:hover {
-    color: #f44336;
+    color: red;
     font-weight: bolder;
 }
 
@@ -35,14 +35,14 @@ thead{
 }
 
 tbody {
-    overflow-y: scroll;
+    overflow: auto;
 
     tr {
         border-top: solid 1px limegreen;
     }
 
     :hover {
-    background: rgb(200, 199, 199);
+    background: #f1f1f1;
 }
 
 
@@ -51,9 +51,10 @@ tbody {
 
 
 export const Deletar = styled.button`
-background: url(./x-circle-fill.svg);
+background: url();
 background-repeat: no-repeat;
 background-position: center;
+background: url(./x-circle-fill.svg);
 background-size: 95%;
 border: none;
 height: 30px;
@@ -67,24 +68,28 @@ padding: 5px;
     }
 
 `
-;
 
 
 export const Editar = styled.button`
-background: url(./pencil-square.svg);
+height:25px;
+width: 25px;
+color: limegreen;
+background-color: black;
+background: url(./person-circle.svg);
 background-size: 95%;
 background-repeat: no-repeat;
 border: none;
-height:17px;
-width: fit-to-content;
-color: limegreen;
-padding: 5px;
+margin: auto;
 
 &:hover {
-    color: #131129;
+    color: black;
     cursor: pointer;
-    }
+
+  }
 `
+
+
+
 
 
 export const Detalhar = styled.button`

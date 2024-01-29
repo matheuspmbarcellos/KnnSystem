@@ -41,7 +41,9 @@ export const NavbarContainer = styled.div`
         font-weight: lighter;
       }
       
-      .dropdown-content a:hover {background-color: #f1f1f1}
+      .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
       
       .dropdown:hover .dropdown-content {
         display: block;
@@ -49,6 +51,7 @@ export const NavbarContainer = styled.div`
       
       .dropdown:hover .dropbtn {
         color: limegreen;
+    
       }
     
       }

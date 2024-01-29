@@ -9,12 +9,12 @@ font-size: 0.8em;
 padding: 1%;
 margin-bottom: 3%;
 margin-top: 3%;
-
 &:hover {
     text-decoration: underline;
     font-weight: bold; 
     cursor: pointer;
 }
+
 `;
 
 export const ButtonContainer = styled.div`

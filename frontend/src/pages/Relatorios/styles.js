@@ -14,6 +14,11 @@ h1 {
     color: #131129;
     margin: 45px 10px 10px 10px;
 }
+
+hr {
+    border-top: limegreen 0.6px;
+}
+
 `
 
 export const ButtonContainer = styled.div`
@@ -22,7 +27,6 @@ display: flex;
 justify-content: center;
 flex-direction: row;
 margin: 30px 10px 10px 10px;
-
 }
 
 `
