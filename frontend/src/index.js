@@ -14,8 +14,8 @@ root.render(
   <React.StrictMode>
     <AuthProvider>
       <QueryClientProvider client={queryClient}>
-        <GlobalStyle />
         <Router>
+          <GlobalStyle />
           <App />
         </Router>        
       </QueryClientProvider>      
