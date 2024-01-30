@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
+import EmailEnviado from './pages/Login/EmailEnviado';
 import Fornecedores from './pages/Fornecedores';
 import Pagamento from './pages/Pagamento';
 import ExtratosFinanceiros from './pages/ExtratoFinanceiros';
@@ -9,8 +10,9 @@ import Contratos from './pages/Contratos';
 import Apartamentos from './pages/Apartamentos';
 import Relatorios from './pages/Relatorios';
 import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
-import BuscarFornecedor from './pages/Fornecedores/Cadastrar copy';
+import BuscarFornecedor from './pages/Fornecedores/Buscar';
 import ResultadoFornecedor from './pages/Fornecedores/Resultado';
+import AlterarFornecedor from './pages/Fornecedores/AlterarFornecedor';
 import Esqueci from './pages/Login/Esqueci';
 import CadastrarContrato from './pages/Contratos/Cadastrar';
 import BuscarApartamentos from './pages/Apartamentos/Buscar';
@@ -36,6 +38,10 @@ const MainRoutes = () => {
                 path="/Esqueci"
                 element={<Esqueci />}
             />
+            <Route 
+                path="/EmailEnviado"
+                element={<EmailEnviado />}
+            />
 
             <Route 
                 path="/Fornecedores"
@@ -49,7 +55,10 @@ const MainRoutes = () => {
                 path="/CadastrarFornecedor"
                 element={<CadastrarFornecedor />}
             /> 
-
+         <Route 
+                path="/AlterarFornecedor"
+                element={<AlterarFornecedor />}
+            /> 
             <Route 
                 path="/ResultadoFornecedor"
                 element={<ResultadoFornecedor />}

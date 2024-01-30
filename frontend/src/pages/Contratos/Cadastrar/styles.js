@@ -17,11 +17,11 @@ h1 {
 
 `
 export const BodyContainer = styled.div`
-width: 50%;
+width: 80%;
 display: flex;
 flex-direction: row;
 align-items: start;
-margin: 3%;
+margin: 2%;
 `
 
 export const InputContainer = styled.div`
@@ -40,6 +40,7 @@ input {
     border-left: none;
     border-right: none;
     margin: 1%;
+    border-radius: 0;    
 
     &:focus {
         color: limegreen;

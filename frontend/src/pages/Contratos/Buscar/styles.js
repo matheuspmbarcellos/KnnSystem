@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const CadastrarContainer = styled.div`
+export const ApartamentosContainer = styled.div`
 width: 100%;
-height: 90%;
+height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -16,34 +16,23 @@ h1 {
 }
 
 `
-export const BodyContainer = styled.div`
-width: 50%;
-display: flex;
-flex-direction: row;
-align-items: center;
-margin: 3%;
-`
-
 export const InputContainer = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 3%;
 
 input {
-    width: 90%;
     color: #131129;
-    height: 5%;
+    background-color: #131129;
+    border-radius: 6px;    
+    width: 30%;
     padding: 6px;
-    border-bottom: 1px solid #131129;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0px;
+    border: solid 0.6px;
     margin: 1%;
 
     &:focus {
-        color: limegreen;
-        outline: none;
+        color: white;
     }
 `

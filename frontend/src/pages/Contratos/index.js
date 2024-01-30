@@ -1,5 +1,4 @@
 import { ContratosContainer, InputContainer } from "./styles";
-import Button from "../../components/Button/Button";
 import MenuCRUD from "../../components/MenuCRUD";
 
 const Contratos = () => {
@@ -9,7 +8,6 @@ const Contratos = () => {
         <MenuCRUD/>
         <InputContainer> 
         </InputContainer> 
-        <Button>Exibir</Button>
 
     </ContratosContainer>
   )

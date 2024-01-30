@@ -13,8 +13,8 @@ const Navbar = () => {
          <div class="dropdown-content">
             <a href="./BuscarFornecedor">Buscar</a><hr/>
             <a href="./CadastrarFornecedor">Cadastrar</a><hr/>
-            <a href="./">Alterar</a><hr/>
-            <a href="./">Inativar</a><hr/>
+            <a href="./AlterarFornecedor">Alterar</a><hr/>
+            <a href="./InativarFornecedor">Inativar</a><hr/>
          </div>
     </div>
 

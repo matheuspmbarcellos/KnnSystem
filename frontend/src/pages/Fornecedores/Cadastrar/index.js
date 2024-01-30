@@ -1,6 +1,6 @@
 import { CadastrarContainer, InputContainer, BodyContainer } from "./styles";
-import Button from "../../../components/Button/Button";
 import Fornecedores from "..";
+import Form from "../../../components/Form";
 
 const CadastrarFornecedor = () => {
 
@@ -9,16 +9,39 @@ const CadastrarFornecedor = () => {
         <Fornecedores/>         
             <BodyContainer>
               <InputContainer> 
-                 <input type='text' placeholder='Nome do Responsável'/>
-                 <input type='text' placeholder='Telefone do Responsável'/>
-                 <input type='email' placeholder='E-mail do Responsável'/>
-                 <input type='email' placeholder='E-mail corporativo'/>
-                 <input type='text' placeholder='Endereço'/>
+               <Form
+                 formArr={formArr}
+                  submitBtn={"Cadastrar"}   
+                 linkSubmit={"./Fornecedores"} 
+               />
                </InputContainer> 
             </BodyContainer>
-        <Button>Cadastrar</Button>
     </CadastrarContainer>
   )
 }
 
+const formArr = [
+
+  {
+    name: "nome",
+    placeholder: "Nome do Responsável",
+  },
+  { 
+    name: "tel",
+    placeholder: "Telefone do Responsável",
+  },
+  { 
+    name: "email",
+    placeholder: "E-mail do Responsável",
+  },
+  { 
+    name: "emailcor",
+    placeholder: "E-mail Corporativo",
+  },
+  { 
+    name: "endereco",
+    placeholder: "Endereço",
+  },
+  ];  
+      
 export default CadastrarFornecedor;

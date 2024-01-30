@@ -1,13 +1,13 @@
-import { FInput, FormContainer, FormC, ButtonContainer} from './styles'
+import { FInput, FormContainer, ButtonContainer, FormC} from './styles'
 import Button from '../Button/Button';
 
 const Form = ({ formArr, submitBtn, linkSubmit }) => {
      return (
 
     <FormC>
-      {formArr.map(({  name, type, placeholder }, index) => (
+      {formArr.map(({  name, type, placeholder }) => (
        
-       <FormContainer key={index}>
+       <FormContainer>
 
            <FInput name={name} type={type} 
              placeholder={placeholder}
@@ -29,6 +29,7 @@ Form.defaultProps = {
     formArr: [
         {
             placeholder: "placeholder",
+            type: String,
         },
     ],
     submitBtn: "Entrar",
