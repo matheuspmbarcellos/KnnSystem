@@ -1,6 +1,6 @@
 import { ButtonContainer, LoginContainer } from './styles';
 import Button from '../../../components/Button/Button';
-import Form from '../../../components/Form';
+
 
 const Esqueci = () => {
 
@@ -13,7 +13,6 @@ const Esqueci = () => {
              <Button as="a" href="/Login">Voltar</Button> 
             <Button as="a" href="/">Enviar</Button> 
         </ButtonContainer>
-    <Button as="a" href="/EmailEnviado">  enviado</Button>
     </LoginContainer>
     
   )

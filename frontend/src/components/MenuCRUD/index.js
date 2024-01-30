@@ -4,7 +4,7 @@ const MenuCRUD = ({ menuArr }) => {
   
   return (
     <MenuC>
-     {menuArr.map(({ link, acao }, index) => (
+     {menuArr.map(({ link, acao }) => (
           <ButtonContainer>
              <MenuButton as="a" href={link}> {acao} </MenuButton>
          </ButtonContainer>          

@@ -8,21 +8,14 @@ const CadastrarContrato = () => {
     <CadastrarContainer>
       <Contratos/>
        <BodyContainer>
-        
+      
         <InputContainer> 
-        <Form 
+        <Form
           formArr={formArr}
-          linkSubmit={"./ResultadoApartamentos"}
+          submitBtn={"Cadastrar"}   
+          linkSubmit={"./CadastroContrato"}
       />
         </InputContainer> 
-
-        <InputContainer> 
-        <Form 
-          formArr={formArr2}
-          submitBtn={"Exibir"}   
-          linkSubmit={"./ResultadoApartamentos"}
-      />
-              </InputContainer> 
 
         </BodyContainer>
     </CadastrarContainer>
@@ -30,21 +23,8 @@ const CadastrarContrato = () => {
 }
 
 const formArr = [
+
   {
-    name: "Controle",
-    placeholder: "Número de Controle",
-  },
-  { 
-    name: "VigIn",
-    type: "date",
-    placeholder: "Vigência inicial",
-  },
-  { 
-    name: "VigF",
-    type: "date",
-    placeholder: "Vigência final",
-  },
-  { 
     name: "ValorIn",
     placeholder: "Valor mensal inicial",
   },
@@ -57,9 +37,7 @@ const formArr = [
     name: "Servico",
     placeholder: "Serviço/Produto",
   },  
-];
 
-const formArr2 = [
     {
       name: "Gestor",
       placeholder: "Nome do gestor do contrato",
@@ -88,5 +66,4 @@ const formArr2 = [
       placeholder: "Percentual de multa",
     },
   ];
-
 export default CadastrarContrato;

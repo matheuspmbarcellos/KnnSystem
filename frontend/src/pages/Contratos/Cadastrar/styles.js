@@ -13,6 +13,7 @@ h1 {
     font-size: 35px;
     color: #131129;
     margin: 45px 10px 10px 10px;
+
 }
 
 `
@@ -22,13 +23,14 @@ display: flex;
 flex-direction: row;
 align-items: start;
 margin: 2%;
+position: absolute;
+top: 250px;
 `
 
 export const InputContainer = styled.div`
 width: 100%;
-display: flex;
-flex-direction: column;
-margin-top: 1%;
+display: box;
+columns: 200px 2;
 
 input {
     width: 90%;
