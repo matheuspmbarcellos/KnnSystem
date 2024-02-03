@@ -1,8 +1,8 @@
 import { useMutation } from 'react-query'
 import { api } from "../services/api"
 
-const postFornecedor = async (data) => {
-    console.log(data.data.razaoSocial)
+const postFornecedor = async (data) => {    
+    
     return await api.post('/fornecedor/api/cadastra', {
         "razaoSocial": data.data.razaoSocial,
         "cnpj": data.data.cnpj,
