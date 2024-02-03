@@ -22,19 +22,23 @@ const CadastrarFornecedor = () => {
 
   const submit =  () => {
     const data = {
-      razaoSocial,
-      cnpj,
-      agencia,
-      contaCorrente,
-      banco,
-      pix,
-      nome,
-      cpf,
-      telefone,
-      email,
-      enderecoCompleto,
-      naturezaDoServico,
-      emailCorporativo
+      "razaoSocial": razaoSocial,
+        "cnpj": cnpj,
+        "domicilioBancario": {
+            "agencia": agencia,
+            "contaCorrente": contaCorrente,
+            "banco": banco,
+            "pix": pix
+        },
+        "responsavel": {
+            "nome": nome,
+            "cpf": cpf,
+            "telefone": telefone,
+            "email": email
+        },
+        "enderecoCompleto": enderecoCompleto,
+        "naturezaDoServico": naturezaDoServico,
+        "emailCorporativo": emailCorporativo
       }
       mutate({data});
   };
