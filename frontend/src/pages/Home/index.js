@@ -1,20 +1,23 @@
-import { HomeContainer, InfosContainer, Banner } from "./styles";
+import { HomeContainer, InfosContainer, Banner, ButtonContainer } from "./styles";
 import Button from "../../components/Button/Button";
 
 const Home = () => {
   return (
     <HomeContainer>
-      <Banner></Banner>
-      <center> 
-      <Button>Informações</Button> 
-      <Button>Quem Somos</Button> 
-      </center>
+      <Banner/>
 
       <InfosContainer>
         <h1>Atelier Três Rios</h1>
         <h2>(21) 9342-3411</h2>
         <h2>secretaria@tresrios.com.br</h2>
       </InfosContainer>
+
+      <ButtonContainer>
+      <Button as="a" href="/Informacoes">Informações</Button> 
+      <Button as="a" href="/QuemSomos">Quem Somos</Button> 
+      </ButtonContainer>
+
+
 
       <InfosContainer>
         <h1>KNN Condomínios</h1>

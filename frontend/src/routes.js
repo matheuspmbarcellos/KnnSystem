@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
+import QuemSomos from './pages/Home/QuemSomos';
+import Informacoes from './pages/Home/Informacoes';
 import Login from './pages/Login';
 import EmailEnviado from './pages/Login/EmailEnviado';
 import Fornecedores from './pages/Fornecedores';
@@ -42,7 +44,14 @@ const MainRoutes = () => {
                 path="/EmailEnviado"
                 element={<EmailEnviado />}
             />
-
+        <Route 
+                path="/QuemSomos"
+                element={<QuemSomos/>}
+            />
+        <Route 
+                path="/Informacoes"
+                element={<Informacoes/>}
+            />
             <Route 
                 path="/Fornecedores"
                 element={<Fornecedores />}
