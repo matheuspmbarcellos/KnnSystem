@@ -3,7 +3,7 @@ import { FornecedoresContainer, InputContainer} from "./styles";
 import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
 
-const Fornecedores = () => {
+const BuscarFornecedor = () => {
   return (
     <FornecedoresContainer>
         <h1>FORNECEDORES</h1>
@@ -24,4 +24,4 @@ const Fornecedores = () => {
   )
 }
 
-export default Fornecedores;
+export default BuscarFornecedor;

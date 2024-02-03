@@ -4,7 +4,7 @@ import { ButtonContainer, MenuButton } from "./styles";
 const MenuFornecedores = () => {
   return (
           <ButtonContainer>
-           <Link to={"/Fornecedores"}>
+           <Link to={"/BuscarFornecedor"}>
               <MenuButton>BUSCAR</MenuButton>
             </Link>
             <Link to={"/CadastrarFornecedor"}>

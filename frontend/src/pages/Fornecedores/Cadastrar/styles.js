@@ -16,31 +16,51 @@ h1 {
 }
 
 `
-export const BodyContainer = styled.div`
+export const BodyContainer = styled.form`
 width: 50%;
 display: flex;
 flex-direction: row;
 align-items: center;
-margin: 3%;
+margin: 2%;
 `
 
 export const InputContainer = styled.div`
-width: 100%;
+width: 90%;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 1%;
 
 input {
     width: 90%;
     color: #131129;
-    height: 5%;
+    height: 20px;
     padding: 6px;
     border-bottom: 1px solid #131129;
     border-top: none;
     border-left: none;
     border-right: none;
-    margin: 1%;
+
+    &:focus {
+        color: limegreen;
+        outline: none;
+    }
+`
+
+export const InputContainerRow= styled.div`
+width: 95%;
+display: flex;
+flex-direction: row;
+align-items: center;
+
+input {
+    width: 90%;
+    color: #131129;
+    height: 20px;
+    padding: 6px;
+    border-bottom: 1px solid #131129;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 
     &:focus {
         color: limegreen;

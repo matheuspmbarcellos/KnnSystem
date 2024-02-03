@@ -12,10 +12,10 @@ const Navbar = () => {
         <hr/> 
         <NavbarContainer>   
      
-        <div class="dropdown">
-          <button class="dropbtn"><a href="./BuscarFornecedor">Fornecedores</a></button>
-           <div class="dropdown-content">
-              <Link to={"/Fornecedores"}>Buscar</Link><hr/>
+        <div className="dropdown">
+          <button className="dropbtn"><Link to={"/BuscarFornecedor"}>Fornecedores</Link></button>
+           <div className="dropdown-content">
+              <Link to={"/BuscarFornecedor"}>Buscar</Link><hr/>
               <Link to={"/CadastrarFornecedor"}>Cadastrar</Link><hr/>
               <Link to={"/AlterarFornecedor"}>Alterar</Link><hr/>
               <Link to={"/InativarFornecedor"}>Inativar</Link><hr/>              
@@ -25,9 +25,9 @@ const Navbar = () => {
       <Link to={"/ExtratosFinanceiros"}>Extratos Financeiros</Link>
   
   
-      <div class="dropdown">
-          <button class="dropbtn"><a href="./BuscarPagamentos">Pagamento</a></button>
-           <div class="dropdown-content">
+      <div className="dropdown">
+          <button className="dropbtn"><Link to={"/BuscarPagamentos"}>Pagamento</Link></button>
+           <div className="dropdown-content">
               <Link to={"/BuscarPagamentos"}>Buscar</Link><hr/>
               <Link to={"/CadastrarPagamentos"}>Cadastrar</Link><hr/>
               <Link to={"/AlterarPagamentos"}>Alterar</Link><hr/>
@@ -35,9 +35,9 @@ const Navbar = () => {
            </div>
       </div>
       
-      <div class="dropdown">
-          <button class="dropbtn"><a href="./BuscarContratos">Contratos</a></button>
-           <div class="dropdown-content">
+      <div className="dropdown">
+          <button className="dropbtn"><Link to={"/BuscarContratos"}>Contratos</Link></button>
+           <div className="dropdown-content">
               <Link to={"/BuscarContratos"}>Buscar</Link><hr/>
               <Link to={"/CadastrarContratos"}>Cadastrar</Link><hr/>
               <Link to={"/AlterarContratos"}>Alterar</Link><hr/>
@@ -45,9 +45,9 @@ const Navbar = () => {
            </div>
       </div>
   
-      <div class="dropdown">
-          <button class="dropbtn"><a href="./BuscarApartamentos">Apartamentos</a></button>
-           <div class="dropdown-content">
+      <div className="dropdown">
+          <button className="dropbtn"><Link to={"/BuscarApartamentos"}>Apartamentos</Link></button>
+           <div className="dropdown-content">
               <Link to={"/BuscarApartamentos"}>Buscar</Link><hr/>
               <Link to={"/CadastrarApartamentos"}>Cadastrar</Link><hr/>
               <Link to={"/AlterarApartamentos"}>Alterar</Link><hr/>

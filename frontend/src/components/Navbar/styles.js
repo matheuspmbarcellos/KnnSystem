@@ -28,13 +28,14 @@ justify-content: space-around;
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #131129;
     min-width: 130px;
-    z-index: 10;
+    z-index: 10;    
+    border: 1px solid #131129;
   }
   
   .dropdown-content a {
-    color: #131129;
+    color: #limegreen;
     padding: 8px;
     text-decoration: none;
     display: block;
@@ -42,7 +43,7 @@ justify-content: space-around;
   }
   
   .dropdown-content a:hover {
-    background-color: #f1f1f1
+    color: #limegreen;
 }
   
   .dropdown:hover .dropdown-content {

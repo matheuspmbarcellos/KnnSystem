@@ -5,7 +5,7 @@ export const MenuButton = styled(Button)`
 color: #131129;
 background: none;
 font-weight: lighter;
-font-size: 0.8em;
+font-size: 0.9em;
 padding: 8px;
 margin-bottom: 3%;
 margin-top: 3%;

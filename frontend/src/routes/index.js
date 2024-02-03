@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Esqueci from '../pages/Login/Esqueci';
-import Fornecedores from '../pages/Fornecedores/Buscar';
+import BuscarFornecedor from '../pages/Fornecedores/Buscar';
 import CadastrarFornecedor from '../pages/Fornecedores/Cadastrar';
 import ResultadoFornecedor from '../pages/Fornecedores/Resultado';
 import Pagamento from '../pages/Pagamento';
@@ -21,8 +21,8 @@ const MainRoutes = () => {
             <Route path="/Login" element={<Login />} />
             <Route path="/Esqueci" element={<Esqueci />}/>
 
-            <Route path="/Fornecedores" element={<PrivateRoutes />}>
-                <Route path="/Fornecedores" element={<Fornecedores />} />
+            <Route path="/BuscarFornecedor" element={<PrivateRoutes />}>
+                <Route path="/BuscarFornecedor" element={<BuscarFornecedor />} />
             </Route>
             <Route path="/CadastrarFornecedor" element={<PrivateRoutes />}>
                 <Route path="/CadastrarFornecedor" element={<CadastrarFornecedor />} />
