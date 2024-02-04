@@ -1,8 +1,8 @@
 import { CadastrarContainer, InputContainer, BodyContainer, InputContainerRow } from "./styles";
 import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
-import { useCadastroFornecedor } from "../../../hooks/useCadastroFornecedor";
 import { useState } from "react";
+import { api } from "../../../services/api";
 
 const CadastrarFornecedor = () => {
   const [razaoSocial, setRazaoSocial] = useState("")  
@@ -18,29 +18,33 @@ const CadastrarFornecedor = () => {
   const [enderecoCompleto, setEnderecoCompleto] = useState("")  
   const [naturezaDoServico, setNaturezaDoServico] = useState("")  
   const [emailCorporativo, setEmailCorporativo] = useState("")  
-  const { mutate} = useCadastroFornecedor();
 
-  const submit =  () => {
-    const data = {
-      "razaoSocial": razaoSocial,
-        "cnpj": cnpj,
-        "domicilioBancario": {
-            "agencia": agencia,
-            "contaCorrente": contaCorrente,
-            "banco": banco,
-            "pix": pix
+  const submit = async () => {
+    try {
+      const response = await api.post('/fornecedor/api/cadastra', {
+        razaoSocial,
+        cnpj,
+        domicilioBancario: {
+          agencia,
+          contaCorrente,
+          banco,
+          pix,
         },
-        "responsavel": {
-            "nome": nome,
-            "cpf": cpf,
-            "telefone": telefone,
-            "email": email
+        responsavel: {
+          nome,
+          cpf,
+          telefone,
+          email,
         },
-        "enderecoCompleto": enderecoCompleto,
-        "naturezaDoServico": naturezaDoServico,
-        "emailCorporativo": emailCorporativo
-      }
-      mutate({data});
+        enderecoCompleto,
+        naturezaDoServico,
+        emailCorporativo,
+      });
+      console.log('Fornecedor cadastrado com sucesso:', response.data);
+      alert('Fornecedor cadastrado com sucesso!')
+    } catch (error) {
+      console.error('Erro ao cadastrar fornecedor:', error);
+    }
   };
 
 
