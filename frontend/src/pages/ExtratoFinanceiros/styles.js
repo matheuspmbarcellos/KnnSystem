@@ -6,7 +6,8 @@ export const ExtratosContainer = styled.div`
     color: #131129;
     width: 100%;
     align-items: center;
-    padding-top: 3%;
+    margin-top: 2%;
+    margin-bottom: 3%;
 
     h1{
         font-stretch: wide;

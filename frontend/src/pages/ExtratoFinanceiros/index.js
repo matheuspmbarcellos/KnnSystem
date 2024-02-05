@@ -19,7 +19,7 @@ const ExtratosFinanceiros = () => {
            <input type="month" name="fim" />
           </FormContainer>
 
-         <Button>Buscar</Button>
+         <Button as="a" href="/ExtratosResultado">Buscar</Button>
         </RowContainer>
       </form>
 

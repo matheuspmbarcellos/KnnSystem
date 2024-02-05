@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 
 const Form = ({ formArr, submitBtn, linkSubmit }) => {
      return (
-
+    
     <FormC>
       {formArr.map(({  name, type, placeholder }) => (
        

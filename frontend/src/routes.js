@@ -8,6 +8,7 @@ import EmailEnviado from './pages/Login/EmailEnviado';
 import Fornecedores from './pages/Fornecedores';
 import Pagamento from './pages/Pagamento';
 import ExtratosFinanceiros from './pages/ExtratoFinanceiros';
+import ExtratosResultado from './pages/ExtratoFinanceiros/ExtratoResultado';
 import Contratos from './pages/Contratos';
 import Apartamentos from './pages/Apartamentos';
 import Relatorios from './pages/Relatorios';
@@ -81,6 +82,11 @@ const MainRoutes = () => {
                 path="/ExtratosFinanceiros"
                 element={<ExtratosFinanceiros />}
             />
+         <Route 
+                path="/ExtratosResultado"
+                element={<ExtratosResultado />}
+            />
+
             <Route 
                 path="/Contratos"
                 element={<Contratos />}
