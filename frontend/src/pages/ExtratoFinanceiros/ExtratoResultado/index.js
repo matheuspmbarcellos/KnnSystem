@@ -1,6 +1,5 @@
 import { ExtratosContainer, ResultadoContainer} from "./styles";
 import ExtratosFinanceiros from "..";
-import Table from "../../../components/Table";
 
 const ExtratosResultado = () => {
   return (

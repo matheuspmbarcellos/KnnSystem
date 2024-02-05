@@ -1,8 +1,10 @@
-import { ButtonContainer, MenuButton, MenuC } from "./styles";
+import { ButtonContainer, MenuButton, MenuC, BContainer } from "./styles";
 
-const MenuCRUD = ({ menuArr }) => {
+const MenuCRUD = ({ titulo, menuArr }) => {
   
   return (
+   <BContainer>
+    <h1>{titulo}</h1>
     <MenuC>
      {menuArr.map(({ link, acao }) => (
           <ButtonContainer>
@@ -10,11 +12,13 @@ const MenuCRUD = ({ menuArr }) => {
          </ButtonContainer>          
   ))}
     </MenuC>
+    </BContainer>
   )
   };
   
 
 MenuCRUD.defaultProps = {
+  titulo:  "TÍTULO",
   menuArr: [
       {
           acao: "ALTERAR",

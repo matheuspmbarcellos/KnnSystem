@@ -9,12 +9,7 @@ align-items: center;
 
 }
 
-h1 {
-    font-size: 35px;
-    color: #131129;
-    margin: 45px 10px 10px 10px;
-    font-style: normal;
-}
+
 `
 export const InputContainer = styled.div`
 width: 100%;

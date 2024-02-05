@@ -4,7 +4,6 @@ const Apartamentos = () => {
 
   return (
     <ApartamentosContainer>
-        <h1>APARTAMENTOS</h1>
         <MenuCRUD/>
       
         <InputContainer> 
@@ -16,6 +15,7 @@ const Apartamentos = () => {
 
 
 MenuCRUD.defaultProps = {
+  titulo: "APARTAMENTOS",
   menuArr: [
       {
           acao: "BUSCAR",

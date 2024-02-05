@@ -34,3 +34,18 @@ display: flex;
 flex-direction: row;
 
 `
+
+export const BContainer = styled.div`
+width: 80%;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+h1 {
+    font-size: 35px;
+    color: #131129;
+    margin: 45px 10px 10px 10px;
+    font-style: normal;
+}
+
+`

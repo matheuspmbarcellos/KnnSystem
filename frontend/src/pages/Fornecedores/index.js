@@ -4,7 +4,6 @@ import MenuCRUD from "../../components/MenuCRUD";
 const Fornecedores = () => {
   return (
     <FornecedoresContainer>
-        <h1>FORNECEDORES</h1>
         <MenuCRUD/>
     </FornecedoresContainer>
   )
@@ -12,6 +11,8 @@ const Fornecedores = () => {
 
 
 MenuCRUD.defaultProps = {
+  titulo: "FORNECEDORES",
+
   menuArr: [
       {
           acao: "BUSCAR",

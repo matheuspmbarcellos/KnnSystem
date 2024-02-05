@@ -22,12 +22,12 @@ const Navbar = () => {
 
 
     <div class="dropdown">
-        <button class="dropbtn"><a href="./BuscarPagamentos">Pagamento</a></button>
+        <button class="dropbtn"><a href="./ConsultarFaturas">Pagamento</a></button>
          <div class="dropdown-content">
-            <a href="./BuscarPagamentos">Buscar</a><hr/>
-            <a href="./">Cadastrar</a><hr/>
-            <a href="./">Alterar</a><hr/>
-            <a href="./">Inativar</a><hr/>
+            <a href="./ConsultarFaturas">Consultar</a><hr/>
+            <a href="./IncluirFaturas">Incluir</a><hr/>
+            <a href="./AlterarFaturas">Alterar</a><hr/>
+            <a href="./InativarFaturas">Inativar</a><hr/>
          </div>
     </div>
     

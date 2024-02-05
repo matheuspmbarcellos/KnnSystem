@@ -4,7 +4,6 @@ import MenuCRUD from "../../components/MenuCRUD";
 const Contratos = () => {
   return (
     <ContratosContainer>
-        <h1>CONTRATOS</h1>
         <MenuCRUD/>
         <InputContainer> 
         </InputContainer> 
@@ -14,6 +13,7 @@ const Contratos = () => {
 }
 
 MenuCRUD.defaultProps = {
+  titulo: "CONTRATOS",
   menuArr: [
       {
           acao: "BUSCAR",
