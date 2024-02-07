@@ -6,14 +6,21 @@ export const AuthContext = createContext()
 
 export const AuthProvider = ({children}) => {
     const [usuario, setUsuario] = useState(null)
+    const [nome, setNome] = useState(null)
+    const [perfil, setPerfil] = useState(null)
+    
 
     useEffect(() => {
         const LoadingStoreData = async () => {
             const storageUsuario = localStorage.getItem("@Auth:usuario")
             const storageToken = localStorage.getItem("@Auth:token")
+            const storageNome = localStorage.getItem("@Auth:nome")
+            const storagePerfil = localStorage.getItem("@Auth:perfil")
 
-            if (storageUsuario && storageToken) {
+            if (storageUsuario && storageToken && storageNome && storagePerfil) {
                 setUsuario(storageUsuario)
+                setNome(storageNome)
+                setPerfil(storagePerfil)
             }
         }
         LoadingStoreData();
@@ -35,6 +42,8 @@ export const AuthProvider = ({children}) => {
                 "Authorization"
             ] = `Bearer ${response.data.token}`
             localStorage.setItem("@Auth:token", response.data.token);
+            localStorage.setItem("@Auth:nome", response.data.nome);
+            localStorage.setItem("@Auth:perfil", response.data.perfil);
             localStorage.setItem("@Auth:usuario", JSON.stringify(response.data));
         }  
     }
@@ -49,6 +58,8 @@ export const AuthProvider = ({children}) => {
         <AuthContext.Provider 
             value={{
                 usuario,
+                nome,
+                perfil,
                 signed: !!usuario,
                 signIn,
                 signOut,

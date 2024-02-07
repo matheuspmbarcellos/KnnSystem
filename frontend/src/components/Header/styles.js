@@ -7,51 +7,83 @@ export const HeaderContainer = styled.div`
     color: #f2f2f4;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
 `
 
 export const LoginContainer = styled.div`
-height:50%;
-width: fit-content;
-margin: 30px auto auto 29%;
+    padding-right: 40px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-button1 {
-    padding-left: 5px;
-    font-size: 9px;
-}
+    button1 {
+        padding-left: 5px;
+        font-size: 9px;
+    }
 
-button2 {
-    padding-left: 5px;
-    font-size: 9px;
-}
+    button2 {
+        padding-left: 5px;
+        font-size: 9px;
+    }
 `
 
 export const KNNlogo = styled.button`
-padding-left: 95px;
-height:70px;
-width: 350px;
-background: url(./KNNlogo.png);
-background-size: 85%;
-position: relative;
-background-repeat: no-repeat;
-background-position: center;
-border: none;
+    padding-left: 95px;
+    height:70px;
+    width: 350px;
+    background: url(./KNNlogo.png);
+    background-size: 85%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
 `;
 
+export const UserPerfil = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 10px;
+
+    p1 {
+        font-size: 11px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    p2 {
+        font-size: 10px;
+        color: #FFFFFF;
+    }
+`
+
+export const BtnSair = styled.button`
+    font-size: 10px;
+    color: #FFFFFF;
+    border: none;
+    background-color: #131129;
+    
+    &:hover {
+        color: limegreen;
+      }
+`
 
 export const Usuario = styled.button`
-height:30px;
-width: 30px;
-color: white;
-background: url(./person-circle.svg);
-background-size: 95%;
-background-repeat: no-repeat;
-border: none;
-margin: auto 30px 22px auto;
+    border: 2px solid white;
+    height:30px;
+    width: 30px;
+    color: white;
+    background: url(./person-circle.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
 
-&:hover {
-    transform: scale(1.1);
-  }
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 ;
 
