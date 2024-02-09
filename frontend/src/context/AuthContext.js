@@ -24,7 +24,7 @@ export const AuthProvider = ({children}) => {
             }
         }
         LoadingStoreData();
-    }, []);
+    }, [usuario]);
 
     
 
