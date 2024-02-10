@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Button = styled.button`
     font-weight: bold;
-    padding: 1.5%;
     border-style: none;
     margin-left: 15px;
+    margin-top: 15px;
 
     border-radius: 12px;
     text-decoration: none;
@@ -12,7 +12,7 @@ const Button = styled.button`
     font-size: 0.9em;
     color: white;
     width: fit-content;
-    padding: 7px;
+    padding: 7px 10px;
     
  
 

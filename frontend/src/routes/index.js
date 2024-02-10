@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
+import Informacoes from '../pages/Home/Informacoes';
+import QuemSomos from '../pages/Home/QuemSomos';
 import Login from '../pages/Login';
 import Esqueci from '../pages/Login/Esqueci';
 import BuscarFornecedor from '../pages/Fornecedores/Buscar';
@@ -18,6 +20,8 @@ const MainRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Informacoes" element={<Informacoes />}/>
+            <Route path="/QuemSomos" element={<QuemSomos />}/>
             <Route path="/Login" element={<Login />} />
             <Route path="/Esqueci" element={<Esqueci />}/>
 

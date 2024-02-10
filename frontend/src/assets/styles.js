@@ -10,5 +10,5 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     background-color: #ffffff;
-    flex:1;
+    flex: 1;
 `
