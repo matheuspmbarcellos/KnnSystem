@@ -9,7 +9,7 @@ align-items: center;
 margin-top: 2%;
 }
 
-h1 {
+h2 {
     margin: 20px auto 10px 80%;
     font-weight: 100;
     font-style: italic; 

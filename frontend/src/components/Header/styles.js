@@ -48,13 +48,13 @@ export const UserPerfil = styled.div`
     justify-content: center;
     padding: 10px;
 
-    p1 {
+    h5 {
         font-size: 11px;
         color: #FFFFFF;
         font-weight: bold;
     }
 
-    p2 {
+    h6 {
         font-size: 10px;
         color: #FFFFFF;
     }

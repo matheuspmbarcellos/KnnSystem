@@ -1,18 +1,28 @@
 import { ResultadoContainer, Resultado } from "./styles";
 import Button from "../../../components/Button/Button";
+import { Link } from "react-router-dom";
 
-const ResultadoFornecedor = () => {
+const ResultadoFornecedor = ({data}) => {
   return (
     <ResultadoContainer>
-      <h1>Resultado</h1>
+      <h2>Resultado</h2>
       <Resultado>
-<td>Razão Social</td>
-<td>CNPJ</td>
-<td>Categoria</td>
-<td>Código</td>
-<td>Detalhar</td>
+        <thead>
+          <tr>
+          <td>Razão Social</td>
+          <td>CNPJ</td>
+          <td>Categoria</td>
+          <td>Código</td>
+          <td>Detalhar</td>
+        </tr>
+        </thead>
+        <tbody>
+          {data.map()}
+        </tbody>
       </Resultado>
-      <Button as="a" href="/Fornecedores">Voltar</Button>
+      <Link to={"/BuscarFornecedor"}>
+            <Button>Voltar</Button>
+      </Link>
     </ResultadoContainer>
   )
 }

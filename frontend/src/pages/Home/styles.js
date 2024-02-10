@@ -21,13 +21,13 @@ flex-direction: column;
 margin-left: 80%;
 padding-bottom: 2%;
 
-h1 {
+h3 {
 color: limegreen;
 font-size: 0.7em;
 margin: 1%;
 }
 
-h2 {
+h4 {
 color: #131129;
 font-size: 0.7em;
 font-weight: lighter;
