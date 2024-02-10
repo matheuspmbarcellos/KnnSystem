@@ -21,18 +21,23 @@ h2 {
 export const Resultado = styled.table`
     width: 80%;
     margin-bottom: 5%;
-    border-bottom: solid 1px limegreen;
+    
 
-    td {
+    th {
+        text-align: center;
         font-weight: bold;
         font-size: 12px;
         color: limegreen;
-        padding-bottom: 10px;
+        padding: 10px;
+        border-bottom: solid 1px limegreen;
     }
 
-    th {
-        font-size: 15px;
+    td {
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
         font-weight: 100;
+        border-bottom: solid 1px #cacaca;
     }
 
 
