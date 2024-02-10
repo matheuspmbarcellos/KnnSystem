@@ -6,15 +6,14 @@ export const HomeContainer = styled.div`
 export const Banner = styled.div`
 width: 100%;
 height: 15em;
-background: url(./predio.png);
-background-size: 40%;
+background: no-repeat 80% url(./predio.png);
 margin-bottom:3%;
 `
 
 export const ButtonContainer = styled.div`
 display: flex;
 width: 20%;
-margin-left: 40%;
+margin-left: 35%;
 flex-direction: row;
 `
 
@@ -24,7 +23,6 @@ width: 20%;
 text-align: left;
 flex-direction: column;
 margin-left: 80%;
-
 
 h1 {
 color: limegreen;
