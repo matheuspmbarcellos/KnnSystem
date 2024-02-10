@@ -1,5 +1,26 @@
 import styled from "styled-components";
 
+
+export const menuContratos =
+[
+        {
+            acao: "BUSCAR",
+            link: "./BuscarContratos",
+        },
+        {
+          acao: "CADASTRAR",
+          link: "./CadastrarContratos",
+      },
+      {
+        acao: "ALTERAR",
+        link: "./AlterarContratos",
+    },
+    {
+      acao: "INATIVAR",
+      link: "./InativarContratos",
+  },
+];
+  
 export const ContratosContainer = styled.div`
 width: 100%;
 height: 100%;

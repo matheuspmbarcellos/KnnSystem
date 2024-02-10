@@ -1,10 +1,13 @@
-import { ContratosContainer, InputContainer } from "./styles";
+import { ContratosContainer, InputContainer, menuContratos } from "./styles";
 import MenuCRUD from "../../components/MenuCRUD";
 
 const Contratos = () => {
   return (
     <ContratosContainer>
-        <MenuCRUD/>
+        <MenuCRUD
+          titulo = "CONTRATOS"
+          menuArr = {menuContratos}
+        />
         <InputContainer> 
         </InputContainer> 
 
@@ -12,26 +15,5 @@ const Contratos = () => {
   )
 }
 
-MenuCRUD.defaultProps = {
-  titulo: "CONTRATOS",
-  menuArr: [
-      {
-          acao: "BUSCAR",
-          link: "./BuscarContratos",
-      },
-      {
-        acao: "CADASTRAR",
-        link: "./CadastrarContratos",
-    },
-    {
-      acao: "ALTERAR",
-      link: "./AlterarContratos",
-  },
-  {
-    acao: "INATIVAR",
-    link: "./InativarContratos",
-},
-  ],
-};
 
 export default Contratos;

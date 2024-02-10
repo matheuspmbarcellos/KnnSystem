@@ -1,5 +1,27 @@
 import styled from "styled-components";
 
+
+export const menuFornecedores = 
+ [
+      {
+          acao: "BUSCAR",
+          link: "./BuscarFornecedor",
+      },
+      {
+        acao: "CADASTRAR",
+        link: "./CadastrarFornecedor",
+    },
+    {
+      acao: "ALTERAR",
+      link: "./AlterarFornecedor",
+  },
+  {
+    acao: "INATIVAR",
+    link: "./InativarFornecedor",
+},
+];
+
+  
 export const FornecedoresContainer = styled.div`
 width: 100%;
 height: 100%;

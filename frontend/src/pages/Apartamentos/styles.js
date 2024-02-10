@@ -1,5 +1,28 @@
 import styled from "styled-components";
 
+
+export const menuApartamentos = 
+[
+        {
+            acao: "BUSCAR",
+            link: "./BuscarApartamentos",
+            
+        },
+        {
+          acao: "CADASTRAR",
+          link: "./CadastrarApartamentos",
+      },
+      {
+        acao: "ALTERAR",
+        link: "./AlterarApartamentos",
+    },
+    {
+      acao: "INATIVAR",
+      link: "./InativarApartamentos",
+  },
+];
+
+  
 export const ApartamentosContainer = styled.div`
 width: 100%;
 display: flex;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Button from "../../components/Button/Button";
 
+  
+
 export const MenuButton = styled(Button)`
 color: #131129;
 background: none;
@@ -23,16 +25,14 @@ width: 80%;
 height: 0.8em;
 display: flex;
 flex-direction: row;
-justify-content: center;
 align-items: center;
-;
 `
 
 export const MenuC = styled.div`
 width: 35%;
 display: flex;
 flex-direction: row;
-
+align-items: center;
 `
 
 export const BContainer = styled.div`

@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import EmailEnviado from './pages/Login/EmailEnviado';
 import Fornecedores from './pages/Fornecedores';
 import Pagamento from './pages/Pagamento';
+import ConsultarFaturas from './pages/Pagamento/Consultar';
 import ExtratosFinanceiros from './pages/ExtratoFinanceiros';
 import ExtratosResultado from './pages/ExtratoFinanceiros/ExtratoResultado';
 import Contratos from './pages/Contratos';
@@ -77,6 +78,10 @@ const MainRoutes = () => {
             <Route 
                 path="/Pagamento"
                 element={<Pagamento />}
+            />
+            <Route 
+                path="/ConsultarFaturas"
+                element={<ConsultarFaturas />}
             />
             <Route 
                 path="/ExtratosFinanceiros"

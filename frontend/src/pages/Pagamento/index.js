@@ -1,35 +1,16 @@
-import { PagamentoContainer } from "./styles";
+import { PagamentoContainer, menuPagamento } from "./styles";
 import MenuCRUD from "../../components/MenuCRUD";
+
 const Pagamento = () => {
   return (
     <PagamentoContainer>
-      <MenuCRUD/>
+      <MenuCRUD
+      titulo = "PAGAMENTO"
+      menuArr = {menuPagamento}
+      />
     </PagamentoContainer>
   )
 }
 
-
-MenuCRUD.defaultProps = {
-  titulo: "PAGAMENTO",
-  menuArr: [
-      {
-          acao: "CONSULTAR",
-          link: "./ConsultarFaturas",
-          
-      },
-      {
-        acao: "INCLUIR",
-        link: "./IncluirFaturas",
-    },
-    {
-      acao: "ALTERAR",
-      link: "./AlterarFaturas",
-  },
-  {
-    acao: "INATIVAR",
-    link: "./InativarFaturas",
-},
-  ],
-};
 
 export default Pagamento;

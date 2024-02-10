@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-
 `
 
 export const Valores = styled.div`
 columns: 3;
+
 `
-
-
 
 export const InfosContainer = styled.div`
 width: 70%;
@@ -18,7 +16,6 @@ margin-left: 12%;
 list-style-type:none;
 line-height: 1.8;
 font-size: 1.5em;
-
 
 h1 {
     margin-top: 8%;

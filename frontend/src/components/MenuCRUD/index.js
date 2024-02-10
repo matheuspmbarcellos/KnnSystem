@@ -21,7 +21,7 @@ MenuCRUD.defaultProps = {
   titulo:  "TÍTULO",
   menuArr: [
       {
-          acao: "ALTERAR",
+          acao: "ACAO",
           link: "./Home",
       },
   ],
