@@ -22,15 +22,15 @@ const ResultadoFornecedor = () => {
           </tr>
         </thead>
         <tbody>
-        {fornecedorStore.map((item, index) => (
+        {fornecedorStore.map((fornecedor, index) => (
           <tr key={index}>
-            <td>{item.razaoSocial}</td>
-            <td>{item.cnpj}</td>
-            <td>{item.naturezaDoServico}</td>
-            <td>{item.numeroControle}</td>
+            <td>{fornecedor.razaoSocial}</td>
+            <td>{fornecedor.cnpj}</td>
+            <td>{fornecedor.naturezaDoServico}</td>
+            <td>{fornecedor.numeroControle}</td>
             <td>
-              <Link to={`/DetalhesFornecedor/${item.id}`}>
-              <Button>Detalhar</Button>
+              <Link to={`/DetalharFornecedor/${fornecedor.numeroControle}`}>
+                <Button>Detalhar</Button>
               </Link>
             </td>
           </tr>

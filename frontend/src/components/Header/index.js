@@ -13,8 +13,8 @@ const Header = () => {
       <LoginContainer>
       {signed ? (
           <UserPerfil>
-            <h5>{nome}</h5>
-            <h6>{perfil}</h6>
+            <p className='userName'>{nome}</p>
+            <p className='userProfile'>{perfil}</p>
             <BtnSair onClick={signOut}>sair</BtnSair>
           </UserPerfil>
         ) : null}       

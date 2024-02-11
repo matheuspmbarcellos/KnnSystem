@@ -4,22 +4,22 @@ export const ResultadoContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 2%;
+padding-bottom: 40px;
 }
 
 h2 {
-    margin: 20px auto 10px 80%;
+    margin: 30px auto 30px 80%;
     font-weight: 100;
     font-style: italic; 
     font-size: 95%;
-    margin-bottom: 5%;
 }
+
+
 `
 
 export const Resultado = styled.table`
     width: 80%;
-    margin-bottom: 5%;
-    
+    margin-bottom: 30px;
 
     th {
         text-align: center;

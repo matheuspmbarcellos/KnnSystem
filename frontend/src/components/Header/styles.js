@@ -49,13 +49,13 @@ export const UserPerfil = styled.div`
     justify-content: center;
     padding: 10px;
 
-    h5 {
+    .userName {
         font-size: 11px;
         color: #FFFFFF;
         font-weight: bold;
     }
 
-    h6 {
+    .userProfile {
         font-size: 10px;
         color: #FFFFFF;
     }

@@ -15,6 +15,7 @@ import CadastrarContrato from '../pages/Contratos/Cadastrar'
 import Apartamentos from '../pages/Apartamentos';
 import Relatorios from '../pages/Relatorios';
 import { PrivateRoutes } from './privateRoutes';
+import DetalharFornecedor from '../pages/Fornecedores/Detalhar';
 
 const MainRoutes = () => {
     return (
@@ -34,18 +35,24 @@ const MainRoutes = () => {
             <Route path="/ResultadoFornecedor" element={<PrivateRoutes />}>
                 <Route path="/ResultadoFornecedor" element={<ResultadoFornecedor />} />
             </Route>
+            <Route path="/DetalharFornecedor/:numeroControle" element={<PrivateRoutes />}>
+                <Route path="/DetalharFornecedor/:numeroControle" element={<DetalharFornecedor />} />
+            </Route>
+
             <Route path="/Pagamento" element={<PrivateRoutes />}>
                 <Route path="/Pagamento" element={<Pagamento />} />
             </Route>
             <Route path="/ExtratosFinanceiros" element={<PrivateRoutes />}>
-                <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />
+                <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />                
             </Route>
+
             <Route path="/Contratos" element={<PrivateRoutes />}>
                 <Route path="/Contratos" element={<Contratos />} />
             </Route>
             <Route path="/CadastrarContrato" element={<PrivateRoutes />}>
                 <Route path="/CadastrarContrato" element={<CadastrarContrato />} />
             </Route>
+
             <Route path="/Apartamentos" element={<PrivateRoutes />}>
                 <Route path="/Apartamentos" element={<Apartamentos />} />                
             </Route>
