@@ -56,10 +56,9 @@ const DetalharFornecedor = () => {
               </CorpoContainer>   
             </AlterarContainer>
           </FornecedorContainer>
-          
-            ) : (
-              <p>Nenhum produto selecionado</p>
-              )}
+      ) : (
+        <p>Nenhum Fornecedor selecionado</p>
+        )}
   </>
     )
     
