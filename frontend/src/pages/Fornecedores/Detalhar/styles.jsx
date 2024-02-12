@@ -8,11 +8,11 @@ export const FornecedorContainer = styled.div`
     align-items: left;
     margin-left: 40px;
 
-    h7 {
+    .title {
         font-weight: bold;
         font-size: 25px;
         color: #131129;
-        padding: 40px 0 5px 90px;
+        padding: 40px 0 5px 50px;
     }
 
 `

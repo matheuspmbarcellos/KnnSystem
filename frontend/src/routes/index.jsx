@@ -35,8 +35,8 @@ const MainRoutes = () => {
             <Route path="/ResultadoFornecedor" element={<PrivateRoutes />}>
                 <Route path="/ResultadoFornecedor" element={<ResultadoFornecedor />} />
             </Route>
-            <Route path="/DetalharFornecedor/:numeroControle" element={<PrivateRoutes />}>
-                <Route path="/DetalharFornecedor/:numeroControle" element={<DetalharFornecedor />} />
+            <Route path="/DetalharFornecedor" element={<PrivateRoutes />}>
+                <Route path="/DetalharFornecedor" element={<DetalharFornecedor />} />
             </Route>
 
             <Route path="/Pagamento" element={<PrivateRoutes />}>
