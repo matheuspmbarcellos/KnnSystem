@@ -17,6 +17,7 @@ import Relatorios from '../pages/Relatorios';
 import { PrivateRoutes } from './privateRoutes';
 import DetalharFornecedor from '../pages/Fornecedores/Detalhar';
 import AlterarFornecedor from '../pages/Fornecedores/Alterar';
+import InativarFornecedor from '../pages/Fornecedores/Inativar';
 
 const MainRoutes = () => {
     return (
@@ -41,6 +42,9 @@ const MainRoutes = () => {
             </Route>
             <Route path="/AlterarFornecedor" element={<PrivateRoutes />}>
                 <Route path="/AlterarFornecedor" element={<AlterarFornecedor />} />
+            </Route>
+            <Route path="/InativarFornecedor" element={<PrivateRoutes />}>
+                <Route path="/InativarFornecedor" element={<InativarFornecedor />} />
             </Route>
 
             <Route path="/Pagamento" element={<PrivateRoutes />}>
