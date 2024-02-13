@@ -14,7 +14,6 @@ import Contratos from '../pages/Contratos';
 import CadastrarContrato from '../pages/Contratos/Cadastrar'
 import Apartamentos from '../pages/Apartamentos';
 import Relatorios from '../pages/Relatorios';
-import { PrivateRoutes } from './privateRoutes';
 import DetalharFornecedor from '../pages/Fornecedores/Detalhar';
 import AlterarFornecedor from '../pages/Fornecedores/Alterar';
 import InativarFornecedor from '../pages/Fornecedores/Inativar';
@@ -27,46 +26,19 @@ const MainRoutes = () => {
             <Route path="/QuemSomos" element={<QuemSomos />}/>
             <Route path="/Login" element={<Login />} />
             <Route path="/Esqueci" element={<Esqueci />}/>
-
-            <Route path="/BuscarFornecedor" element={<PrivateRoutes />}>
-                <Route path="/BuscarFornecedor" element={<BuscarFornecedor />} />
-            </Route>
-            <Route path="/CadastrarFornecedor" element={<PrivateRoutes />}>
-                <Route path="/CadastrarFornecedor" element={<CadastrarFornecedor />} />
-            </Route>
-            <Route path="/ResultadoFornecedor" element={<PrivateRoutes />}>
-                <Route path="/ResultadoFornecedor" element={<ResultadoFornecedor />} />
-            </Route>
-            <Route path="/DetalharFornecedor" element={<PrivateRoutes />}>
-                <Route path="/DetalharFornecedor" element={<DetalharFornecedor />} />
-            </Route>
-            <Route path="/AlterarFornecedor" element={<PrivateRoutes />}>
-                <Route path="/AlterarFornecedor" element={<AlterarFornecedor />} />
-            </Route>
-            <Route path="/InativarFornecedor" element={<PrivateRoutes />}>
-                <Route path="/InativarFornecedor" element={<InativarFornecedor />} />
-            </Route>
-
-            <Route path="/Pagamento" element={<PrivateRoutes />}>
-                <Route path="/Pagamento" element={<Pagamento />} />
-            </Route>
-            <Route path="/ExtratosFinanceiros" element={<PrivateRoutes />}>
-                <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />                
-            </Route>
-
-            <Route path="/Contratos" element={<PrivateRoutes />}>
-                <Route path="/Contratos" element={<Contratos />} />
-            </Route>
-            <Route path="/CadastrarContrato" element={<PrivateRoutes />}>
-                <Route path="/CadastrarContrato" element={<CadastrarContrato />} />
-            </Route>
-
-            <Route path="/Apartamentos" element={<PrivateRoutes />}>
-                <Route path="/Apartamentos" element={<Apartamentos />} />                
-            </Route>
-            <Route path="/Relatorios" element={<PrivateRoutes />}>
-                <Route path="/Relatorios" element={<Relatorios />} />                
-            </Route>
+            <Route path="/BuscarFornecedor" element={<BuscarFornecedor />} />
+            <Route path="/CadastrarFornecedor" element={<CadastrarFornecedor />} />
+            <Route path="/ResultadoFornecedor" element={<ResultadoFornecedor />} />
+            <Route path="/DetalharFornecedor" element={<DetalharFornecedor />} />
+            <Route path="/AlterarFornecedor" element={<AlterarFornecedor />} />
+            <Route path="/InativarFornecedor" element={<InativarFornecedor />} />
+            <Route path="/Pagamento" element={<Pagamento />} />
+            <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />                
+            <Route path="/Contratos" element={<Contratos />} />
+            <Route path="/CadastrarContrato" element={<CadastrarContrato />} />
+            <Route path="/Apartamentos" element={<Apartamentos />} />                
+            <Route path="/Relatorios" element={<Relatorios />} />                
+            
         </Routes>
     )
 }

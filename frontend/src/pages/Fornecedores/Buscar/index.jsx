@@ -2,26 +2,16 @@
 import { FornecedoresContainer, InputContainer} from "./styles";
 import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
-import { useContext, useState } from "react";
-import { FornecedorContext } from "../../../context/FornecedorContext";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const BuscarFornecedor = () => {
   const [cnpj, setCnpj] = useState('');
   const [razaoSocial, setRazaoSocial] = useState('');
   const [numeroContrato, setNumeroContrato] = useState('');
-  const { buscarParams } = useContext(FornecedorContext)
   const navigate = useNavigate();
 
   const handleExibirResultado = (e) => {
-      e.preventDefault();
-      const input = {
-        cnpj,
-        razaoSocial,
-        numeroContrato
-      };
-      
-      buscarParams(input);
       navigate("/ResultadoFornecedor");
       
   };

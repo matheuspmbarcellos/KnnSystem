@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom';
 import { NavbarContainer, NavbarContent } from './styles'
-import { useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
-  const {signed} = useContext(AuthContext);
 
-  if (signed) {
+
       return (
         <NavbarContainer>
           <hr/> 
@@ -57,8 +54,7 @@ const Navbar = () => {
             <Link to={"/Relatorios"}>Relatórios</Link>
           </NavbarContent>
       </NavbarContainer>  
-    )
-  }  
+    ) 
 }
 
 export default Navbar;
