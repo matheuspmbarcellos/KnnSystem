@@ -1,4 +1,4 @@
-import { ResultadoContainer, Resultado } from "./styles";
+import { ResultadoContainer, Resultado, DetailButton, EditButton, DisableButton } from "./styles";
 import Button from "../../../components/Button/Button";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +16,10 @@ const ResultadoFornecedor = () => {
   const handleEditar = (fornecedor) => {
     setFornecedorDetail(fornecedor)
     navigate("/AlterarFornecedor");
+  };
+  const handleInativar = (fornecedor) => {
+    setFornecedorDetail(fornecedor)
+    navigate("/InativarFornecedor");
   };
 
 
@@ -40,8 +44,9 @@ const ResultadoFornecedor = () => {
             <td>{fornecedor.naturezaDoServico}</td>
             <td>{fornecedor.numeroControle}</td>
             <td>
-                <Button onClick={() => handleExibirDetail(fornecedor)}>Detalhar</Button>
-                <Button onClick={() => handleEditar(fornecedor)}>Editar</Button>
+                <DetailButton onClick={() => handleExibirDetail(fornecedor)} />
+                <EditButton onClick={() => handleEditar(fornecedor)} />
+                <DisableButton onClick={() => handleInativar(fornecedor)} />
             </td>
           </tr>
         ))}

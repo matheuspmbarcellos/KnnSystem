@@ -37,6 +37,46 @@ export const Resultado = styled.table`
         font-weight: 100;
         border-bottom: solid 1px #cacaca;
     }
-
-
 `
+export const DetailButton = styled.button`
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url(../detail-open.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+export const EditButton = styled.button`
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url(../edit-open.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+export const DisableButton = styled.button`
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url(../inativar.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
