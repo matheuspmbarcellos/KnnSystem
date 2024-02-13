@@ -168,7 +168,7 @@ const AlterarFornecedor = () => {
                   {editing ? 'Cancelar' : 'Editar'}
                 </Button>
                 {editing && (
-                  <Button onClick={handleSaveChanges}>Salvar Alterações</Button>
+                  <Button onClick={handleSaveChanges}>Salvar</Button>
                 )}
               </center>
             </CorpoContainer>
