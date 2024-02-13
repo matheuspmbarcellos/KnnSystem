@@ -23,7 +23,6 @@ flex-direction: column;
 align-items: center;
 margin-top: 3%;
 
-
 input {
     color: #131129;
     background-color: #131129;

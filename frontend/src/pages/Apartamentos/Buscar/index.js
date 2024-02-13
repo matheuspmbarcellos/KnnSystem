@@ -22,15 +22,15 @@ const BuscarApartamentos = () => {
 const formArr = [
   {
     name: "Controle",
-    placeholder: "Número de Controle",
+    placeholder: "Número de controle",
   },
   { 
     name: "Apt",
-    placeholder: "Número do Apartamento",
+    placeholder: "Número do apartamento",
   },
   { 
     name: "Bloco",
-    placeholder: "Bloco",
+    placeholder: "bloco",
   },
 
 ];

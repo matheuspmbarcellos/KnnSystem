@@ -1,16 +1,35 @@
-import * as React from "react";
-import { ResultadoContainer } from "./styles";
-import Button from "../../../components/Button/Button";
-import Table from "../../../components/Table";
+import { ResultadoContainer, Resultado, Editar, Deletar, Exibir, ButtonContainer } from "./styles";
 
-const ResultadoApartamento = () => {
+const ResultadoApartamentos = () => {
   return (
     <ResultadoContainer>
-      <h1>Resultado</h1>
-      <Table/>
-      <Button as="a" href="/AlterarApt">ALTERAR</Button>
-    </ResultadoContainer>
-  )
-}
+      <h2>Resultado</h2>
+      <Resultado>
+        <thead>
+          <tr>
+          <th>Número do Controle</th>
+          <th>Número do Apartamento</th>
+          <th>Bloco</th>
+          <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>00304</td>
+          <td>304</td>
+          <td>02</td>
+          <td>
+            <ButtonContainer>
+              <Exibir/>
+              <Editar/>
+              <Deletar/>
+            </ButtonContainer>
+          </td>
+        </tbody>
 
-export default ResultadoApartamento;
+      </Resultado>
+
+    </ResultadoContainer>
+
+  )
+  }
+export default ResultadoApartamentos;

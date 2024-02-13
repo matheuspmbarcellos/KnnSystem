@@ -13,6 +13,7 @@ import ExtratosFinanceiros from './pages/ExtratoFinanceiros';
 import ExtratosResultado from './pages/ExtratoFinanceiros/ExtratoResultado';
 import Contratos from './pages/Contratos';
 import Apartamentos from './pages/Apartamentos';
+import InativarApt from './pages/Apartamentos/AlterarApt';
 import Relatorios from './pages/Relatorios';
 import CadastrarFornecedor from './pages/Fornecedores/Cadastrar';
 import BuscarFornecedor from './pages/Fornecedores/Buscar';
@@ -24,7 +25,7 @@ import BuscarApartamentos from './pages/Apartamentos/Buscar';
 import CadastrarApartamentos from './pages/Apartamentos/Cadastrar';
 import InativarApartamentos from './pages/Apartamentos/Inativar';
 import AlterarApartamentos from './pages/Apartamentos/Alterar';
-import ResultadoApartamento from './pages/Apartamentos/Resultado';
+import ResultadoApartamentos from './pages/Apartamentos/Resultado';
 import AlterarApt from './pages/Apartamentos/AlterarApt';
 
 const MainRoutes = () => {
@@ -122,6 +123,10 @@ const MainRoutes = () => {
                 path="/InativarApartamentos"
                 element={<InativarApartamentos />}
             />
+                          <Route 
+                path="/InativarApt"
+                element={<InativarApt />}
+            />
             <Route 
                 path="/AlterarApartamentos"
                 element={<AlterarApartamentos />}
@@ -133,8 +138,8 @@ const MainRoutes = () => {
             />
 
             <Route 
-                path="/ResultadoApartamento"
-                element={<ResultadoApartamento />}
+                path="/ResultadoApartamentos"
+                element={<ResultadoApartamentos />}
             /> 
             <Route 
                 path="/Relatorios"

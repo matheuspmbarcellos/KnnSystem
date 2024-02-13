@@ -56,7 +56,7 @@ dado{
 
 `
 
-export const AlterarContainer = styled.div`
+export const InativarContainer = styled.div`
 font-size: 14px;
 color: #131129;
 display: flex;

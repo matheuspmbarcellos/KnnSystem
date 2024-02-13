@@ -1,5 +1,5 @@
 import Apartamentos from "..";
-import { ApartamentosContainer, InputContainer } from "../styles";
+import { ApartamentosContainer, InputContainer } from "./styles";
 import Form from "../../../components/Form";
 
 const AlterarApartamentos = () => {

@@ -1,6 +1,7 @@
-import { AlterarContainer, ApartamentosContainer, SubtituloContainer, CorpoContainer, ButtonContainer } from "./styles";
+import { InativarContainer, ApartamentosContainer, SubtituloContainer, CorpoContainer, ButtonContainer } from "./styles";
 import Button from "../../../components/Button/Button";
-const AlterarApt = () => {
+
+const InativarApt = () => {
 
   return (
     <ApartamentosContainer>
@@ -11,8 +12,8 @@ const AlterarApt = () => {
            <h2>Status</h2>
         </SubtituloContainer>
 
-        <AlterarContainer>
-        
+      <InativarContainer>
+
           <CorpoContainer>
             <titulo>Número do Apartamento</titulo>
             <dado>208</dado>
@@ -23,10 +24,10 @@ const AlterarApt = () => {
 
           </CorpoContainer>
 
-        </AlterarContainer>
+        </InativarContainer>
           
         <ButtonContainer> 
-          <Button as="a">Alterar</Button>
+          <Button as="a">Inativar</Button>
           </ButtonContainer>
 
     </ApartamentosContainer>
@@ -34,4 +35,4 @@ const AlterarApt = () => {
 }
 
 
-export default AlterarApt;
+export default InativarApt;
