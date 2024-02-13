@@ -2,7 +2,6 @@ import { CadastrarContainer, InputContainer, BodyContainer, InputContainerRow } 
 import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
 import { useState } from "react";
-import { api } from "../../../services/api";
 
 const CadastrarFornecedor = () => {
   const [razaoSocial, setRazaoSocial] = useState("")  
@@ -20,32 +19,8 @@ const CadastrarFornecedor = () => {
   const [emailCorporativo, setEmailCorporativo] = useState("")  
 
   const submit = async () => {
-    try {
-      const response = await api.post('/fornecedor/api/cadastra', {
-        razaoSocial,
-        cnpj,
-        domicilioBancario: {
-          agencia,
-          contaCorrente,
-          banco,
-          pix,
-        },
-        responsavel: {
-          nome,
-          cpf,
-          telefone,
-          email,
-        },
-        enderecoCompleto,
-        naturezaDoServico,
-        emailCorporativo,
-      });
-      console.log('Fornecedor cadastrado com sucesso:', response.data);
       alert('Fornecedor cadastrado com sucesso!')
       handleLimparFormulario();
-    } catch (error) {
-      console.error('Erro ao cadastrar fornecedor:', error);
-    }
   }; 
 
   const handleLimparFormulario = () => {

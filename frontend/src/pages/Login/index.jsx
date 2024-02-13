@@ -1,30 +1,17 @@
 import { ButtonContainer, LoginContainer } from './styles';
 import Button from '../../components/Button/Button';
 import ButtonSecondary from '../../components/Button/ButtonSecondary';
-import { useContext, useState } from 'react';
-import { AuthContext } from '../../context/AuthContext';
-import { Navigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Login = () => {
   const [login, setLogin] = useState("")
   const [password, setPassword] = useState("")
-  const { signIn, signed } = useContext(AuthContext)
 
   const handleSignIn = async (e) => {
     e.preventDefault()
-    
-    const data = {
-      login,
-      password
-    };
-
-    await signIn(data.login,data.password);
   }
 
-  if (signed) {
-    return <Navigate to="/"/>
-  } else {
-    return (
+  return (
       <LoginContainer>      
         <h1>Login</h1>
         <form onSubmit={handleSignIn}>
@@ -52,7 +39,6 @@ const Login = () => {
       </LoginContainer>
       
     )
-  }
 }
 
 export default Login;
