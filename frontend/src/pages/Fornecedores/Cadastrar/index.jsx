@@ -42,9 +42,27 @@ const CadastrarFornecedor = () => {
       });
       console.log('Fornecedor cadastrado com sucesso:', response.data);
       alert('Fornecedor cadastrado com sucesso!')
+      handleLimparFormulario();
     } catch (error) {
       console.error('Erro ao cadastrar fornecedor:', error);
     }
+  }; 
+
+  const handleLimparFormulario = () => {
+    setRazaoSocial("")
+    seteCnpj("")
+    seteAgencia("")
+    setContaCorrente("")
+    setBanco("")
+    setPix("")
+    setNome("")
+    setCpf("")
+    setTelefone("")
+    setEmail("")
+    setEnderecoCompleto("")
+    setNaturezaDoServico("") 
+    setEmailCorporativo("")
+
   };
 
 
