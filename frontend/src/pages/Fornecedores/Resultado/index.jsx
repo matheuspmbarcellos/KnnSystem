@@ -1,7 +1,7 @@
 import { ResultadoContainer, Resultado } from "./styles";
 import Button from "../../../components/Button/Button";
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FornecedorContext } from "../../../context/FornecedorContext";
 
 const ResultadoFornecedor = () => {  
@@ -11,6 +11,11 @@ const ResultadoFornecedor = () => {
   const handleExibirDetail = (fornecedor) => {
     setFornecedorDetail(fornecedor)
     navigate("/DetalharFornecedor");
+  };
+
+  const handleEditar = (fornecedor) => {
+    setFornecedorDetail(fornecedor)
+    navigate("/AlterarFornecedor");
   };
 
 
@@ -24,7 +29,7 @@ const ResultadoFornecedor = () => {
           <th>CNPJ</th>
           <th>Categoria</th>
           <th>Código</th>
-          <th>Detalhar</th>
+          <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -35,17 +40,14 @@ const ResultadoFornecedor = () => {
             <td>{fornecedor.naturezaDoServico}</td>
             <td>{fornecedor.numeroControle}</td>
             <td>
-              {/* <Link to={`/DetalharFornecedor/${fornecedor.numeroControle}`}> */}
                 <Button onClick={() => handleExibirDetail(fornecedor)}>Detalhar</Button>
-              {/* </Link> */}
+                <Button onClick={() => handleEditar(fornecedor)}>Editar</Button>
             </td>
           </tr>
         ))}
         </tbody>
       </Resultado>
-      <Link to={"/BuscarFornecedor"}>
-            <Button>Voltar</Button>
-      </Link>
+      <Button onClick={() => navigate(-1)}>Voltar</Button>
     </ResultadoContainer>
   )
 }

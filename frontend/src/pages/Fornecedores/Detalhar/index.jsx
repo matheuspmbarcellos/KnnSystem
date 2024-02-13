@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { AlterarContainer, FornecedorContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "./styles";
 import { FornecedorContext } from "../../../context/FornecedorContext";
+import { useNavigate } from "react-router-dom";
+import Button from "../../../components/Button/Button";
 
 
 const DetalharFornecedor = () => {
   const { fornecedorDetail } = useContext(FornecedorContext);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -53,7 +56,12 @@ const DetalharFornecedor = () => {
                 <Dado>Banco: {fornecedorDetail.domicilioBancario.banco}</Dado>
                 <Dado>PIX: {fornecedorDetail.domicilioBancario.pix}</Dado>
               </CorpoContent>
-              </CorpoContainer>   
+              </CorpoContainer>  
+              <CorpoContainer>
+                <center>
+                  <Button onClick={() => navigate(-1)}>Voltar</Button>
+                </center>
+              </CorpoContainer> 
             </AlterarContainer>
           </FornecedorContainer>
       ) : (

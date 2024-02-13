@@ -20,7 +20,8 @@ export const SubtituloContainer = styled.div`
 display: flex;
 flex-direction: column;
 height: 20px;
-width: 50%;
+min-width: 400px;
+width: 800px;
 align-items: left;
 padding: 10px 0 10px 0;
 
@@ -58,9 +59,10 @@ font-size: 14px;
 color: #131129;
 display: flex;
 flex-direction: column;
-margin-left: 7%;
-margin-top: 4%;
-margin-right: 20%;
+margin-left: 60px;
+margin-top: 40px;
+margin-bottom: 40px;
+margin-right: 150px;
 `
 
 export const CorpoContent = styled.div`

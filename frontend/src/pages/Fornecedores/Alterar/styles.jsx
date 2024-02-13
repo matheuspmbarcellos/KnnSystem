@@ -7,12 +7,13 @@ export const FornecedorContainer = styled.div`
     flex-direction: column;
     align-items: left;
     margin-left: 40px;
+    padding-bottom: 20px;
 
-    h7 {
+    .title {
         font-weight: bold;
         font-size: 25px;
         color: #131129;
-        padding: 40px 0 5px 90px;
+        padding: 40px 0 5px 50px;
     }
 
 `
@@ -20,7 +21,8 @@ export const SubtituloContainer = styled.div`
 display: flex;
 flex-direction: column;
 height: 20px;
-width: 50%;
+min-width: 400px;
+width: 800px;
 align-items: left;
 padding: 10px 0 10px 0;
 
@@ -58,15 +60,41 @@ font-size: 14px;
 color: #131129;
 display: flex;
 flex-direction: column;
-margin-left: 7%;
-margin-top: 4%;
-margin-right: 20%;
+margin-left: 60px;
+margin-top: 40px;
+margin-bottom: 40px;
+margin-right: 150px;
+`
+
+export const CorpoContent = styled.div`
+    min-height: 70px;
 `
 
 export const Titulo = styled.div`
     font-weight: bolder;
+    margin-bottom: 4px;
 `
 export const Dado = styled.div`
     font-weight: lighter;
-    margin-bottom: 30%;
+    margin-bottom: 2px;
+`
+export const InputContainer = styled.div`
+width: 210px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+input {
+    width: 100%;
+    color: #131129;
+    height: 20px;
+    border-bottom: 1px solid #131129;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:focus {
+        color: limegreen;
+        outline: none;
+    }
 `
