@@ -7,13 +7,16 @@ const AlterarApartamentos = () => {
   return (
     <ApartamentosContainer>
         <Apartamentos/>
+
         <InputContainer> 
         <Form
           formArr={formArr}
           submitBtn={"Exibir"}   
           linkSubmit={"./AlterarApt"} 
         />
+        
         </InputContainer> 
+
     </ApartamentosContainer>
   )
 }
