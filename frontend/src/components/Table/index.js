@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ResultadoContainer, Deletar, Detalhar, Editar } from "./styles";
+import { ResultadoContainer, Deletar, Detalhar, Editar, ButtonContainer } from "./styles";
 import resultado from "./mock-resultado.json";
 import { useTable } from "react-table";
 
@@ -59,9 +59,11 @@ return (
                       {cell.render("Cell")}
                     </td>
                  ))} 
-                   <Detalhar/>
-                    <Editar/>
-                    <Deletar/>
+                   <ButtonContainer>
+                      <Detalhar/>
+                      <Editar/>
+                      <Deletar/>
+                    </ButtonContainer>
                </tr>
             );
             })}

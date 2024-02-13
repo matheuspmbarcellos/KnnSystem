@@ -15,9 +15,7 @@ h1 {
     margin: 45px 10px 10px 10px;
 }
 
-hr {
-    border-top: limegreen 0.6px;
-}
+
 
 `
 

@@ -51,16 +51,11 @@ tbody {
 
 
 export const Deletar = styled.button`
-background: url();
-background-repeat: no-repeat;
-background-position: center;
-background: url(./x-circle-fill.svg);
-background-size: 95%;
+background: url(./trash3-fill.svg) no-repeat;
+background-size: cover;
 border: none;
-height: 30px;
-width: fit-to-content;
-color: limegreen;
-padding: 5px;
+height: 15px;
+width: 15px;
 
 &:hover {
     color: red;
@@ -69,22 +64,25 @@ padding: 5px;
 
 `
 
+export const ButtonContainer = styled.div`
+display: flex;
+flex-direction: row;
+margin-top: 12px;
+width: 60%;
+`
 
 export const Editar = styled.button`
-height:25px;
-width: 25px;
-color: limegreen;
-background-color: black;
-background: url(./person-circle.svg);
-background-size: 95%;
+height: 15px;
+width: 15px;
+background: url(./pencil-square.svg);
+background-size: cover;
 background-repeat: no-repeat;
 border: none;
 margin: auto;
 
 &:hover {
-    color: black;
+    color:  #131129;
     cursor: pointer;
-
   }
 `
 
@@ -93,12 +91,11 @@ margin: auto;
 
 
 export const Detalhar = styled.button`
-background: url(./file-view.svg);
-color: limegreen;
-padding: 5px;
+background: url(./file-earmark-text.svg);
 border: none;
-height:17px;
-width: fit-to-content;
+height:15px;
+width: 15px;
+background-size: cover;
 
 &:hover {
     color: #131129;

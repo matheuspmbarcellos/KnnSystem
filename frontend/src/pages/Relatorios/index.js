@@ -10,12 +10,10 @@ const Relatorios = () => {
           <Button>Boletos em aberto</Button>
           <Button>Fornecedores ativos</Button>
         </ButtonContainer>
-        <hr/>
         <ButtonContainer>
           <Button>Despesas por competência</Button>
           <Button>Receitas por competência</Button>
         </ButtonContainer>
-        <hr/>
         <ButtonContainer>
           <Button>Contratos vigentes</Button>
           <Button>Contratos vencidos</Button>
