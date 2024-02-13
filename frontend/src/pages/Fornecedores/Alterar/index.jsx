@@ -162,7 +162,7 @@ const AlterarFornecedor = () => {
               </CorpoContent>
             </CorpoContainer>
             <CorpoContainer>
-              <center>
+              <center className="bottom">
                 <Button onClick={() => navigate(-1)}>Voltar</Button>
                 <Button onClick={() => setEditing(!editing)}>
                   {editing ? 'Cancelar' : 'Editar'}

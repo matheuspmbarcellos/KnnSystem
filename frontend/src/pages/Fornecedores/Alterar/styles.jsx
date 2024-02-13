@@ -64,9 +64,15 @@ margin-left: 60px;
 margin-top: 40px;
 margin-bottom: 40px;
 margin-right: 150px;
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
 `
 
 export const CorpoContent = styled.div`
+    width: 260px;
     min-height: 70px;
 `
 
@@ -79,10 +85,11 @@ export const Dado = styled.div`
     margin-bottom: 2px;
 `
 export const InputContainer = styled.div`
-width: 210px;
+width: 260px;
 display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: space-around;
 
 input {
     width: 100%;
