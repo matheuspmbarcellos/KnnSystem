@@ -15,9 +15,7 @@ const Navbar = () => {
               <button className="dropbtn"><Link to={"/BuscarFornecedor"}>Fornecedores</Link></button>
               <div className="dropdown-content">
                   <Link to={"/BuscarFornecedor"}>Buscar</Link><hr/>
-                  <Link to={"/CadastrarFornecedor"}>Cadastrar</Link><hr/>
-                  <Link to={"/AlterarFornecedor"}>Alterar</Link><hr/>
-                  <Link to={"/InativarFornecedor"}>Inativar</Link><hr/>              
+                  <Link to={"/CadastrarFornecedor"}>Cadastrar</Link><hr/>            
               </div>
             </div>
       
@@ -28,9 +26,7 @@ const Navbar = () => {
                 <button className="dropbtn"><Link to={"/BuscarPagamentos"}>Pagamento</Link></button>
                 <div className="dropdown-content">
                     <Link to={"/BuscarPagamentos"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarPagamentos"}>Cadastrar</Link><hr/>
-                    <Link to={"/AlterarPagamentos"}>Alterar</Link><hr/>
-                    <Link to={"/InativarPagamentos"}>Inativar</Link><hr/>      
+                    <Link to={"/CadastrarPagamentos"}>Cadastrar</Link><hr/>    
                 </div>
             </div>
           
@@ -38,9 +34,7 @@ const Navbar = () => {
                 <button className="dropbtn"><Link to={"/BuscarContratos"}>Contratos</Link></button>
                 <div className="dropdown-content">
                     <Link to={"/BuscarContratos"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarContratos"}>Cadastrar</Link><hr/>
-                    <Link to={"/AlterarContratos"}>Alterar</Link><hr/>
-                    <Link to={"/InativarContratos"}>Inativar</Link><hr/>      
+                    <Link to={"/CadastrarContratos"}>Cadastrar</Link><hr/>  
                 </div>
             </div>
       
@@ -48,9 +42,7 @@ const Navbar = () => {
                 <button className="dropbtn"><Link to={"/BuscarApartamento"}>Apartamentos</Link></button>
                 <div className="dropdown-content">
                     <Link to={"/BuscarApartamento"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarApartamento"}>Cadastrar</Link><hr/>
-                    <Link to={"/AlterarApartamento"}>Alterar</Link><hr/>
-                    <Link to={"/InativarApartamento"}>Inativar</Link><hr/>      
+                    <Link to={"/CadastrarApartamento"}>Cadastrar</Link><hr/>   
                 </div>
             </div>
     
