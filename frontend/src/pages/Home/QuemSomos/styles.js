@@ -16,7 +16,7 @@ margin-top: 8%;
 width: 70%;
 text-align: left;
 align: center;
-margin-left: 12%;
+margin-left: 15%;
 list-style-type:none;
 line-height: 1.8;
 font-size: 1.5em;
@@ -29,12 +29,13 @@ h1 {
     color: white;
     width: fit-content;
     border-radius: 6px;
-    padding: 0 5px 0 5px;
     margin-top: 8%;
     }
 
+    h2{
+        font-size: .5em;
+    }
 p{
-    font-size: 22px;
     padding: 1%;
     margin-bottom: 3%;
 }
