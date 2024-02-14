@@ -1,4 +1,4 @@
-import { CadastrarContainer, InputContainer, BodyContainer, InputContainerRow } from "./styles";
+import { CadastrarContainer, InputContainer, BodyContainer, InputContainerRow } from "../../../components/PagesStyles/cadastrar";
 import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
 import { useState } from "react";

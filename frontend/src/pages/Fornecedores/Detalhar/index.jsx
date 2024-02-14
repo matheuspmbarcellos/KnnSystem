@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AlterarContainer, FornecedorContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "./styles";
+import { AlterarContainer, PageContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/detalhar";
 import { FornecedorContext } from "../../../context/FornecedorContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button/Button";
@@ -12,7 +12,7 @@ const DetalharFornecedor = () => {
   return (
     <>
     {fornecedorDetail ? (
-        <FornecedorContainer>
+        <PageContainer>
           <p className="title">{fornecedorDetail.razaoSocial}</p>
             <SubtituloContainer>
               <ul>
@@ -58,12 +58,12 @@ const DetalharFornecedor = () => {
               </CorpoContent>
               </CorpoContainer>  
               <CorpoContainer>
-                <center>
+                <center className="bottom">
                   <Button onClick={() => navigate(-1)}>Voltar</Button>
                 </center>
               </CorpoContainer> 
             </AlterarContainer>
-          </FornecedorContainer>
+          </PageContainer>
       ) : (
         <p>Nenhum Fornecedor selecionado</p>
         )}

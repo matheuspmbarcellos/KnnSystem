@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FornecedoresContainer = styled.div`
+export const PageContainer = styled.div`
 
     display: flex;
     flex-direction: column;

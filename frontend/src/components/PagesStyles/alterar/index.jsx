@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const FornecedorContainer = styled.div`
+export const PageContainer = styled.div`
     width: 100%;
     height: 90%;
     display: flex;
     flex-direction: column;
     align-items: left;
     margin-left: 40px;
+    padding-bottom: 20px;
 
     .title {
         font-weight: bold;
@@ -63,9 +64,15 @@ margin-left: 60px;
 margin-top: 40px;
 margin-bottom: 40px;
 margin-right: 150px;
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
 `
 
 export const CorpoContent = styled.div`
+    width: 260px;
     min-height: 70px;
 `
 
@@ -76,4 +83,25 @@ export const Titulo = styled.div`
 export const Dado = styled.div`
     font-weight: lighter;
     margin-bottom: 2px;
+`
+export const InputContainer = styled.div`
+width: 260px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+
+input {
+    width: 100%;
+    color: #131129;
+    height: 20px;
+    border-bottom: 1px solid #131129;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:focus {
+        color: limegreen;
+        outline: none;
+    }
 `

@@ -1,4 +1,4 @@
-import { ResultadoContainer, Resultado, DetailButton, EditButton, DisableButton } from "./styles";
+import { ResultadoContainer, Resultado, DetailButton, EditButton, DisableButton } from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";

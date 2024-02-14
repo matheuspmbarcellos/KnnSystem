@@ -10,12 +10,6 @@ const MenuApartamentos = () => {
             <Link to={"/CadastrarApartamento"}>
               <MenuButton>CADASTRAR</MenuButton>
             </Link>
-            <Link to={"/AlterarApartamento"}>
-              <MenuButton>ALTERAR</MenuButton>
-            </Link>
-            <Link to={"/InativarApartamento"}>
-              <MenuButton>INATIVAR</MenuButton>
-            </Link>
         </ButtonContainer>
   )
 }

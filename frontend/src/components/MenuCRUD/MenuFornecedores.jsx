@@ -10,13 +10,6 @@ const MenuFornecedores = () => {
             <Link to={"/CadastrarFornecedor"}>
               <MenuButton>CADASTRAR</MenuButton>
             </Link>
-            <Link to={"/AlterarFornecedor"}>
-              <MenuButton>ALTERAR</MenuButton>
-            </Link>
-            <Link to={"/InativarFornecedor"}>
-              <MenuButton>INATIVAR</MenuButton>
-            </Link>
-
         </ButtonContainer>
   )
 }

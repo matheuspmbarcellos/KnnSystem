@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AlterarContainer, FornecedorContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "./styles";
+import { AlterarContainer, PageContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/inativar";
 import { FornecedorContext } from "../../../context/FornecedorContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button/Button";
@@ -17,7 +17,7 @@ const InativarFornecedor = () => {
   return (
     <>
     {fornecedorDetail ? (
-        <FornecedorContainer>
+        <PageContainer>
           <p className="title">{fornecedorDetail.razaoSocial}</p>
             <SubtituloContainer>
               <ul>
@@ -63,13 +63,13 @@ const InativarFornecedor = () => {
               </CorpoContent>
               </CorpoContainer>  
               <CorpoContainer>
-                <center>
+                <center className="bottom">
                   <Button onClick={() => navigate(-1)}>Voltar</Button>
-                  <Button onClick={() => handleInativarFornecedor(fornecedorDetail.id)}>Inativar</Button>
+                  <Button onClick={() => handleInativarFornecedor(fornecedorDetail.id)} className="warning">Inativar</Button>
                 </center>
               </CorpoContainer> 
             </AlterarContainer>
-          </FornecedorContainer>
+          </PageContainer>
       ) : (
         <p>Nenhum Fornecedor selecionado</p>
         )}

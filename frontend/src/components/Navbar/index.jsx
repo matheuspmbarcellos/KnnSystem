@@ -45,12 +45,12 @@ const Navbar = () => {
             </div>
       
             <div className="dropdown">
-                <button className="dropbtn"><Link to={"/BuscarApartamentos"}>Apartamentos</Link></button>
+                <button className="dropbtn"><Link to={"/BuscarApartamento"}>Apartamentos</Link></button>
                 <div className="dropdown-content">
-                    <Link to={"/BuscarApartamentos"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarApartamentos"}>Cadastrar</Link><hr/>
-                    <Link to={"/AlterarApartamentos"}>Alterar</Link><hr/>
-                    <Link to={"/InativarApartamentos"}>Inativar</Link><hr/>      
+                    <Link to={"/BuscarApartamento"}>Buscar</Link><hr/>
+                    <Link to={"/CadastrarApartamento"}>Cadastrar</Link><hr/>
+                    <Link to={"/AlterarApartamento"}>Alterar</Link><hr/>
+                    <Link to={"/InativarApartamento"}>Inativar</Link><hr/>      
                 </div>
             </div>
     

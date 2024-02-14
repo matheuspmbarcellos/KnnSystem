@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { PrivateRoutes } from './privateRoutes';
 
 import Home from '../pages/Home';
 import Informacoes from '../pages/Home/Informacoes';
@@ -8,16 +9,15 @@ import Esqueci from '../pages/Login/Esqueci';
 import BuscarFornecedor from '../pages/Fornecedores/Buscar';
 import CadastrarFornecedor from '../pages/Fornecedores/Cadastrar';
 import ResultadoFornecedor from '../pages/Fornecedores/Resultado';
-import Pagamento from '../pages/Pagamento';
-import ExtratosFinanceiros from '../pages/ExtratoFinanceiros';
-import Contratos from '../pages/Contratos';
-import CadastrarContrato from '../pages/Contratos/Cadastrar'
-import Apartamentos from '../pages/Apartamentos';
-import Relatorios from '../pages/Relatorios';
-import { PrivateRoutes } from './privateRoutes';
 import DetalharFornecedor from '../pages/Fornecedores/Detalhar';
 import AlterarFornecedor from '../pages/Fornecedores/Alterar';
 import InativarFornecedor from '../pages/Fornecedores/Inativar';
+import BuscarApartamento from '../pages/Apartamento/Buscar';
+import CadastrarApartamento from '../pages/Apartamento/Cadastrar';
+import ResultadoApartamento from '../pages/Apartamento/Resultado';
+import DetalharApartamento from '../pages/Apartamento/Detalhar';
+import AlterarApartamento from '../pages/Apartamento/Alterar';
+import InativarApartamento from '../pages/Apartamento/Inativar';
 
 const MainRoutes = () => {
     return (
@@ -28,6 +28,7 @@ const MainRoutes = () => {
             <Route path="/Login" element={<Login />} />
             <Route path="/Esqueci" element={<Esqueci />}/>
 
+            {/* Fornecedor */}
             <Route path="/BuscarFornecedor" element={<PrivateRoutes />}>
                 <Route path="/BuscarFornecedor" element={<BuscarFornecedor />} />
             </Route>
@@ -47,7 +48,31 @@ const MainRoutes = () => {
                 <Route path="/InativarFornecedor" element={<InativarFornecedor />} />
             </Route>
 
-            <Route path="/Pagamento" element={<PrivateRoutes />}>
+            {/* Apartamento */}
+            <Route path="/BuscarApartamento" element={<PrivateRoutes />}>
+                <Route path="/BuscarApartamento" element={<BuscarApartamento />} />
+            </Route>
+            <Route path="/CadastrarApartamento" element={<PrivateRoutes />}>
+                <Route path="/CadastrarApartamento" element={<CadastrarApartamento />} />
+            </Route>
+            <Route path="/ResultadoApartamento" element={<PrivateRoutes />}>
+                <Route path="/ResultadoApartamento" element={<ResultadoApartamento />} />
+            </Route>
+            <Route path="/DetalharApartamento" element={<PrivateRoutes />}>
+                <Route path="/DetalharApartamento" element={<DetalharApartamento />} />
+            </Route>
+            <Route path="/AlterarApartamento" element={<PrivateRoutes />}>
+                <Route path="/AlterarApartamento" element={<AlterarApartamento />} />
+            </Route>
+            <Route path="/InativarApartamento" element={<PrivateRoutes />}>
+                <Route path="/InativarApartamento" element={<InativarApartamento />} />
+            </Route>
+
+            
+
+            
+
+            {/* <Route path="/Pagamento" element={<PrivateRoutes />}>
                 <Route path="/Pagamento" element={<Pagamento />} />
             </Route>
             <Route path="/ExtratosFinanceiros" element={<PrivateRoutes />}>
@@ -66,7 +91,7 @@ const MainRoutes = () => {
             </Route>
             <Route path="/Relatorios" element={<PrivateRoutes />}>
                 <Route path="/Relatorios" element={<Relatorios />} />                
-            </Route>
+            </Route> */}
         </Routes>
     )
 }

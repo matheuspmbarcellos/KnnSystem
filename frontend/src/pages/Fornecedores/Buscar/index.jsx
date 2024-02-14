@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import { FornecedoresContainer, InputContainer} from "./styles";
+import { PageContainer, InputContainer} from "../../../components/PagesStyles/buscar";
 import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
 import { useContext, useState } from "react";
@@ -27,7 +27,7 @@ const BuscarFornecedor = () => {
   };
 
   return (
-    <FornecedoresContainer>
+    <PageContainer>
         <h1>FORNECEDORES</h1>
         <MenuFornecedores/>
         <form onSubmit={handleExibirResultado}>
@@ -41,7 +41,7 @@ const BuscarFornecedor = () => {
         </InputContainer>
         </form>
         
-    </FornecedoresContainer>
+    </PageContainer>
   )
 }
 

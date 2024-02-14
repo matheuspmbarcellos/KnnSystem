@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const CadastrarContainer = styled.div`
-width: 100%;
-height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -12,34 +10,55 @@ align-items: center;
 h1 {
     font-size: 35px;
     color: #131129;
-    margin: 45px 10px 10px 10px;
+    margin: 25px 10px 10px 10px;
 }
 
 `
-export const BodyContainer = styled.div`
+export const BodyContainer = styled.form`
 width: 50%;
 display: flex;
 flex-direction: row;
-align-items: start;
-margin: 3%;
+align-items: center;
+margin: 2%;
 `
 
 export const InputContainer = styled.div`
-width: 100%;
+width: 90%;
 display: flex;
 flex-direction: column;
-margin-top: 1%;
+align-items: center;
 
 input {
     width: 90%;
     color: #131129;
-    height: 5%;
+    height: 20px;
     padding: 6px;
     border-bottom: 1px solid #131129;
     border-top: none;
     border-left: none;
     border-right: none;
-    margin: 1%;
+
+    &:focus {
+        color: limegreen;
+        outline: none;
+    }
+`
+
+export const InputContainerRow= styled.div`
+width: 95%;
+display: flex;
+flex-direction: row;
+align-items: center;
+
+input {
+    width: 90%;
+    color: #131129;
+    height: 20px;
+    padding: 6px;
+    border-bottom: 1px solid #131129;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 
     &:focus {
         color: limegreen;
