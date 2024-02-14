@@ -6,15 +6,13 @@ const Relatorios = () => {
     <RelatoriosContainer>
         <h1>RELATÓRIOS</h1> 
         <ButtonContainer>
-          <Button>Apartamentos</Button>
+          <Button as="a" href="./RelatorioApt">Apartamentos</Button>
           <Button>Boletos em aberto</Button>
           <Button>Fornecedores ativos</Button>
-          <hr/>
         </ButtonContainer>
         <ButtonContainer>
           <Button>Despesas por competência</Button>
           <Button>Receitas por competência</Button>
-          <hr/>
         </ButtonContainer>
         <ButtonContainer>
           <Button>Contratos vigentes</Button>
