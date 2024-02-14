@@ -4,7 +4,7 @@ import Button from "../../../components/Button/Button";
 const RelatorioApt = () => {
   return (
     <RelatoriosContainer>
-        <h1>RELATÓRIOS</h1> 
+        <h1>Apartamentos</h1> 
         <Resultado>
         <thead>
           <tr>
