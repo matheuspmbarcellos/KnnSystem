@@ -15,6 +15,7 @@ import CadastrarContrato from '../pages/Contratos/Cadastrar'
 import Apartamentos from '../pages/Apartamentos';
 import Relatorios from '../pages/Relatorios';
 import RelatorioApt from '../pages/Relatorios/RelatorioApts';
+import RelatorioFornecedores from '../pages/Relatorios/RelatorioFornecedores';
 import DetalharFornecedor from '../pages/Fornecedores/Detalhar';
 import AlterarFornecedor from '../pages/Fornecedores/Alterar';
 import InativarFornecedor from '../pages/Fornecedores/Inativar';
@@ -42,6 +43,7 @@ const MainRoutes = () => {
             <Route path="/Apartamentos" element={<Apartamentos />} />                
             <Route path="/Relatorios" element={<Relatorios />} />                
             <Route path="/RelatorioApt" element={<RelatorioApt />} />                
+            <Route path="/RelatorioFornecedores" element={<RelatorioFornecedores />} />                
 
         </Routes>
     )

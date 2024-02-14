@@ -1,4 +1,4 @@
-import { RelatoriosContainer, Resultado } from "./styles";
+import { RelatoriosContainer, Resultado } from "../styles";
 import Button from "../../../components/Button/Button";
 
 const RelatorioApt = () => {

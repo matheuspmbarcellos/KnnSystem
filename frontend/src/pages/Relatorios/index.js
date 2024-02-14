@@ -8,7 +8,7 @@ const Relatorios = () => {
         <ButtonContainer>
           <Button as="a" href="./RelatorioApt">Apartamentos</Button>
           <Button>Boletos em aberto</Button>
-          <Button>Fornecedores ativos</Button>
+          <Button as="a" href="./RelatorioFornecedores">Fornecedores ativos</Button>
         </ButtonContainer>
         <ButtonContainer>
           <Button>Despesas por competência</Button>
