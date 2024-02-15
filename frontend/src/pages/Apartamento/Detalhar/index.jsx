@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AlterarContainer, PageContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/detalhar";
+import { AlterarContainer, PageContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
 import { ApartamentoContext } from "../../../context/ApartamentoContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button/Button";
@@ -16,7 +16,7 @@ const DetalharApartamento = () => {
           <p className="title">{`Apartamento ${apartamentoDetail.morador.numeroDoApartamento} `}</p>
             <SubtituloContainer>
               <ul>
-                  <li><p>{`${apartamentoDetail.morador.blocoDoApartamento}`}</p></li>           
+                  <li><p>{`Bloco: ${apartamentoDetail.morador.blocoDoApartamento}`}</p></li>           
                   <li><p>{`${apartamentoDetail.metragemDoImovel} m²`}</p></li>
                   <li><p>RGI: {`${apartamentoDetail.proprietario.registroImovel}`}</p></li>
               </ul> 

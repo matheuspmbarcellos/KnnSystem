@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { AlterarContainer, PageContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/inativar";
+import { AlterarContainer, PageContainer, SubtituloContainer,
+   CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
 import { FornecedorContext } from "../../../context/FornecedorContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button/Button";

@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const ApartamentoContainer = styled.div`
-width: 100%;
-height: 90%;
+export const PageContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: left;
-margin-left: 40px;
-padding-bottom: 20px;
 
 .title {
+    margin-left: 48px;
     font-weight: bold;
     font-size: 25px;
     color: #131129;
@@ -17,7 +14,11 @@ padding-bottom: 20px;
 }
 
 .warning {
-    background-color: red;
+    background-color: #b81414;
+    &:hover {
+        color: #111111; 
+        cursor: pointer;
+    }
 }
 
 `
@@ -52,6 +53,7 @@ padding: 10px;
 
 `
 export const AlterarContainer = styled.div`
+margin-left: 40px;
 font-size: 14px;
 color: #131129;
 display: flex;
@@ -66,7 +68,6 @@ display: flex;
 flex-direction: column;
 margin-left: 60px;
 margin-top: 40px;
-margin-bottom: 40px;
 margin-right: 150px;
 
 .bottom {
@@ -87,4 +88,25 @@ margin-bottom: 4px;
 export const Dado = styled.div`
 font-weight: lighter;
 margin-bottom: 2px;
+`
+export const InputContainer = styled.div`
+width: 260px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+
+input {
+    width: 100%;
+    color: #131129;
+    height: 20px;
+    border-bottom: 1px solid #131129;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:focus {
+        color: limegreen;
+        outline: none;
+    }
 `
