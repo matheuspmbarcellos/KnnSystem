@@ -5,7 +5,13 @@ export const FornecedorContext = createContext();
 
 export const FornecedorProvider = ({ children}) => {
     const [fornecedorStore, setFornecedorStore] = useState([]);
-    const [fornecedorDetail, setFornecedorDetail] = useState([])
+    const [fornecedorDetail, setFornecedorDetail] = useState([]);
+    const [fornecedorRelatorio, setFornecedorRelatorio] = useState([])
+
+    const buscarRelatorio = async () => {
+        const response = await api.get("/relatorio/api/fornecedores-ativos");
+        setFornecedorRelatorio(response.data);
+    }
 
     const buscarParams = async (input) => {
         const params = {};
@@ -28,8 +34,10 @@ export const FornecedorProvider = ({ children}) => {
             value={{
                 fornecedorStore,
                 fornecedorDetail,
+                fornecedorRelatorio,
                 setFornecedorDetail,
                 buscarParams,
+                buscarRelatorio,
             }}
         >
             {children}
