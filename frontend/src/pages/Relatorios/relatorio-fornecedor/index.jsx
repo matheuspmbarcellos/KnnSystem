@@ -2,6 +2,8 @@ import { RelatoriosContainer, Resultado } from "../styles"
 import Button from "../../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { usePDF, Margin } from 'react-to-pdf';
+import { useContext, useEffect } from "react";
+import { FornecedorContext } from "../../../context/FornecedorContext";
 
 const RelatorioFornecedores = () => {
     const navigate = useNavigate()
@@ -10,6 +12,12 @@ const RelatorioFornecedores = () => {
         filename: 'relatorio_apto.pdf',
         page: { margin: Margin.SMALL }
     });
+    const { fornecedorRelatorio, buscarRelatorio } = useContext(FornecedorContext);
+
+    useEffect(() => {
+        buscarRelatorio()
+    },[buscarRelatorio])
+    
 
   return (
     <RelatoriosContainer>
@@ -25,10 +33,14 @@ const RelatorioFornecedores = () => {
             </tr>
             </thead>
             <tbody>
-            <td>101</td>
-            <td>60.444.437/0001-46</td>
-            <td>Jardim S.A</td>
-            <td>Fulano</td>
+            {fornecedorRelatorio?.map((fornecedor, index) => (
+                <tr key={index}>
+                    <td>{fornecedor.numeroControle}</td>
+                    <td>{fornecedor.cnpj}</td>
+                    <td>{fornecedor.razaoSocial}</td>
+                    <td>{fornecedor.responsavel.nome}</td>
+                </tr>
+            ))}       
             </tbody>
         </Resultado>
         </center>
