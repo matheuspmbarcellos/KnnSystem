@@ -6,6 +6,12 @@ export const ApartamentoContext = createContext();
 export const ApartamentoProvider = ({ children}) => {
     const [apartamentoStore, setApartamentoStore] = useState([]);
     const [apartamentoDetail, setApartamentoDetail] = useState([])
+    const [apartamentoRelatorio, setApartamentoRelatorio] = useState([])
+
+    const buscarRelatorio = async () => {
+        const response = await api.get("/relatorio/api/apartamentos");
+        setApartamentoRelatorio(response.data);
+    }
 
     const buscarParams = async (input) => {
         const params = {};
@@ -27,8 +33,10 @@ export const ApartamentoProvider = ({ children}) => {
             value={{
                 apartamentoStore,
                 apartamentoDetail,
+                apartamentoRelatorio,
                 setApartamentoDetail,
                 buscarParams,
+                buscarRelatorio,
             }}
         >
             {children}

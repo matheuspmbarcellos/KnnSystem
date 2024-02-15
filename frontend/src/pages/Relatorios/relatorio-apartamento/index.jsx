@@ -2,6 +2,8 @@ import { RelatoriosContainer, Resultado } from "../styles";
 import Button from "../../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { usePDF, Margin } from 'react-to-pdf';
+import { useContext, useEffect } from "react";
+import { ApartamentoContext } from "../../../context/ApartamentoContext";
 
 const RelatorioApt = () => {
     const navigate = useNavigate();
@@ -9,7 +11,13 @@ const RelatorioApt = () => {
         method: "save",
         filename: 'relatorio_apto.pdf',
         page: { margin: Margin.SMALL }
-    });    
+    });
+    const { apartamentoRelatorio, buscarRelatorio } = useContext(ApartamentoContext);
+
+    useEffect(() => {
+        buscarRelatorio();
+    },[buscarRelatorio]);
+
 
   return (
     <RelatoriosContainer>
@@ -17,32 +25,36 @@ const RelatorioApt = () => {
             <h1>Relatório - Apartamentos</h1> 
             <Resultado>
             <thead>
-            <tr>
-            <th>Apt.</th>
-            <th>Bloco</th>
-            <th>Nome do proprietário</th>
-            <th>Telefone do proprietário</th>
-            <th>CPF do proprietário</th>
-            <th>E-mail do proprietário</th>
-            <th>Nome do morador</th>
-            <th>Telefone do morador</th>
-            <th>CPF do morador</th>
-            <th>E-mail do morador</th>
-            <th>Metragem do imóvel</th>
-            </tr>
+                <tr>
+                    <th>Apt.</th>
+                    <th>Bloco</th>
+                    <th>Nome do proprietário</th>
+                    <th>Telefone do proprietário</th>
+                    <th>CPF do proprietário</th>
+                    <th>E-mail do proprietário</th>
+                    <th>Nome do morador</th>
+                    <th>Telefone do morador</th>
+                    <th>CPF do morador</th>
+                    <th>E-mail do morador</th>
+                    <th>Metragem do imóvel m²</th>
+                </tr>
             </thead>
             <tbody>
-            <td>101</td>
-            <td>01</td>
-            <td>Fulano</td>
-            <td>2045-3145</td>
-            <td>102.446.966-06</td>
-            <td>fulano@gmail.com</td>
-            <td>Sicrano</td>
-            <td>2045-3145</td>
-            <td>102.446.966-06</td>
-            <td>sicrano@gmail.com</td>
-            <td>70m2</td>
+            {apartamentoRelatorio?.map((apartamento, index) => (
+                <tr key={index}>
+                    <td>{apartamento.morador.numeroDoApartamento}</td>
+                    <td>{apartamento.morador.blocoDoApartamento}</td>
+                    <td>{apartamento.proprietario.nome}</td>
+                    <td>{apartamento.proprietario.telefone}</td>
+                    <td>{apartamento.proprietario.cpf}</td>
+                    <td>{apartamento.proprietario.email}</td>
+                    <td>{apartamento.morador.nome}</td>
+                    <td>{apartamento.morador.telefone}</td>
+                    <td>{apartamento.morador.cpf}</td>
+                    <td>{apartamento.morador.email}</td>
+                    <td>{apartamento.metragemDoImovel}</td>
+                </tr>
+            ))}            
             </tbody>
             </Resultado>
         </center>
