@@ -18,6 +18,9 @@ import ResultadoApartamento from '../pages/Apartamento/Resultado';
 import DetalharApartamento from '../pages/Apartamento/Detalhar';
 import AlterarApartamento from '../pages/Apartamento/Alterar';
 import InativarApartamento from '../pages/Apartamento/Inativar';
+import Relatorios from '../pages/Relatorios';
+import RelatorioFornecedores from '../pages/Relatorios/relatorio-fornecedor';
+import RelatorioApt from '../pages/Relatorios/relatorio-apartamento';
 
 const MainRoutes = () => {
     return (
@@ -68,7 +71,16 @@ const MainRoutes = () => {
                 <Route path="/InativarApartamento" element={<InativarApartamento />} />
             </Route>
 
-            
+            {/* Relatorios */}
+            <Route path="/Relatorios" element={<PrivateRoutes />}>
+                <Route path="/Relatorios" element={<Relatorios />} />                
+            </Route> 
+            <Route path="/RelatorioFornecedores" element={<PrivateRoutes />}>
+                <Route path="/RelatorioFornecedores" element={<RelatorioFornecedores />} />                
+            </Route> 
+            <Route path="/RelatorioApt" element={<PrivateRoutes />}>
+                <Route path="/RelatorioApt" element={<RelatorioApt />} />                
+            </Route> 
 
             
 
@@ -89,9 +101,7 @@ const MainRoutes = () => {
             <Route path="/Apartamentos" element={<PrivateRoutes />}>
                 <Route path="/Apartamentos" element={<Apartamentos />} />                
             </Route>
-            <Route path="/Relatorios" element={<PrivateRoutes />}>
-                <Route path="/Relatorios" element={<Relatorios />} />                
-            </Route> */}
+            */}
         </Routes>
     )
 }
