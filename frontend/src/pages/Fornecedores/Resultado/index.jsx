@@ -3,8 +3,10 @@ import Button from "../../../components/Button/Button";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FornecedorContext } from "../../../context/FornecedorContext";
+import { AuthContext } from "../../../context/AuthContext";
 
 const ResultadoFornecedor = () => {  
+  const { perfil } = useContext(AuthContext)
   const { fornecedorStore, setFornecedorDetail } = useContext(FornecedorContext)
   const navigate = useNavigate()
 
@@ -46,7 +48,7 @@ const ResultadoFornecedor = () => {
             <td>
                 <DetailButton onClick={() => handleExibirDetail(fornecedor)} />
                 <EditButton onClick={() => handleEditar(fornecedor)} />
-                <DisableButton onClick={() => handleInativar(fornecedor)} />
+                {(perfil === "Administrador") && <DisableButton onClick={() => handleInativar(fornecedor)} />}
             </td>
           </tr>
         ))}
