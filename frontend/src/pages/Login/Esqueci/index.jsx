@@ -1,7 +1,9 @@
 import { ButtonContainer, LoginContainer } from './styles';
 import Button from '../../../components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Esqueci = () => {
+  const navigate = useNavigate()
 
   return (
     <LoginContainer>
@@ -9,8 +11,8 @@ const Esqueci = () => {
         <input type='text' placeholder=' CPF:'/>
 
         <ButtonContainer>
-             <Button as="a" href="/Login">Voltar</Button> 
-            <Button as="a" href="/">Enviar</Button> 
+             <Button onClick={() => navigate("/Login")}>Voltar</Button> 
+            <Button>Enviar</Button> 
         </ButtonContainer>
 
     </LoginContainer>
