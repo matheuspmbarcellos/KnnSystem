@@ -8,9 +8,13 @@ import { ApartamentoContext } from "../../../context/ApartamentoContext";
 const RelatorioApt = () => {
     const navigate = useNavigate();
     const { toPDF, targetRef } = usePDF({
-        method: "save",
+        method: "open",
         filename: 'relatorio_apto.pdf',
-        page: { margin: Margin.SMALL }
+        page: { 
+            format: 'A4',
+            orientation: 'landscape',
+            margin: Margin.MEDIUM 
+        }
     });
     const { apartamentoRelatorio, buscarRelatorio } = useContext(ApartamentoContext);
 

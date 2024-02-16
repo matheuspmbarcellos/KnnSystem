@@ -8,9 +8,13 @@ import { FornecedorContext } from "../../../context/FornecedorContext";
 const RelatorioFornecedores = () => {
     const navigate = useNavigate()
     const { toPDF, targetRef } = usePDF({
-        method: "save",
+        method: "open",
         filename: 'relatorio_apto.pdf',
-        page: { margin: Margin.SMALL }
+        page: { 
+            format: 'A4',
+            orientation: 'landscape',
+            margin: Margin.MEDIUM 
+        }
     });
     const { fornecedorRelatorio, buscarRelatorio } = useContext(FornecedorContext);
 
