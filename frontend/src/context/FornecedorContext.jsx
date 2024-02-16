@@ -7,6 +7,7 @@ export const FornecedorProvider = ({ children}) => {
     const [fornecedorStore, setFornecedorStore] = useState([]);
     const [fornecedorDetail, setFornecedorDetail] = useState([]);
     const [fornecedorRelatorio, setFornecedorRelatorio] = useState([])
+    const [error, setError] = useState(null);
 
     const buscarRelatorio = async () => {
         const response = await api.get("/relatorio/api/fornecedores-ativos");
@@ -22,10 +23,9 @@ export const FornecedorProvider = ({ children}) => {
         try {
             const response = await api.get('/fornecedor/api/consulta', { params });
             setFornecedorStore(response.data);
-            // console.log(response.data);
-            // console.log(fornecedorStore);
+            setError(null);
         } catch (error) {
-            alert('Error fetching data:', error);
+            setError('Nenhum fornecedor encontrado. Tente novamente.');
         }
     }
     
@@ -35,9 +35,11 @@ export const FornecedorProvider = ({ children}) => {
                 fornecedorStore,
                 fornecedorDetail,
                 fornecedorRelatorio,
+                error,
                 setFornecedorDetail,
                 buscarParams,
                 buscarRelatorio,
+                setError,
             }}
         >
             {children}

@@ -1,15 +1,14 @@
-// import { Link } from "react-router-dom";
 import { PageContainer, InputContainer} from "../../../components/PagesStyles/buscar";
 import MenuApartamentos from "../../../components/MenuCRUD/MenuApartamentos";
 import Button from "../../../components/Button/Button";
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { ApartamentoContext } from "../../../context/ApartamentoContext";
+import { useNavigate } from "react-router-dom";
 
 const BuscarApartamento = () => {
   const [numero, setNumero] = useState('');
   const [bloco, setBloco] = useState('');
-  const { buscarParams } = useContext(ApartamentoContext)
+  const { buscarParams, error, setError } = useContext(ApartamentoContext)
   const navigate = useNavigate();
 
   const handleExibirResultado = (e) => {
@@ -20,7 +19,10 @@ const BuscarApartamento = () => {
       };
       
       buscarParams(input);
-      navigate("/ResultadoApartamento");
+
+      if(error === null || (numero === '' && bloco === '')) {
+        navigate("/ResultadoApartamento")
+      };
       
   };
 
@@ -30,9 +32,10 @@ const BuscarApartamento = () => {
         <MenuApartamentos/>
         <form onSubmit={handleExibirResultado}>
         <InputContainer> 
-          <input type='text' placeholder='Número' value={numero} onChange={(e) => setNumero(e.target.value)}/>
-          <input type='text' placeholder='Bloco' value={bloco} onChange={(e) => setBloco(e.target.value)}/>        
-            <Button type="submit">Exibir</Button>
+          <input type='text' placeholder='Número' value={numero} onChange={(e) => setNumero(e.target.value)} onFocus={() => setError("")} />
+          <input type='text' placeholder='Bloco' value={bloco} onChange={(e) => setBloco(e.target.value)} onFocus={() => setError("")} />        
+          <Button type="submit">Exibir</Button>
+          {error && <p>{error}</p>}
         </InputContainer>
         </form>
         

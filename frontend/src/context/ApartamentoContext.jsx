@@ -7,6 +7,7 @@ export const ApartamentoProvider = ({ children}) => {
     const [apartamentoStore, setApartamentoStore] = useState([]);
     const [apartamentoDetail, setApartamentoDetail] = useState([])
     const [apartamentoRelatorio, setApartamentoRelatorio] = useState([])
+    const [error, setError] = useState(null);
 
     const buscarRelatorio = async () => {
         const response = await api.get("/relatorio/api/apartamentos");
@@ -21,10 +22,9 @@ export const ApartamentoProvider = ({ children}) => {
         try {
             const response = await api.get('/apartamento/api/consulta', { params });
             setApartamentoStore(response.data);
-            console.log(response.data);
-            console.log(apartamentoStore);
+            setError(null);
         } catch (error) {
-            alert('Error fetching data:', error.message);
+            setError('Nenhum apartamento encontrado. Tente novamente.');
         }
     }
     
@@ -34,9 +34,11 @@ export const ApartamentoProvider = ({ children}) => {
                 apartamentoStore,
                 apartamentoDetail,
                 apartamentoRelatorio,
+                error,
                 setApartamentoDetail,
                 buscarParams,
                 buscarRelatorio,
+                setError,
             }}
         >
             {children}

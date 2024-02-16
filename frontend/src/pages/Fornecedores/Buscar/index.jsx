@@ -10,7 +10,7 @@ const BuscarFornecedor = () => {
   const [cnpj, setCnpj] = useState('');
   const [razaoSocial, setRazaoSocial] = useState('');
   const [numeroContrato, setNumeroContrato] = useState('');
-  const { buscarParams } = useContext(FornecedorContext)
+  const { buscarParams, error, setError } = useContext(FornecedorContext)
   const navigate = useNavigate();
 
   const handleExibirResultado = (e) => {
@@ -22,8 +22,10 @@ const BuscarFornecedor = () => {
       };
       
       buscarParams(input);
-      navigate("/ResultadoFornecedor");
       
+      if(error === null || (cnpj === '' && razaoSocial === '' && numeroContrato === '')) {
+      navigate("/ResultadoFornecedor");
+      }
   };
 
   return (
@@ -32,12 +34,11 @@ const BuscarFornecedor = () => {
         <MenuFornecedores/>
         <form onSubmit={handleExibirResultado}>
         <InputContainer> 
-          <input type='text' placeholder='CNPJ' value={cnpj} onChange={(e) => setCnpj(e.target.value)}/>
-          <input type='text' placeholder='Razão Social' value={razaoSocial} onChange={(e) => setRazaoSocial(e.target.value)}/>
-          <input type='text' placeholder='Número do Contrato' value={numeroContrato} onChange={(e) => setNumeroContrato(e.target.value)}/>          
-          {/* <Link to={"/ResultadoFornecedor"}> */}
-            <Button type="submit">Exibir</Button>
-          {/* </Link> */}
+          <input type='text' placeholder='CNPJ' value={cnpj} onChange={(e) => setCnpj(e.target.value)} onFocus={() => setError("")} />
+          <input type='text' placeholder='Razão Social' value={razaoSocial} onChange={(e) => setRazaoSocial(e.target.value)} onFocus={() => setError("")} />
+          <input type='text' placeholder='Número do Contrato' value={numeroContrato} onChange={(e) => setNumeroContrato(e.target.value)} onFocus={() => setError("")} />          
+          <Button type="submit">Exibir</Button>
+          {error && <p>{error}</p>}
         </InputContainer>
         </form>
         
