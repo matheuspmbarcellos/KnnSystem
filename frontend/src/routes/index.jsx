@@ -21,6 +21,7 @@ import InativarApartamento from '../pages/Apartamento/Inativar';
 import Relatorios from '../pages/Relatorios';
 import RelatorioFornecedores from '../pages/Relatorios/relatorio-fornecedor';
 import RelatorioApt from '../pages/Relatorios/relatorio-apartamento';
+import ExtratosFinanceiros from '../pages/ExtratoFinanceiros';
 
 const MainRoutes = () => {
     return (
@@ -82,13 +83,13 @@ const MainRoutes = () => {
                 <Route path="/RelatorioApt" element={<RelatorioApt />} />                
             </Route> 
 
+            <Route path="/ExtratosFinanceiros" element={<PrivateRoutes />}>
+                <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />                
+            </Route>
             
 
             {/* <Route path="/Pagamento" element={<PrivateRoutes />}>
                 <Route path="/Pagamento" element={<Pagamento />} />
-            </Route>
-            <Route path="/ExtratosFinanceiros" element={<PrivateRoutes />}>
-                <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />                
             </Route>
 
             <Route path="/Contratos" element={<PrivateRoutes />}>

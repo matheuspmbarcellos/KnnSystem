@@ -7,7 +7,7 @@ align-items: center;
 padding-bottom: 40px;
 }
 
-h2 {
+.resultado {
     margin: 30px auto 30px 80%;
     font-weight: 100;
     font-style: italic; 

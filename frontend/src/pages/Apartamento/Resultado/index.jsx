@@ -26,7 +26,7 @@ const ResultadoApartamento = () => {
 
   return (
     <ResultadoContainer>
-      <h2>Resultado</h2>
+      <h2 className="resultado">Resultado</h2>
       <Resultado>
         <thead>
           <tr>
