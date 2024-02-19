@@ -32,7 +32,7 @@ const DetalharContrato = () => {
 
               <CorpoContent>
                 <Titulo>Vigência</Titulo>
-                <Dado>De 03.04.24</Dado> <Dado> a 03.06.2025</Dado> 
+                <Dado>De: 03.04.24</Dado> <Dado>A: 03.06.2025</Dado> 
               </CorpoContent>    
             
           
