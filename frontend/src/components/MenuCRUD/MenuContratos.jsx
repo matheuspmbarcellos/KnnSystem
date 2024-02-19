@@ -14,12 +14,19 @@ const MenuContratos = () => {
             <Link to={"/AlterarContrato"}>
               <MenuButton>ALTERAR</MenuButton>
             </Link>
+            <Link to={"/ArmazenarContrato"}>
+              <MenuButton>ARMAZENAR</MenuButton>
+            </Link>
+            <Link to={"/RescindirContrato"}>
+              <MenuButton>RESCINDIR</MenuButton>
+            </Link>
             <Link to={"/InativarContrato"}>
               <MenuButton>INATIVAR</MenuButton>
             </Link>
-
         </ButtonContainer>
   )
+
+  
 }
     
 export default MenuContratos;

@@ -11,7 +11,10 @@ import ResultadoFornecedor from '../pages/Fornecedores/Resultado';
 import Pagamento from '../pages/Pagamento';
 import ExtratosFinanceiros from '../pages/ExtratoFinanceiros';
 import Contratos from '../pages/Contratos';
-import CadastrarContrato from '../pages/Contratos/Cadastrar'
+import CadastrarContrato from '../pages/Contratos/Cadastrar';
+import BuscarContratos from '../pages/Contratos/Buscar';
+import DetalharContrato from '../pages/Contratos/Detalhar';
+import ResultadoContrato from '../pages/Contratos/Resultado';
 import Apartamentos from '../pages/Apartamentos';
 import Relatorios from '../pages/Relatorios';
 import RelatorioApt from '../pages/Relatorios/RelatorioApts';
@@ -39,6 +42,9 @@ const MainRoutes = () => {
             <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />       
             <Route path="/ExtratosResultado" element={<ExtratosResultado />} />                         
             <Route path="/Contratos" element={<Contratos />} />
+            <Route path="/ResultadoContrato" element={<ResultadoContrato />} />
+            <Route path="/DetalharContrato" element={<DetalharContrato />} />
+            <Route path="/BuscarContratos" element={<BuscarContratos />} />
             <Route path="/CadastrarContrato" element={<CadastrarContrato />} />
             <Route path="/Apartamentos" element={<Apartamentos />} />                
             <Route path="/Relatorios" element={<Relatorios />} />                
