@@ -1,4 +1,4 @@
-import { ResultadoContainer, Resultado, DetailButton } from "./styles";
+import { ResultadoContainer, Resultado, DetailButton} from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
@@ -38,7 +38,7 @@ const ResultadoContrato = () => {
         </tbody>
 
       </Resultado>
-      <Button>Voltar</Button>
+      <Button onClick={() => navigate(-1)}>Voltar</Button>
     </ResultadoContainer>
   )
 }

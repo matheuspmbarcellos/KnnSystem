@@ -79,6 +79,7 @@ flex-direction: column;
 export const CorpoContent = styled.div`
 width: 260px;
 min-height: 70px;
+
 `
 
 export const Titulo = styled.div`

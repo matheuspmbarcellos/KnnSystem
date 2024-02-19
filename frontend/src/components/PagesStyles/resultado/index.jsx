@@ -7,7 +7,7 @@ align-items: center;
 padding-bottom: 40px;
 }
 
-h2 {
+.resultado {
     margin: 30px auto 30px 80%;
     font-weight: 100;
     font-style: italic; 
@@ -58,6 +58,20 @@ export const EditButton = styled.button`
     margin-left: 5px;
     margin-right: 5px;
     background: url(../edit-open.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+export const DisableButton = styled.button`
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url(../inativar.svg);
     background-size: 95%;
     background-repeat: no-repeat;
     border: none;

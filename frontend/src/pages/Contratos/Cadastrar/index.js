@@ -1,16 +1,15 @@
-import { CadastrarContainer, InputContainer, BodyContainer } from "./styles";
+import { CadastrarContainer, InputContainer, BodyContainer } from "../../../components/PagesStyles/cadastrar";
+import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
 import Button from "../../../components/Button/Button";
-import MenuContratos from "../../../components/MenuCRUD/MenuContratos";
 
-const CadastrarContrato = () => {
+const CadastrarFornecedor = () => {
 
   return (
     <CadastrarContainer>
-        <h1>CONTRATOS</h1>
-        <MenuContratos/>
-
+        <h1>FORNECEDORES</h1>
+        <MenuFornecedores/>
        <BodyContainer>
-        <InputContainer> 
+       <InputContainer> 
         <input type='text' placeholder='Número controle fornecedor'/>
         <input type='date' placeholder='Vigência inicial'/>
         <input type='date' placeholder='Vigência final'/>
@@ -32,4 +31,4 @@ const CadastrarContrato = () => {
   )
 }
 
-export default CadastrarContrato;
+export default CadastrarFornecedor;
