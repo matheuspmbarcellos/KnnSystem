@@ -1,13 +1,13 @@
 import { CadastrarContainer, InputContainer, BodyContainer } from "../../../components/PagesStyles/cadastrar";
-import MenuFornecedores from "../../../components/MenuCRUD/MenuFornecedores";
+import MenuContratos from "../../../components/MenuCRUD/MenuContratos";
 import Button from "../../../components/Button/Button";
 
-const CadastrarFornecedor = () => {
+const CadastrarContratos = () => {
 
   return (
     <CadastrarContainer>
-        <h1>FORNECEDORES</h1>
-        <MenuFornecedores/>
+        <h1>CONTRATOS</h1>
+        <MenuContratos/>
        <BodyContainer>
        <InputContainer> 
         <input type='text' placeholder='Número controle fornecedor'/>
@@ -31,4 +31,4 @@ const CadastrarFornecedor = () => {
   )
 }
 
-export default CadastrarFornecedor;
+export default CadastrarContratos;

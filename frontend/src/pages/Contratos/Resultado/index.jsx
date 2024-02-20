@@ -32,7 +32,7 @@ const ResultadoContrato = () => {
             <td>111</td>
             <td>22.06.2023</td>
             <td>22.06.2025</td>
-            <td><Button>Cadastrar</Button> </td>
+            <td><Button as="a" href="./NivelServico">Cadastrar</Button> </td>
             <td> <DetailButton onClick={() => handleExibirDetail("./DetalharContrato")} /></td>
 
         </tbody>

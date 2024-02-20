@@ -5,19 +5,19 @@ import { ButtonContainer, MenuButton } from "./styles";
 const MenuContratos = () => {
   return (
           <ButtonContainer>
-            <Link to={"/BuscarContrato"}>
+            <Link to={"/BuscarContratos"}>
               <MenuButton>BUSCAR</MenuButton>
             </Link>
-            <Link to={"/CadastrarContrato"}>
+            <Link to={"/CadastrarContratos"}>
               <MenuButton>CADASTRAR</MenuButton>
             </Link>
-            <Link to={"/AlterarContrato"}>
+            <Link to={"/AlterarContratos"}>
               <MenuButton>ALTERAR</MenuButton>
             </Link>
-            <Link to={"/ArmazenarContrato"}>
+            <Link to={"/ArmazenarContratos"}>
               <MenuButton>ARMAZENAR</MenuButton>
             </Link>
-            <Link to={"/RescindirContrato"}>
+            <Link to={"/RescindirContratos"}>
               <MenuButton>RESCINDIR</MenuButton>
             </Link>
             <Link to={"/InativarContrato"}>
