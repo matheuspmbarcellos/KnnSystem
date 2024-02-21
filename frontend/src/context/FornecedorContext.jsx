@@ -1,13 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { api } from "../services/api";
+import { useNavigation } from "./NavigateContext";
 
 export const FornecedorContext = createContext();
+
+export const useFornecedor = () => useContext(FornecedorContext);
 
 export const FornecedorProvider = ({ children}) => {
     const [fornecedorStore, setFornecedorStore] = useState([]);
     const [fornecedorDetail, setFornecedorDetail] = useState([]);
     const [fornecedorRelatorio, setFornecedorRelatorio] = useState([])
     const [error, setError] = useState(null);
+    const navigate = useNavigation()
 
     const buscarRelatorio = async () => {
         const response = await api.get("/relatorio/api/fornecedores-ativos");
@@ -24,6 +28,7 @@ export const FornecedorProvider = ({ children}) => {
             const response = await api.get('/fornecedor/api/consulta', { params });
             setFornecedorStore(response.data);
             setError(null);
+            navigate("/ResultadoFornecedor")
         } catch (error) {
             setError('Nenhum fornecedor encontrado. Tente novamente.');
         }

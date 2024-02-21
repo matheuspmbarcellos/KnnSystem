@@ -42,7 +42,10 @@ const ResultadoFornecedor = () => {
         {fornecedorStore?.map((fornecedor, index) => (
           <tr key={index}>
             <td>{fornecedor.razaoSocial}</td>
-            <td>{fornecedor.cnpj}</td>
+            <td>{fornecedor.cnpj.replace(
+                    /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
+                    '$1.$2.$3/$4-$5'
+                  )}</td>
             <td>{fornecedor.naturezaDoServico}</td>
             <td>{fornecedor.numeroControle}</td>
             <td>

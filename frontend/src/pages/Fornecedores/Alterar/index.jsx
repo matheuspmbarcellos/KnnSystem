@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { InputContainer, AlterarContainer, PageContainer, SubtituloContainer, CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
+import { InputContainer, AlterarContainer, PageContainer, SubtituloContainer, 
+  CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
 import { FornecedorContext } from "../../../context/FornecedorContext";
 import Button from "../../../components/Button/Button";
 
@@ -29,7 +30,10 @@ const AlterarFornecedor = () => {
           <p className="title">{fornecedorDetail.razaoSocial}</p>
           <SubtituloContainer>
             <ul>
-              <li><p>CNPJ: {fornecedorDetail.cnpj}</p></li>
+              <li><p>CNPJ: {fornecedorDetail.cnpj.replace(
+                    /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
+                    '$1.$2.$3/$4-$5'
+                  )}</p></li>
               <li><p>{fornecedorDetail.naturezaDoServico}</p></li>
               <li><p>{fornecedorDetail.numeroControle}</p></li>
             </ul>
