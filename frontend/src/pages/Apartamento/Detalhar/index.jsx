@@ -29,7 +29,11 @@ const DetalharApartamento = () => {
               </CorpoContent>
               <CorpoContent>
                 <Titulo>CPF Proprietário</Titulo>
-                <Dado>{apartamentoDetail.proprietario.cpf}</Dado>
+                <Dado>{apartamentoDetail.proprietario.cpf.replace(
+                      /^(\d{3})(\d{3})(\d{3})(\d{2})$/,
+                      '$1.$2.$3-$4'
+                )}
+                </Dado>
               </CorpoContent>    
               <CorpoContent>
                 <Titulo>Telefone Proprietário</Titulo>
@@ -48,7 +52,11 @@ const DetalharApartamento = () => {
               </CorpoContent>
               <CorpoContent>
                 <Titulo>CPF Morador</Titulo>
-                <Dado>{apartamentoDetail.morador.cpf}</Dado>
+                <Dado>{apartamentoDetail.morador.cpf.replace(
+                      /^(\d{3})(\d{3})(\d{3})(\d{2})$/,
+                      '$1.$2.$3-$4'
+                )}
+                </Dado>
               </CorpoContent>    
               <CorpoContent>
                 <Titulo>Telefone Morador</Titulo>

@@ -63,7 +63,10 @@ const AlterarApartamento = () => {
                     />
                   </InputContainer>
                 ) : (
-                  <Dado>{apartamentoDetail.proprietario.cpf}</Dado>
+                  <Dado>{apartamentoDetail.proprietario.cpf.replace(
+                    /^(\d{3})(\d{3})(\d{3})(\d{2})$/,
+                    '$1.$2.$3-$4'
+                  )}</Dado>
                 )}
               </CorpoContent>
               <CorpoContent>
@@ -126,7 +129,11 @@ const AlterarApartamento = () => {
                     />
                   </InputContainer>
                 ) : (
-                  <Dado>{apartamentoDetail.morador.cpf}</Dado>
+                  <Dado>{apartamentoDetail.morador.cpf.replace(
+                    /^(\d{3})(\d{3})(\d{3})(\d{2})$/,
+                    '$1.$2.$3-$4'
+                  )}
+                  </Dado>
                 )}
               </CorpoContent>
               <CorpoContent>
