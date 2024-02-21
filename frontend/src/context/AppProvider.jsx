@@ -1,5 +1,6 @@
 import { ApartamentoProvider } from "./ApartamentoContext"
 import { AuthProvider } from "./AuthContext"
+import { ContratoProvider } from "./ContratoContext"
 import { ExtratoProvider } from "./ExtratoContext"
 import { FornecedorProvider } from "./FornecedorContext"
 import { NavigationProvider } from "./NavigateContext"
@@ -15,7 +16,9 @@ export const AppProvider = ({children}) => {
                     <ApartamentoProvider>
                         <PagamentoProvider>
                             <ExtratoProvider>
-                            {children}
+                                <ContratoProvider>
+                                {children}
+                                </ContratoProvider>
                             </ExtratoProvider>
                         </PagamentoProvider>                        
                     </ApartamentoProvider>

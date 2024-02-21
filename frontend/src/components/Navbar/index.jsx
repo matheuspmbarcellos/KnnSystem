@@ -31,10 +31,10 @@ const Navbar = () => {
             </div>
           
             <div className="dropdown">
-                <button className="dropbtn"><Link to={"/BuscarContratos"}>Contratos</Link></button>
+                <button className="dropbtn"><Link to={"/BuscarContrato"}>Contratos</Link></button>
                 <div className="dropdown-content">
-                    <Link to={"/BuscarContratos"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarContratos"}>Cadastrar</Link><hr/>  
+                    <Link to={"/BuscarContrato"}>Buscar</Link><hr/>
+                    <Link to={"/CadastrarContrato"}>Cadastrar</Link><hr/>  
                 </div>
             </div>
       
