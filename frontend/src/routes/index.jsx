@@ -22,6 +22,9 @@ import Relatorios from '../pages/Relatorios';
 import RelatorioFornecedores from '../pages/Relatorios/relatorio-fornecedor';
 import RelatorioApt from '../pages/Relatorios/relatorio-apartamento';
 import ExtratosFinanceiros from '../pages/ExtratoFinanceiros';
+import CadastrarPagamento from '../pages/Pagamento/Cadastrar';
+import ConsultarPagamento from '../pages/Pagamento/Buscar';
+import ResultadoPagamento from '../pages/Pagamento/Resultado';
 
 const MainRoutes = () => {
     return (
@@ -71,6 +74,17 @@ const MainRoutes = () => {
             <Route path="/InativarApartamento" element={<PrivateRoutes />}>
                 <Route path="/InativarApartamento" element={<InativarApartamento />} />
             </Route>
+            
+            {/* Pagamentos */}
+            <Route path="/CadastrarPagamento" element={<PrivateRoutes />}>
+                <Route path="/CadastrarPagamento" element={<CadastrarPagamento />} />
+            </Route>
+            <Route path="/ConsultarPagamento" element={<PrivateRoutes />}>
+                <Route path="/ConsultarPagamento" element={<ConsultarPagamento />} />
+            </Route>
+            <Route path="/ResultadoPagamento" element={<PrivateRoutes />}>
+                <Route path="/ResultadoPagamento" element={<ResultadoPagamento />} />
+            </Route>
 
             {/* Relatorios */}
             <Route path="/Relatorios" element={<PrivateRoutes />}>
@@ -83,14 +97,13 @@ const MainRoutes = () => {
                 <Route path="/RelatorioApt" element={<RelatorioApt />} />                
             </Route> 
 
+            {/* Extrato */}
             <Route path="/ExtratosFinanceiros" element={<PrivateRoutes />}>
                 <Route path="/ExtratosFinanceiros" element={<ExtratosFinanceiros />} />                
             </Route>
-            
 
-            {/* <Route path="/Pagamento" element={<PrivateRoutes />}>
-                <Route path="/Pagamento" element={<Pagamento />} />
-            </Route>
+
+            {/* 
 
             <Route path="/Contratos" element={<PrivateRoutes />}>
                 <Route path="/Contratos" element={<Contratos />} />
@@ -99,9 +112,7 @@ const MainRoutes = () => {
                 <Route path="/CadastrarContrato" element={<CadastrarContrato />} />
             </Route>
 
-            <Route path="/Apartamentos" element={<PrivateRoutes />}>
-                <Route path="/Apartamentos" element={<Apartamentos />} />                
-            </Route>
+            
             */}
         </Routes>
     )

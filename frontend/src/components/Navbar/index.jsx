@@ -23,10 +23,10 @@ const Navbar = () => {
       
       
             <div className="dropdown">
-                <button className="dropbtn"><Link to={"/BuscarPagamentos"}>Pagamento</Link></button>
+                <button className="dropbtn"><Link to={"/ConsultarPagamento"}>Pagamento</Link></button>
                 <div className="dropdown-content">
-                    <Link to={"/BuscarPagamentos"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarPagamentos"}>Cadastrar</Link><hr/>    
+                    <Link to={"/ConsultarPagamento"}>Consultar</Link><hr/>
+                    <Link to={"/CadastrarPagamento"}>Incluir</Link><hr/>    
                 </div>
             </div>
           
