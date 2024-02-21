@@ -9,20 +9,15 @@ const Relatorios = () => {
     <RelatoriosContainer>
         <h1>RELATÓRIOS</h1> 
         <ButtonContainer>
-          <Button onClick={() => navigate("/RelatorioApt")}>Apartamentos</Button>
-          <Button onClick={() => {}}>Boletos em aberto</Button>
+          <Button onClick={() => navigate("/RelatorioContratosVigentes")}>Contratos vigentes</Button>
+          <Button onClick={() => navigate("/RelatorioContratosVencidos")}>Contratos vencidos</Button>
+        </ButtonContainer>
+        <ButtonContainer>
           <Button onClick={() => navigate("/RelatorioFornecedores")}>Fornecedores ativos</Button>
         </ButtonContainer>
-      
         <ButtonContainer>
-          <Button>Despesas por competência</Button>
-          <Button>Receitas por competência</Button>
-        </ButtonContainer>
-      
-        <ButtonContainer>
-          <Button>Contratos vigentes</Button>
-          <Button>Contratos vencidos</Button>
-        </ButtonContainer>
+          <Button onClick={() => navigate("/RelatorioApt")}>Apartamentos</Button>
+        </ButtonContainer>      
    
     </RelatoriosContainer>
   )
