@@ -8,7 +8,7 @@ import { useFornecedor } from "../../../context/FornecedorContext";
 const BuscarFornecedor = () => {
   const [cnpj, setCnpj] = useState('');
   const [razaoSocial, setRazaoSocial] = useState('');
-  const [numeroContrato, setNumeroContrato] = useState('');
+  const [numeroControle, setNumeroControle] = useState('');
   const { buscarParams, error, setError } = useFornecedor();
 
   const handleExibirResultado = (e) => {
@@ -16,7 +16,7 @@ const BuscarFornecedor = () => {
       const input = {
         cnpj,
         razaoSocial,
-        numeroContrato
+        numeroControle
       };    
       buscarParams(input);
   };
@@ -29,7 +29,7 @@ const BuscarFornecedor = () => {
         <InputContainer> 
           <input type='text' placeholder='CNPJ' value={cnpj} onChange={(e) => setCnpj(e.target.value)} onFocus={() => setError(null)} />
           <input type='text' placeholder='Razão Social' value={razaoSocial} onChange={(e) => setRazaoSocial(e.target.value)} onFocus={() => setError(null)} />
-          <input type='text' placeholder='Número do Contrato' value={numeroContrato} onChange={(e) => setNumeroContrato(e.target.value)} onFocus={() => setError(null)} />          
+          <input type='text' placeholder='Número de Controle' value={numeroControle} onChange={(e) => setNumeroControle(e.target.value)} onFocus={() => setError(null)} />          
           <Button type="submit">Exibir</Button>
           {error && <p>{error}</p>}
         </InputContainer>

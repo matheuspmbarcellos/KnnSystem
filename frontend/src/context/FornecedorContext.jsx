@@ -22,7 +22,7 @@ export const FornecedorProvider = ({ children}) => {
         const params = {};
         if (input.cnpj) {params.cnpj = input.cnpj} else {params.cnpj = null};
         if (input.razaoSocial) {params.razaoSocial = input.razaoSocial} else {params.razaoSocial = null};
-        if (input.numeroContrato) {params.numeroContrato = input.numeroContrato} else {params.numeroContrato = null};
+        if (input.numeroControle) {params.numeroControle = input.numeroControle} else {params.numeroControle = null};
 
         try {
             const response = await api.get('/fornecedor/api/consulta', { params });
