@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CadastrarContainer = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 2%;
 
 h1 {
     font-size: 35px;
@@ -43,7 +42,8 @@ display: flex;
 flex-direction: row;
 margin-left: 6%;
 
-h1{
+h3{
+    padding-left: 5px;
     font-size: 15px;
     color: red;
 }

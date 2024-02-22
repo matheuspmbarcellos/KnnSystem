@@ -35,7 +35,7 @@ const RescindirContratos = () => {
 
           <ResultadoContainer>
           Valor da Rescisão:
-          <h1>R$50,00</h1>
+          <h3>R$50,00</h3>
           </ResultadoContainer>
             
 
