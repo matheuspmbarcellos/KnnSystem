@@ -12,10 +12,10 @@ export const AuthProvider = ({children}) => {
 
     useEffect(() => {
         const LoadingStoreData = async () => {
-            const storageUsuario = localStorage.getItem("@Auth:usuario")
-            const storageToken = localStorage.getItem("@Auth:token")
-            const storageNome = localStorage.getItem("@Auth:nome")
-            const storagePerfil = localStorage.getItem("@Auth:perfil")
+            const storageUsuario = sessionStorage.getItem("@Auth:usuario")
+            const storageToken = sessionStorage.getItem("@Auth:token")
+            const storageNome = sessionStorage.getItem("@Auth:nome")
+            const storagePerfil = sessionStorage.getItem("@Auth:perfil")
 
             if (storageUsuario && storageToken && storageNome && storagePerfil) {
                 setUsuario(storageUsuario)
@@ -41,15 +41,15 @@ export const AuthProvider = ({children}) => {
             api.defaults.headers.common[
                 "Authorization"
             ] = `Bearer ${response.data.token}`
-            localStorage.setItem("@Auth:token", response.data.token);
-            localStorage.setItem("@Auth:nome", response.data.nome);
-            localStorage.setItem("@Auth:perfil", response.data.perfil);
-            localStorage.setItem("@Auth:usuario", JSON.stringify(response.data));
+            sessionStorage.setItem("@Auth:token", response.data.token);
+            sessionStorage.setItem("@Auth:nome", response.data.nome);
+            sessionStorage.setItem("@Auth:perfil", response.data.perfil);
+            sessionStorage.setItem("@Auth:usuario", JSON.stringify(response.data));
         }  
     }
 
     const signOut = () => {
-        localStorage.clear();
+        sessionStorage.clear();
         setUsuario(null);
         return <Navigate to="/" />
     }
