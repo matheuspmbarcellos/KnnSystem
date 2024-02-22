@@ -37,7 +37,10 @@ const Navbar = () => {
                     <Link to={"/BuscarContratos"}>Buscar</Link><hr/>
                     <Link to={"/CadastrarContratos"}>Cadastrar</Link><hr/>
                     <Link to={"/AlterarContratos"}>Alterar</Link><hr/>
+                    <Link to={"/ArmazenarContratos"}>Armazenar</Link><hr/>   
+                    <Link to={"/RescindirContratos"}>Rescindir</Link><hr/>      
                     <Link to={"/InativarContratos"}>Inativar</Link><hr/>      
+   
                 </div>
             </div>
       
