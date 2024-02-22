@@ -1,19 +1,14 @@
-import { useContext } from "react";
 import { AlterarContainer, PageContainer, SubtituloContainer,
    CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
-import { FornecedorContext } from "../../../context/FornecedorContext";
-import { useNavigate } from "react-router-dom";
+import { useFornecedor } from "../../../context/FornecedorContext";
 import Button from "../../../components/Button/Button";
+import { useNavigation } from "../../../context/NavigateContext";
 
 
 const InativarFornecedor = () => {
-  const { fornecedorDetail } = useContext(FornecedorContext);
-  const navigate = useNavigate();
+  const { fornecedorDetail, inativarFornecedor } = useFornecedor()
+  const navigate = useNavigation();
 
-  const handleInativarFornecedor = (id) => {
-    alert(`Cnpj ${fornecedorDetail.cnpj} inativado `)
-    navigate(-1);
-  };
 
   return (
     <>
@@ -69,7 +64,7 @@ const InativarFornecedor = () => {
               <CorpoContainer>
                 <center className="bottom">
                   <Button onClick={() => navigate(-1)}>Voltar</Button>
-                  <Button onClick={() => handleInativarFornecedor(fornecedorDetail.id)} className="warning">Inativar</Button>
+                  <Button onClick={() => inativarFornecedor(fornecedorDetail.id)} className="warning">Inativar</Button>
                 </center>
               </CorpoContainer> 
             </AlterarContainer>

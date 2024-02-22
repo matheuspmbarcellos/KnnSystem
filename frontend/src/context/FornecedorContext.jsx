@@ -38,6 +38,26 @@ export const FornecedorProvider = ({ children}) => {
             setError('Nenhum fornecedor encontrado. Tente novamente.');
         }
     }
+
+    const inativarFornecedor = async (id) => {
+        try {
+            await api.put(`/fornecedor/api/inativa/${id}`)
+            alert("Fornecedor inativo!")
+        } catch (error) {
+            alert("Erro ao inativar fornecedor")
+        }
+    }
+
+    const atualizarFornecedor = async (id, fornecedorAtualizado) => {
+        try {
+            await api.put(`/fornecedor/api/atualiza/${id}`, fornecedorAtualizado);
+            setFornecedorDetail(fornecedorAtualizado);
+            alert("Fornecedor atualizado!")
+        } catch (error) {
+            alert(error.response.mensagem)
+        }
+    }
+
     
     return (
         <FornecedorContext.Provider
@@ -50,6 +70,8 @@ export const FornecedorProvider = ({ children}) => {
                 buscarParams,
                 gerarRelatorioFornecedor,
                 setError,
+                inativarFornecedor,
+                atualizarFornecedor,
             }}
         >
             {children}

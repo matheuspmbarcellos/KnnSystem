@@ -7,7 +7,7 @@ import Button from "../../../components/Button/Button";
 
 
 const AlterarFornecedor = () => {
-  const { fornecedorDetail } = useContext(FornecedorContext);
+  const { fornecedorDetail, atualizarFornecedor } = useContext(FornecedorContext);
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({}); 
   const navigate = useNavigate();
@@ -18,10 +18,30 @@ const AlterarFornecedor = () => {
   };
 
   const handleSaveChanges = () => {
-    // Lógica para enviar formData para o backend
-    // Isso pode ser feito através de uma requisição HTTP (por exemplo, utilizando fetch ou axios)
-    // Depois de salvar os dados, você pode atualizar a interface de acordo com a resposta do backend
-  };
+    const fornecedoratualizado = {
+        id: fornecedorDetail.id,
+        razaoSocial: fornecedorDetail.razaoSocial,
+        cnpj: fornecedorDetail.cnpj,
+        domicilioBancario: {
+          agencia: formData.agencia || fornecedorDetail.domicilioBancario.agencia,
+          contaCorrente: formData.contaCorrente || fornecedorDetail.domicilioBancario.contaCorrente,
+          banco: formData.banco || fornecedorDetail.domicilioBancario.banco,
+          pix: formData.pix || fornecedorDetail.domicilioBancario.pix
+        },
+        responsavel: {
+          nome: formData.nomeResponsavel || fornecedorDetail.responsavel.nome,
+          cpf: formData.cpfResponsavel || fornecedorDetail.responsavel.cpf,
+          telefone: formData.telResponsavel || fornecedorDetail.responsavel.telefone,
+          email: formData.emailResponsavel || fornecedorDetail.responsavel.email
+        },
+        enderecoCompleto: formData.endereco || fornecedorDetail.enderecoCompleto,
+        naturezaDoServico: fornecedorDetail.naturezaDoServico,
+        emailCorporativo: formData.emailCorporativo || fornecedorDetail.emailCorporativo,
+        numeroControle: fornecedorDetail.numeroControle
+    }
+    atualizarFornecedor(fornecedorDetail.id, fornecedoratualizado);
+    setEditing(!editing);
+};
 
   return (
     <>
@@ -83,7 +103,7 @@ const AlterarFornecedor = () => {
                     <input
                       type="text"
                       name="emailResponsavel"
-                      value={formData.telResponsavel || fornecedorDetail.responsavel.email}
+                      value={formData.emailResponsavel || fornecedorDetail.responsavel.email}
                       onChange={handleInputChange}
                     />
                   </InputContainer>
