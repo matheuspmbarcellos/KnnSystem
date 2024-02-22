@@ -1,4 +1,4 @@
-import { CadastrarContainer, CheckboxContainer, BodyContainer, CheckboxGroup } from "./styles";
+import { CadastrarContainer, CheckboxContainer, BodyContainer, ResultadoContainer, FormContainer } from "./styles";
 import Button from "../../../components/Button/Button";
 
 const RescindirContratos = () => {
@@ -6,29 +6,40 @@ const RescindirContratos = () => {
   return (
     <CadastrarContainer><br/>
         <h1>{`Contrato [Numero] | Razão Social`}</h1>
-       <BodyContainer>
-        <CheckboxGroup>
+      
+      <BodyContainer>
+        <form>
+        <CheckboxContainer>  
 
-          
-         <CheckboxContainer>  
-           <label>
-           <input type="checkbox" /> 
-           </label>  Rescisão pelo contratante
-          </CheckboxContainer> 
+        <FormContainer>
+          <label> Data da rescisão:</label> 
+           <input type='date'/>
+          </FormContainer>
 
-          <CheckboxContainer>  
-           <label>
-           <input type="checkbox" />
-           </label>  Rescisão pelo fornecedor
-          </CheckboxContainer> 
+            <input type="checkbox" /> 
+            <label>Pelo contratante </label>  
 
-        </CheckboxGroup>
+            <input type="checkbox" /> 
+            <label> Pelo fornecedor </label> 
+        </CheckboxContainer> 
+            
+          <FormContainer>
+          <input type='text' placeholder='Motivação'/>
+          <Button>Rescindir</Button> 
 
-        Motivação:
+          </FormContainer>
+    </form>
 
 
-        </BodyContainer><br/>
-        <Button>Cadastrar</Button>
+         </BodyContainer>
+
+          <ResultadoContainer>
+          Valor da Rescisão:
+          <h1>R$50,00</h1>
+          </ResultadoContainer>
+            
+
+
     </CadastrarContainer>
   )
 }
