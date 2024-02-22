@@ -2,8 +2,7 @@ import { RelatoriosContainer, Resultado } from "../styles"
 import Button from "../../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { usePDF, Margin } from 'react-to-pdf';
-import { useContext, useEffect } from "react";
-import { FornecedorContext } from "../../../context/FornecedorContext";
+import { useFornecedor } from "../../../context/FornecedorContext";
 
 const RelatorioFornecedores = () => {
     const navigate = useNavigate()
@@ -16,11 +15,7 @@ const RelatorioFornecedores = () => {
             margin: Margin.MEDIUM 
         }
     });
-    const { fornecedorRelatorio, buscarRelatorio } = useContext(FornecedorContext);
-
-    useEffect(() => {
-        buscarRelatorio()
-    },[buscarRelatorio])
+    const { fornecedorRelatorio } = useFornecedor();
     
 
   return (

@@ -1,8 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { api } from "../services/api";
 import { useNavigation } from "./NavigateContext";
 
 export const ApartamentoContext = createContext();
+
+export const useApartamento = () => useContext(ApartamentoContext);
 
 export const ApartamentoProvider = ({ children}) => {
     const [apartamentoStore, setApartamentoStore] = useState([]);
@@ -11,9 +13,14 @@ export const ApartamentoProvider = ({ children}) => {
     const [error, setError] = useState(null);
     const navigate = useNavigation()
 
-    const buscarRelatorio = async () => {
-        const response = await api.get("/relatorio/api/apartamentos");
-        setApartamentoRelatorio(response.data);
+    const gerarRelatorioApartamento = async () => {
+        try {
+            const response = await api.get("/relatorio/api/apartamentos");
+            setApartamentoRelatorio(response.data);
+            navigate("/RelatorioApt")            
+        } catch (error) {
+            alert(error.response.mensagem)
+        }
     }
 
     const buscarParams = async (input) => {
@@ -40,7 +47,7 @@ export const ApartamentoProvider = ({ children}) => {
                 error,
                 setApartamentoDetail,
                 buscarParams,
-                buscarRelatorio,
+                gerarRelatorioApartamento,
                 setError,
             }}
         >

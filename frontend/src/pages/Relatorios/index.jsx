@@ -1,23 +1,28 @@
 import { RelatoriosContainer, ButtonContainer } from "./styles";
 import Button from "../../components/Button/Button";
-import { useNavigate } from "react-router-dom";
+import { useApartamento } from "../../context/ApartamentoContext";
+import { useFornecedor } from "../../context/FornecedorContext";
+import { useContrato } from "../../context/ContratoContext";
 
 const Relatorios = () => {
-  const navigate = useNavigate()
+  const { gerarRelatorioContratosVigentes } = useContrato();
+  const { gerarRelatorioContratosVencidos } = useContrato();
+  const { gerarRelatorioApartamento } = useApartamento();
+  const { gerarRelatorioFornecedor } = useFornecedor();
 
   return (
     <RelatoriosContainer>
         <h1>RELATÓRIOS</h1> 
         <ButtonContainer>
-          <Button onClick={() => navigate("/RelatorioContratosVigentes")}>Contratos vigentes</Button>
-          <Button onClick={() => navigate("/RelatorioContratosVencidos")}>Contratos vencidos</Button>
+          <Button onClick={() => gerarRelatorioContratosVigentes()}>Contratos vigentes</Button>
+          <Button onClick={() => gerarRelatorioContratosVencidos()}>Contratos vencidos</Button>
         </ButtonContainer>
         <ButtonContainer>
-          <Button onClick={() => navigate("/RelatorioFornecedores")}>Fornecedores ativos</Button>
-        </ButtonContainer>
-        <ButtonContainer>
-          <Button onClick={() => navigate("/RelatorioApt")}>Apartamentos</Button>
+          <Button onClick={() => gerarRelatorioApartamento()}>Apartamentos</Button>
         </ButtonContainer>      
+        <ButtonContainer>
+          <Button onClick={() => gerarRelatorioFornecedor()}>Fornecedores ativos</Button>
+        </ButtonContainer>
    
     </RelatoriosContainer>
   )

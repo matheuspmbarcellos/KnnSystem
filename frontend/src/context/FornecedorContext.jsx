@@ -13,9 +13,14 @@ export const FornecedorProvider = ({ children}) => {
     const [error, setError] = useState(null);
     const navigate = useNavigation()
 
-    const buscarRelatorio = async () => {
-        const response = await api.get("/relatorio/api/fornecedores-ativos");
-        setFornecedorRelatorio(response.data);
+    const gerarRelatorioFornecedor = async () => {
+        try {
+            const response = await api.get("/relatorio/api/fornecedores-ativos");
+            setFornecedorRelatorio(response.data);
+            navigate("/RelatorioFornecedores")            
+        } catch (error) {
+            alert(error.response.mensagem)
+        }
     }
 
     const buscarParams = async (input) => {
@@ -43,7 +48,7 @@ export const FornecedorProvider = ({ children}) => {
                 error,
                 setFornecedorDetail,
                 buscarParams,
-                buscarRelatorio,
+                gerarRelatorioFornecedor,
                 setError,
             }}
         >

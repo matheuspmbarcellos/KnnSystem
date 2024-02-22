@@ -2,8 +2,7 @@ import { RelatoriosContainer, Resultado } from "../styles";
 import Button from "../../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { usePDF, Margin } from 'react-to-pdf';
-import { useContext, useEffect } from "react";
-import { ApartamentoContext } from "../../../context/ApartamentoContext";
+import { useApartamento } from "../../../context/ApartamentoContext";
 
 const RelatorioApt = () => {
     const navigate = useNavigate();
@@ -16,11 +15,7 @@ const RelatorioApt = () => {
             margin: Margin.MEDIUM 
         }
     });
-    const { apartamentoRelatorio, buscarRelatorio } = useContext(ApartamentoContext);
-
-    useEffect(() => {
-        buscarRelatorio();
-    },[buscarRelatorio]);
+    const { apartamentoRelatorio } = useApartamento();
 
 
   return (

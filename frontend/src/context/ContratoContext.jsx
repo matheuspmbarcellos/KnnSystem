@@ -15,12 +15,22 @@ export const ContratoProvider = ({ children}) => {
     const navigate = useNavigation()
 
     const gerarRelatorioContratosVigentes = async () => {
-        const response = await api.get("/relatorio/api/contratos-vigentes");
-        setRelatorioContratoVigente(response.data);
+        try {
+            const response = await api.get("/relatorio/api/contratos-vigentes");
+            setRelatorioContratoVigente(response.data);
+            navigate("/RelatorioContratosVigentes")
+        } catch (error) {
+            alert(error.response.mensagem)
+        }
     }
     const gerarRelatorioContratosVencidos = async () => {
-        const response = await api.get("/relatorio/api/contratos-vencidos");
-        setRelatorioContratoVencido(response.data);
+        try {
+            const response = await api.get("/relatorio/api/contratos-vencidos");
+            setRelatorioContratoVencido(response.data);
+            navigate("/RelatorioContratosVencidos")
+        } catch (error) {
+            alert(error.response.mensagem)
+        }
     }
 
     const buscarParams = async (input) => {

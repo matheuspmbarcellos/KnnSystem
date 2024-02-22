@@ -6,7 +6,7 @@ import { useContrato } from "../../../context/ContratoContext";
 
 const RelatorioContratosVigentes = () => {
     const navigate = useNavigation()
-    const { relatorioContratoVigente } = useContrato();
+    const { relatorioContratoVencido } = useContrato();
     const { toPDF, targetRef } = usePDF({
         method: "open",
         filename: 'relatorio_apto.pdf',
@@ -40,7 +40,7 @@ const RelatorioContratosVigentes = () => {
             </tr>
             </thead>
             <tbody>
-            {relatorioContratoVigente?.map((contrato, index) => (
+            {relatorioContratoVencido?.map((contrato, index) => (
                 <tr key={index}>
                     <td>{contrato.numeroContrato}</td>
                     <td>{contrato.numeroControleFornecedor}</td>
