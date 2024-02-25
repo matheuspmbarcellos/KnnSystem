@@ -1,13 +1,13 @@
 import { PageContainer, InputContainer} from "../../../components/PagesStyles/buscar";
 import MenuApartamentos from "../../../components/MenuCRUD/MenuApartamentos";
 import Button from "../../../components/Button/Button";
-import { useContext, useState } from "react";
-import { ApartamentoContext } from "../../../context/ApartamentoContext";
+import { useState } from "react";
+import { useApartamento } from "../../../context/ApartamentoContext";
 
 const BuscarApartamento = () => {
   const [numero, setNumero] = useState('');
   const [bloco, setBloco] = useState('');
-  const { buscarParams, error, setError } = useContext(ApartamentoContext)
+  const { buscarParams, error, setError } = useApartamento()
 
   const handleExibirResultado = (e) => {
       e.preventDefault();

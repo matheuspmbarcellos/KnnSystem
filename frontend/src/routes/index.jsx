@@ -18,7 +18,6 @@ import CadastrarApartamento from '../pages/Apartamento/Cadastrar';
 import ResultadoApartamento from '../pages/Apartamento/Resultado';
 import DetalharApartamento from '../pages/Apartamento/Detalhar';
 import AlterarApartamento from '../pages/Apartamento/Alterar';
-import InativarApartamento from '../pages/Apartamento/Inativar';
 import Relatorios from '../pages/Relatorios';
 import RelatorioFornecedores from '../pages/Relatorios/relatorio-fornecedor';
 import RelatorioApt from '../pages/Relatorios/relatorio-apartamento';
@@ -30,6 +29,8 @@ import BuscarContrato from '../pages/Contratos/Buscar';
 import CadastrarContrato from '../pages/Contratos/Cadastrar';
 import ResultadoContrato from '../pages/Contratos/Resultado';
 import RelatorioContratosVigentes from '../pages/Relatorios/relatorio-contratos-vigentes';
+import AlterarStatusApartamento from '../pages/Apartamento/AlterarStatus';
+import ExcluirApartamento from '../pages/Apartamento/Deletar';
 
 const MainRoutes = () => {
     return (
@@ -79,8 +80,11 @@ const MainRoutes = () => {
             <Route path="/AlterarApartamento" element={<PrivateRoutes />}>
                 <Route path="/AlterarApartamento" element={<AlterarApartamento />} />
             </Route>
-            <Route path="/InativarApartamento" element={<PrivateRoutes />}>
-                <Route path="/InativarApartamento" element={<InativarApartamento />} />
+            <Route path="/AlterarStatusApartamento" element={<PrivateRoutes />}>
+                <Route path="/AlterarStatusApartamento" element={<AlterarStatusApartamento />} />
+            </Route>
+            <Route path="/ExcluirApartamento" element={<PrivateRoutes />}>
+                <Route path="/ExcluirApartamento" element={<ExcluirApartamento />} />
             </Route>
             
             {/* Pagamentos */}

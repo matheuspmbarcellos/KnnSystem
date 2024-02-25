@@ -39,11 +39,16 @@ const CadastrarApartamento = () => {
           email: emailProprietario
         }
       });
-      console.log('Fornecedor cadastrado com sucesso:', response.data);
-      alert('Fornecedor cadastrado com sucesso!')
+      alert(`Apartamento ${response.data.morador.numeroDoApartamento} cadastrado com sucesso!`)
       handleLimparFormulario();
     } catch (error) {
-      console.error('Erro ao cadastrar fornecedor:', error);
+      if (error.response) {
+        alert(error.response.data.mensagem);
+      } else if (error.request) {
+          alert("Erro ao fazer a requisição para o servidor.");
+      } else {
+          alert("Ocorreu um erro ao processar sua solicitação.");
+      }
     }
   }; 
 
@@ -70,20 +75,20 @@ const CadastrarApartamento = () => {
         <MenuApartamentos/>
        <BodyContainer>
         <InputContainer>
-          <input type='text' placeholder='Unidade' value={numeroDoApartamento} onChange={e => setNumeroDoApartamento(e.target.value)}/>
-          <input type='text' placeholder='RGI' value={registroImovel} onChange={e => setRegistroImovel(e.target.value)}/>
-          <input type='text' placeholder='Nome Proprietário' value={nomeProprietario} onChange={e => setNomeProprietario(e.target.value)}/>
-          <input type='text' placeholder='CPF Proprietário' value={cpfProprietario} onChange={e => setCpfProprietario(e.target.value)}/>
-          <input type='text' placeholder='Telefone Proprietário' value={telefoneProprietario} onChange={e => setTelefoneProprietario(e.target.value)}/>
-          <input type='email' placeholder='E-mail Proprietário' value={emailProprietario} onChange={e => setEmailProprietario(e.target.value)}/>
+          <input type='text' placeholder='Unidade' value={numeroDoApartamento} onChange={e => setNumeroDoApartamento(e.target.value)} required />
+          <input type='text' placeholder='RGI' value={registroImovel} onChange={e => setRegistroImovel(e.target.value)} required />
+          <input type='text' placeholder='Nome Proprietário' value={nomeProprietario} onChange={e => setNomeProprietario(e.target.value)} required />
+          <input type='text' placeholder='CPF Proprietário' value={cpfProprietario} onChange={e => setCpfProprietario(e.target.value)} required />
+          <input type='text' placeholder='Telefone Proprietário' value={telefoneProprietario} onChange={e => setTelefoneProprietario(e.target.value)} required />
+          <input type='email' placeholder='E-mail Proprietário' value={emailProprietario} onChange={e => setEmailProprietario(e.target.value)} required />
         </InputContainer> 
         <InputContainer> 
-          <input type='text' placeholder='Bloco' value={blocoDoApartamento} onChange={e => setBlocoDoApartamento(e.target.value)}/>
-          <input type='text' placeholder='Metragem (m²)' value={metragemDoImovel} onChange={e => setMetragemDoImovel(e.target.value)}/>
-          <input type='text' placeholder='Nome Morador' value={nomeMorador} onChange={e => setNomeMorador(e.target.value)}/>
-          <input type='text' placeholder='CPF Morador' value={cpfMorador} onChange={e => setCpfMorador(e.target.value)}/>
-          <input type='text' placeholder='Telefone Morador' value={telefoneMorador} onChange={e => setTelefoneMorador(e.target.value)}/>
-          <input type='email' placeholder='E-mail Morador' value={emailMorador} onChange={e => setEmailMorador(e.target.value)}/>
+          <input type='text' placeholder='Bloco' value={blocoDoApartamento} onChange={e => setBlocoDoApartamento(e.target.value)} required />
+          <input type='text' placeholder='Metragem (m²)' value={metragemDoImovel} onChange={e => setMetragemDoImovel(e.target.value)} required />
+          <input type='text' placeholder='Nome Morador' value={nomeMorador} onChange={e => setNomeMorador(e.target.value)} required />
+          <input type='text' placeholder='CPF Morador' value={cpfMorador} onChange={e => setCpfMorador(e.target.value)} required />
+          <input type='text' placeholder='Telefone Morador' value={telefoneMorador} onChange={e => setTelefoneMorador(e.target.value)} required />
+          <input type='email' placeholder='E-mail Morador' value={emailMorador} onChange={e => setEmailMorador(e.target.value)} required />
         </InputContainer> 
         </BodyContainer>
         <Button onClick={submit}>Cadastrar</Button>

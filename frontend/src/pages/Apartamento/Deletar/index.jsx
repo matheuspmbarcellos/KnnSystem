@@ -2,18 +2,20 @@ import { useContext } from "react";
 import { AlterarContainer, PageContainer, SubtituloContainer,
    CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
 import { ApartamentoContext } from "../../../context/ApartamentoContext";
-import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button/Button";
+import { useNavigation } from "../../../context/NavigateContext";
 
 
-const InativarApartamento = () => {
-  const { apartamentoDetail } = useContext(ApartamentoContext);
-  const navigate = useNavigate();
+const ExcluirApartamento = () => {
+  const { apartamentoDetail, excluirApartamento } = useContext(ApartamentoContext);
+  const navigate = useNavigation();
 
-  const handleInativarFornecedor = (id) => {
-    alert(`Apartamento ${apartamentoDetail.morador.numeroDoApartamento} inativado `)
-    navigate(-1);
-  };
+  const handleExclusao = () => {
+    const confirmacao = window.confirm(`Esta ação não poderá ser desfeita. Deseja continuar?`);
+    if (confirmacao) {
+      excluirApartamento(apartamentoDetail.id);
+    }
+  }
 
   return (
     <>
@@ -76,7 +78,7 @@ const InativarApartamento = () => {
             <CorpoContainer>
               <center className="bottom">
                 <Button onClick={() => navigate(-1)}>Voltar</Button>
-                <Button onClick={() => handleInativarFornecedor(apartamentoDetail.id) } className="warning">Inativar</Button>
+                <Button onClick={() => handleExclusao()} className="warning">Excluir</Button>
               </center>
             </CorpoContainer> 
           </AlterarContainer>
@@ -90,4 +92,4 @@ const InativarApartamento = () => {
 }
 
 
-export default InativarApartamento;
+export default ExcluirApartamento;

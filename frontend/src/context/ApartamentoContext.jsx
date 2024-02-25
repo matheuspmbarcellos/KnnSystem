@@ -19,7 +19,13 @@ export const ApartamentoProvider = ({ children}) => {
             setApartamentoRelatorio(response.data);
             navigate("/RelatorioApt")            
         } catch (error) {
-            alert(error.response.mensagem)
+            if (error.response) {
+                alert(error.response.data.mensagem);
+              } else if (error.request) {
+                  alert("Erro ao fazer a requisição para o servidor.");
+              } else {
+                  alert("Ocorreu um erro ao processar sua solicitação.");
+              }
         }
     }
 
@@ -34,7 +40,53 @@ export const ApartamentoProvider = ({ children}) => {
             setError(null);
             navigate("/ResultadoApartamento")
         } catch (error) {
-            setError('Nenhum apartamento encontrado. Tente novamente.');
+            if (error.response) {
+                setError(error.response.data.mensagem);
+            } else if (error.request) {
+                setError("Erro ao fazer a requisição para o servidor.");
+            } else {
+                setError("Ocorreu um erro ao processar sua solicitação.");
+            }
+        }
+    }
+
+    const inativarApartamento = async (id) => {
+        try {
+            await api.put(`/apartamento/api/inativa/${id}`)
+            buscarParams({numero: apartamentoDetail.morador.numeroDoApartamento})
+            alert("Apartamento inativo!")
+        } catch (error) {
+            alert("Erro ao inativar apartamento")
+        }
+    }
+
+    const ativarApartamento = async (id) => {
+        try {
+            await api.put(`/apartamento/api/ativa/${id}`)
+            buscarParams({numero: apartamentoDetail.morador.numeroDoApartamento})
+            alert("Apartamento ativo!")
+        } catch (error) {
+            alert("Função indisponível!")
+        }
+    }
+    
+    const excluirApartamento = async (id) => {
+        try {
+            await api.delete(`/apartamento/api/exclui/${id}`)
+            buscarParams([])
+            alert("Apartamento excluído!")
+        } catch (error) {
+            alert("Erro ao excluir apartamento")
+        }
+    }
+
+    const atualizarApartamento = async (id, apartamentoAtualizado) => {
+        try {
+            await api.put(`/apartamento/api/atualiza/${id}`, apartamentoAtualizado);
+            buscarParams({numero: apartamentoDetail.morador.numeroDoApartamento})
+            alert("Apartamento atualizado!")
+        } catch (error) {
+            alert(error.response.mensagem)
         }
     }
     
@@ -49,6 +101,10 @@ export const ApartamentoProvider = ({ children}) => {
                 buscarParams,
                 gerarRelatorioApartamento,
                 setError,
+                inativarApartamento,
+                ativarApartamento,
+                excluirApartamento,
+                atualizarApartamento,
             }}
         >
             {children}

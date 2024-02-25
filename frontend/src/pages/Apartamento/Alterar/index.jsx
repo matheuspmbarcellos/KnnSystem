@@ -7,7 +7,7 @@ import Button from "../../../components/Button/Button";
 
 
 const AlterarApartamento = () => {
-  const { apartamentoDetail } = useContext(ApartamentoContext);
+  const { apartamentoDetail, atualizarApartamento } = useContext(ApartamentoContext);
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({}); 
   const navigate = useNavigate();
@@ -18,8 +18,25 @@ const AlterarApartamento = () => {
   };
 
   const handleSaveChanges = () => {
-    // Lógica para enviar formData para o backend
-    
+    const apartamentoAtualizado = {
+      metragemDoImovel: apartamentoDetail.metragemDoImovel,
+        morador: {
+          numeroDoApartamento: apartamentoDetail.morador.numeroDoApartamento,
+          blocoDoApartamento: apartamentoDetail.morador.blocoDoApartamento,
+          nome: formData.nomeMorador || apartamentoDetail.morador.nome,
+          cpf: formData.cpfMorador || apartamentoDetail.morador.cpf,
+          telefone: formData.telMorador || apartamentoDetail.morador.telefone,
+          email: formData.emailMorador || apartamentoDetail.morador.email
+        },
+        proprietario: {
+          registroImovel: apartamentoDetail.proprietario.registroImovel,
+          nome: formData.nomeProprietario || apartamentoDetail.proprietario.nome,
+          cpf: formData.cpfProprietario || apartamentoDetail.proprietario.cpf,
+          telefone: formData.telProprietario || apartamentoDetail.proprietario.telefone,
+          email: formData.emailProprietario || apartamentoDetail.proprietario.email
+        }
+    }
+    atualizarApartamento(apartamentoDetail.id, apartamentoAtualizado)
   };
 
   return (
