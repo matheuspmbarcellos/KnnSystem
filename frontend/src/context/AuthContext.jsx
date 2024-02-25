@@ -29,14 +29,11 @@ export const AuthProvider = ({children}) => {
     
 
     const signIn = async (login, password) => {
-        const response = await api.post('/auth/api/login', {
-            "cpf": login,
-            "senha": password,
-        })
-
-        if (response.data.error) {
-            alert(response.data.error)
-        } else {
+        try {
+            const response = await api.post('/auth/api/login', {
+                "cpf": login,
+                "senha": password,
+            })
             setUsuario(response.data);
             api.defaults.headers.common[
                 "Authorization"
@@ -44,8 +41,17 @@ export const AuthProvider = ({children}) => {
             sessionStorage.setItem("@Auth:token", response.data.token);
             sessionStorage.setItem("@Auth:nome", response.data.nome);
             sessionStorage.setItem("@Auth:perfil", response.data.perfil);
-            sessionStorage.setItem("@Auth:usuario", JSON.stringify(response.data));
-        }  
+            sessionStorage.setItem("@Auth:usuario", JSON.stringify(response.data));            
+        } catch (error) {
+            if (error.response) {
+                alert(error.response.data.mensagem);
+              } else if (error.request) {
+                  alert("Erro ao fazer a requisição para o servidor.");
+              } else {
+                  alert("Ocorreu um erro ao processar sua solicitação.");
+              }           
+        }
+
     }
 
     const signOut = () => {
