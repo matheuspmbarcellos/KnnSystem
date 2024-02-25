@@ -1,14 +1,16 @@
-import { ResultadoContainer, Resultado, DetailButton, EditButton, DisableButton } from "../../../components/PagesStyles/resultado";
+import { ResultadoContainer, Resultado, DetailButton, EditButton, ActivateButton, DeleteButton, InactivateButton } from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { FornecedorContext } from "../../../context/FornecedorContext";
+import { useFornecedor } from "../../../context/FornecedorContext";
 import { AuthContext } from "../../../context/AuthContext";
+import { useNavigation } from "../../../context/NavigateContext";
 
 const ResultadoFornecedor = () => {  
   const { perfil } = useContext(AuthContext)
-  const { fornecedorStore, setFornecedorDetail } = useContext(FornecedorContext)
-  const navigate = useNavigate()
+  const { fornecedorStore, setFornecedorDetail } = useFornecedor()
+  const navigate = useNavigation()
+
+
 
   const handleExibirDetail = (fornecedor) => {
     setFornecedorDetail(fornecedor)
@@ -19,9 +21,13 @@ const ResultadoFornecedor = () => {
     setFornecedorDetail(fornecedor)
     navigate("/AlterarFornecedor");
   };
-  const handleInativar = (fornecedor) => {
+  const handleAlterarStatus = (fornecedor) => {
     setFornecedorDetail(fornecedor)
-    navigate("/InativarFornecedor");
+    navigate("/AlterarStatusFornecedor");
+  };
+  const handleExcluir = (fornecedor) => {
+    setFornecedorDetail(fornecedor)
+    navigate("/ExcluirFornecedor");
   };
 
 
@@ -39,25 +45,41 @@ const ResultadoFornecedor = () => {
           </tr>
         </thead>
         <tbody>
-        {fornecedorStore?.map((fornecedor, index) => (
-          <tr key={index}>
-            <td>{fornecedor.razaoSocial}</td>
-            <td>{fornecedor.cnpj.replace(
-                    /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
-                    '$1.$2.$3/$4-$5'
-                  )}</td>
-            <td>{fornecedor.naturezaDoServico}</td>
-            <td>{fornecedor.numeroControle}</td>
-            <td>
-                <DetailButton onClick={() => handleExibirDetail(fornecedor)} />
-                <EditButton onClick={() => handleEditar(fornecedor)} />
-                {(perfil === "Administrador") && <DisableButton onClick={() => handleInativar(fornecedor)} />}
-            </td>
+        {(fornecedorStore && fornecedorStore.length > 0) ? (
+          fornecedorStore
+            .sort((a, b) => {
+              const statusComparison = a.status.localeCompare(b.status);
+              if (statusComparison !== 0) {
+                return statusComparison;
+              }
+              return a.razaoSocial.localeCompare(b.razaoSocial);
+            })
+            .map((fornecedor, index) => (
+              <tr key={index}>
+                <td>{fornecedor.razaoSocial}<span className={`${fornecedor.status}`}> {fornecedor.status}</span></td>
+                <td>{fornecedor.cnpj.replace(
+                        /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
+                        '$1.$2.$3/$4-$5'
+                      )}</td>
+                <td>{fornecedor.naturezaDoServico}</td>
+                <td>{fornecedor.numeroControle}</td>
+                <td>
+                  <DetailButton onClick={() => handleExibirDetail(fornecedor)} title="Detalhar" />
+                  <EditButton onClick={() => handleEditar(fornecedor)} title="Editar" />
+                  {(fornecedor.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(fornecedor)} title="Desativar"/>}
+                  {(fornecedor.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(fornecedor)} title="Ativar"/>}
+                  {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(fornecedor)} title="Excluir"/>}
+                </td>
+              </tr>
+            ))
+        ) : (
+          <tr>
+            <td colSpan="5">Nenhum fornecedor encontrado</td>
           </tr>
-        ))}
+        )}
         </tbody>
       </Resultado>
-      <Button onClick={() => navigate(-1)}>Voltar</Button>
+      <Button onClick={() => navigate("/BuscarFornecedor")}>Voltar</Button>
     </ResultadoContainer>
   )
 }

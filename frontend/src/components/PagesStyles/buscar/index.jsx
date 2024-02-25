@@ -28,13 +28,12 @@ margin-top: 15px;
 input{
     color: white;
     background-color: #131129;
-    border-radius: 5px;    
+    border-radius: 15px;    
     height: 5%;
     width: 30%;
-    padding: 6px;
+    padding: 6px 10px;
     border: solid 0.6px;
     margin-bottom:14px;
-
     &:focus {
         color: white;
     }

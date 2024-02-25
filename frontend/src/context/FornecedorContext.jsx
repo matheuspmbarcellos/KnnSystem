@@ -42,16 +42,37 @@ export const FornecedorProvider = ({ children}) => {
     const inativarFornecedor = async (id) => {
         try {
             await api.put(`/fornecedor/api/inativa/${id}`)
+            buscarParams({cnpj: fornecedorDetail.cnpj})
             alert("Fornecedor inativo!")
         } catch (error) {
             alert("Erro ao inativar fornecedor")
         }
     }
 
+    const ativarFornecedor = async (id) => {
+        try {
+            await api.put(`/fornecedor/api/ativa/${id}`)
+            buscarParams({cnpj: fornecedorDetail.cnpj})
+            alert("Fornecedor ativo!")
+        } catch (error) {
+            alert("Erro ao ativar fornecedor")
+        }
+    }
+    
+    const exluirFornecedor = async (id) => {
+        try {
+            await api.delete(`/fornecedor/api/exclui/${id}`)
+            buscarParams([])
+            alert("Fornecedor excluído!")
+        } catch (error) {
+            alert("Erro ao excluir fornecedor")
+        }
+    }
+
     const atualizarFornecedor = async (id, fornecedorAtualizado) => {
         try {
             await api.put(`/fornecedor/api/atualiza/${id}`, fornecedorAtualizado);
-            setFornecedorDetail(fornecedorAtualizado);
+            buscarParams({cnpj: fornecedorDetail.cnpj})
             alert("Fornecedor atualizado!")
         } catch (error) {
             alert(error.response.mensagem)
@@ -71,6 +92,8 @@ export const FornecedorProvider = ({ children}) => {
                 gerarRelatorioFornecedor,
                 setError,
                 inativarFornecedor,
+                ativarFornecedor,
+                exluirFornecedor,
                 atualizarFornecedor,
             }}
         >

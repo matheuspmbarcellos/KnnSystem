@@ -11,7 +11,8 @@ import CadastrarFornecedor from '../pages/Fornecedores/Cadastrar';
 import ResultadoFornecedor from '../pages/Fornecedores/Resultado';
 import DetalharFornecedor from '../pages/Fornecedores/Detalhar';
 import AlterarFornecedor from '../pages/Fornecedores/Alterar';
-import InativarFornecedor from '../pages/Fornecedores/Inativar';
+import AlterarStatusFornecedor from '../pages/Fornecedores/AlterarStatus';
+import ExcluirFornecedor from '../pages/Fornecedores/Deletar';
 import BuscarApartamento from '../pages/Apartamento/Buscar';
 import CadastrarApartamento from '../pages/Apartamento/Cadastrar';
 import ResultadoApartamento from '../pages/Apartamento/Resultado';
@@ -55,8 +56,11 @@ const MainRoutes = () => {
             <Route path="/AlterarFornecedor" element={<PrivateRoutes />}>
                 <Route path="/AlterarFornecedor" element={<AlterarFornecedor />} />
             </Route>
-            <Route path="/InativarFornecedor" element={<PrivateRoutes />}>
-                <Route path="/InativarFornecedor" element={<InativarFornecedor />} />
+            <Route path="/AlterarStatusFornecedor" element={<PrivateRoutes />}>
+                <Route path="/AlterarStatusFornecedor" element={<AlterarStatusFornecedor />} />
+            </Route>
+            <Route path="/ExcluirFornecedor" element={<PrivateRoutes />}>
+                <Route path="/ExcluirFornecedor" element={<ExcluirFornecedor />} />
             </Route>
 
             {/* Apartamento */}

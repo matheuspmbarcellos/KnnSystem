@@ -5,16 +5,23 @@ import Button from "../../../components/Button/Button";
 import { useNavigation } from "../../../context/NavigateContext";
 
 
-const InativarFornecedor = () => {
-  const { fornecedorDetail, inativarFornecedor } = useFornecedor()
+const ExcluirFornecedor = () => {
+  const { fornecedorDetail, exluirFornecedor } = useFornecedor()
   const navigate = useNavigation();
+
+  const handleExclusao = () => {
+    const confirmacao = window.confirm(`Deseja excluir fornecedor?`);
+    if (confirmacao) {
+      exluirFornecedor(fornecedorDetail.id);
+    }
+  }
 
 
   return (
     <>
     {fornecedorDetail ? (
         <PageContainer>
-          <p className="title">{fornecedorDetail.razaoSocial}</p>
+          <p className="title">{fornecedorDetail.razaoSocial}<span className={`${fornecedorDetail.status}`}> {fornecedorDetail.status}</span></p>
             <SubtituloContainer>
               <ul>
                   <li><p>CNPJ: {fornecedorDetail.cnpj.replace(
@@ -22,7 +29,7 @@ const InativarFornecedor = () => {
                     '$1.$2.$3/$4-$5'
                   )}</p></li>
                   <li><p>{fornecedorDetail.naturezaDoServico}</p></li>           
-                  <li><p>{fornecedorDetail.numeroControle}</p></li>
+                  <li><p>COD: {fornecedorDetail.numeroControle}</p></li>
               </ul> 
           </SubtituloContainer>
           <AlterarContainer>
@@ -33,7 +40,10 @@ const InativarFornecedor = () => {
               </CorpoContent>
               <CorpoContent>
                 <Titulo>CPF Responsável</Titulo>
-                <Dado>{fornecedorDetail.responsavel.cpf}</Dado>
+                <Dado>{fornecedorDetail.responsavel.cpf.replace(
+                      /^(\d{3})(\d{3})(\d{3})(\d{2})$/,
+                      '$1.$2.$3-$4'
+                )}</Dado>
               </CorpoContent>
               <CorpoContent>
                 <Titulo>Contato Responsável</Titulo>
@@ -64,7 +74,7 @@ const InativarFornecedor = () => {
               <CorpoContainer>
                 <center className="bottom">
                   <Button onClick={() => navigate(-1)}>Voltar</Button>
-                  <Button onClick={() => inativarFornecedor(fornecedorDetail.id)} className="warning">Inativar</Button>
+                  <Button onClick={() => handleExclusao()} className="warning">Excluir</Button>
                 </center>
               </CorpoContainer> 
             </AlterarContainer>
@@ -78,4 +88,4 @@ const InativarFornecedor = () => {
 }
 
 
-export default InativarFornecedor;
+export default ExcluirFornecedor;

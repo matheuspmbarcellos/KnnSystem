@@ -1,14 +1,14 @@
-import { useContext } from "react";
 import { AlterarContainer, PageContainer, SubtituloContainer,
    CorpoContainer, Titulo, Dado, CorpoContent } from "../../../components/PagesStyles/alterar-detalhar-inativar";
-import { FornecedorContext } from "../../../context/FornecedorContext";
-import { useNavigate } from "react-router-dom";
+import { useFornecedor } from "../../../context/FornecedorContext";
 import Button from "../../../components/Button/Button";
+import { useNavigation } from "../../../context/NavigateContext";
 
 
-const DetalharFornecedor = () => {
-  const { fornecedorDetail } = useContext(FornecedorContext);
-  const navigate = useNavigate();
+const AlterarStatusFornecedor = () => {
+  const { fornecedorDetail, inativarFornecedor, ativarFornecedor } = useFornecedor()
+  const navigate = useNavigation();
+
 
   return (
     <>
@@ -67,6 +67,8 @@ const DetalharFornecedor = () => {
               <CorpoContainer>
                 <center className="bottom">
                   <Button onClick={() => navigate(-1)}>Voltar</Button>
+                  {(fornecedorDetail.status === "ATIVO") && <Button onClick={() => inativarFornecedor(fornecedorDetail.id)} className="warning">Inativar</Button>}
+                  {(fornecedorDetail.status === "INATIVO") && <Button onClick={() => ativarFornecedor(fornecedorDetail.id)} className="activate">Ativar</Button>}
                 </center>
               </CorpoContainer> 
             </AlterarContainer>
@@ -80,4 +82,4 @@ const DetalharFornecedor = () => {
 }
 
 
-export default DetalharFornecedor;
+export default AlterarStatusFornecedor;

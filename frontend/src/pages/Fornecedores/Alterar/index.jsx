@@ -40,14 +40,13 @@ const AlterarFornecedor = () => {
         numeroControle: fornecedorDetail.numeroControle
     }
     atualizarFornecedor(fornecedorDetail.id, fornecedoratualizado);
-    setEditing(!editing);
 };
 
   return (
     <>
       {fornecedorDetail ? (
         <PageContainer>
-          <p className="title">{fornecedorDetail.razaoSocial}</p>
+          <p className="title">{fornecedorDetail.razaoSocial}<span className={`${fornecedorDetail.status}`}> {fornecedorDetail.status}</span></p>
           <SubtituloContainer>
             <ul>
               <li><p>CNPJ: {fornecedorDetail.cnpj.replace(
@@ -55,7 +54,7 @@ const AlterarFornecedor = () => {
                     '$1.$2.$3/$4-$5'
                   )}</p></li>
               <li><p>{fornecedorDetail.naturezaDoServico}</p></li>
-              <li><p>{fornecedorDetail.numeroControle}</p></li>
+              <li><p>COD: {fornecedorDetail.numeroControle}</p></li>
             </ul>
           </SubtituloContainer>
           <AlterarContainer>
@@ -87,7 +86,10 @@ const AlterarFornecedor = () => {
                     />
                   </InputContainer>
                 ) : (
-                  <Dado>{fornecedorDetail.responsavel.cpf}</Dado>
+                  <Dado>{fornecedorDetail.responsavel.cpf.replace(
+                    /^(\d{3})(\d{3})(\d{3})(\d{2})$/,
+                    '$1.$2.$3-$4'
+                  )}</Dado>
                 )}
               </CorpoContent>
               <CorpoContent>

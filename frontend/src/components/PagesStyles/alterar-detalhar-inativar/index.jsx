@@ -20,14 +20,45 @@ align-items: left;
         cursor: pointer;
     }
 }
+.activate {
+    background-color: limegreen;
+    &:hover {
+        color: #111111; 
+        cursor: pointer;
+    }
+}
+
+.ATIVO {
+    margin-left: 5px;
+    color: limegreen;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: bold;
+}
+.INATIVO {
+    margin-left: 5px;
+    color: #b81414;        
+    font-size: 11px;
+    font-style: italic;
+    font-weight: bold;
+}
+.RESCINDIDO {
+    margin-left: 5px;
+    color: #b81414;        
+    font-size: 11px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
 
 `
 export const SubtituloContainer = styled.div`
 display: flex;
 flex-direction: column;
 height: 20px;
-min-width: 400px;
-width: 800px;
+min-width: 500px;
+max-width: 900px;
 align-items: left;
 padding: 10px 0 10px 0;
 
@@ -48,6 +79,7 @@ font-size: 20px;
 color: #131129;
 font-weight: 100;
 padding: 10px;
+margin-right: 15px;
 
 }
 
