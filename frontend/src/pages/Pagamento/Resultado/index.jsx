@@ -1,27 +1,12 @@
-import { ResultadoContainer, Resultado, DetailButton,
-   EditButton, DisableButton } from "../../../components/PagesStyles/resultado";
+import { ResultadoContainer, Resultado } from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
 import { useNavigation } from "../../../context/NavigateContext";
 import { usePagamento } from "../../../context/PagamentoContext";
 import moment from "moment";
 
 const ResultadoPagamento = () => {  
-  const { pagamentoStore, setPagamentoDetail } = usePagamento()
+  const { pagamentoStore } = usePagamento()
   const navigate = useNavigation()
-
-  const handleExibirDetail = (pagamento) => {
-    setPagamentoDetail(pagamento)
-    navigate("/Detalharpagamento");
-  };
-
-  const handleEditar = (pagamento) => {
-    setPagamentoDetail(pagamento)
-    navigate("/Alterarpagamento");
-  };
-  const handleInativar = (pagamento) => {
-    setPagamentoDetail(pagamento)
-    navigate("/Inativarpagamento");
-  };
 
 
   return (
@@ -36,7 +21,7 @@ const ResultadoPagamento = () => {
             <th>Razão Social</th>
             <th>Valor</th>
             <th>Competência</th>
-            <th>Ações</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -53,11 +38,7 @@ const ResultadoPagamento = () => {
               <td>{pagamento.razaoSocial}</td>
               <td>{pagamento.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
               <td>{moment(pagamento.competencia).format('DD-MM-YYYY')}</td>
-              <td>
-                  <DetailButton onClick={() => handleExibirDetail(pagamento)} />
-                  <EditButton onClick={() => handleEditar(pagamento)} />
-                  <DisableButton onClick={() => handleInativar(pagamento)} />
-              </td>
+              <td>{pagamento.status}</td>
             </tr>
           ))}
         </>
