@@ -63,9 +63,9 @@ const ResultadoApartamento = () => {
               <td>
               <DetailButton onClick={() => handleExibirDetail(apartamento)} title="Detalhar" />
                   <EditButton onClick={() => handleEditar(apartamento)} title="Editar" />
+                  {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(apartamento)} title="Excluir"/>}
                   {(apartamento.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(apartamento)} title="Inativar"/>}
                   {(apartamento.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(apartamento)} title="Ativar"/>}
-                  {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(apartamento)} title="Excluir"/>}
               </td>
             </tr>
           ))

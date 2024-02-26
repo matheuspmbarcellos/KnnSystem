@@ -66,9 +66,9 @@ const ResultadoFornecedor = () => {
                 <td>
                   <DetailButton onClick={() => handleExibirDetail(fornecedor)} title="Detalhar" />
                   <EditButton onClick={() => handleEditar(fornecedor)} title="Editar" />
+                  {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(fornecedor)} title="Excluir"/>}
                   {(fornecedor.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(fornecedor)} title="Desativar"/>}
                   {(fornecedor.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(fornecedor)} title="Ativar"/>}
-                  {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(fornecedor)} title="Excluir"/>}
                 </td>
               </tr>
             ))
