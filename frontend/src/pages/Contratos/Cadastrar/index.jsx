@@ -34,18 +34,14 @@ const CadastrarContrato = () => {
         percentualMulta,
         emailSindico,
       });
-      console.log(response.data);
       alert(`Contrato cadastrado com sucesso! N° ${response.data.numeroContrato}`)
       handleLimparFormulario();
     } catch (error) {
       if (error.response) {
-        // Erro de resposta do servidor
         alert(error.response.data.mensagem);
       } else if (error.request) {
-          // Erro de requisição
           alert("Erro ao fazer a requisição para o servidor.");
       } else {
-          // Outro tipo de erro
           alert("Ocorreu um erro ao processar sua solicitação.");
       }
     }

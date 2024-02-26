@@ -87,6 +87,34 @@ export const DeleteButton = styled.button`
         transform: scale(1.1);
     }
 `;
+export const TerminateButton = styled.button`
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url(../rescisao.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+export const ReadjustButton = styled.button`
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url(../reajustar.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
 
 export const ResultadoContainer = styled.div`
 display: flex;
