@@ -31,6 +31,16 @@ export const PagamentoProvider = ({ children }) => {
         }
     }
 
+    const inativarPagamento = async (id) => {
+        try {
+            await api.put(`/pagamento/api/inativa/${id}`)
+            buscarParams([])
+            alert("Pagamento inativo!")
+        } catch (error) {
+            alert("Erro ao inativar pagamento")
+        }
+    }
+
 
     return (
         <PagamentoContext.Provider value={{
@@ -40,6 +50,7 @@ export const PagamentoProvider = ({ children }) => {
             buscarParams,
             setPagamentoDetail,
             setError,
+            inativarPagamento,
         }}>
             {children}
         </PagamentoContext.Provider>
