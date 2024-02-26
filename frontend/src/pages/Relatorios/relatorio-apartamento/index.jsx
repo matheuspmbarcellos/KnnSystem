@@ -5,6 +5,7 @@ import { usePDF, Margin } from 'react-to-pdf';
 import { useApartamento } from "../../../context/ApartamentoContext";
 
 const RelatorioApt = () => {
+    const { apartamentoRelatorio } = useApartamento();
     const navigate = useNavigate();
     const { toPDF, targetRef } = usePDF({
         method: "open",
@@ -15,7 +16,6 @@ const RelatorioApt = () => {
             margin: Margin.MEDIUM 
         }
     });
-    const { apartamentoRelatorio } = useApartamento();
 
 
   return (
@@ -39,7 +39,9 @@ const RelatorioApt = () => {
                 </tr>
             </thead>
             <tbody>
-            {apartamentoRelatorio?.map((apartamento, index) => (
+            {(apartamentoRelatorio && apartamentoRelatorio.length > 0) ? (
+                apartamentoRelatorio
+                .map((apartamento, index) => (
                 <tr key={index}>
                     <td>{apartamento.morador.numeroDoApartamento}</td>
                     <td>{apartamento.morador.blocoDoApartamento}</td>
@@ -53,7 +55,11 @@ const RelatorioApt = () => {
                     <td>{apartamento.morador.email}</td>
                     <td>{apartamento.metragemDoImovel}</td>
                 </tr>
-            ))}            
+            ))): (
+                <tr>
+                  <td colSpan="11">Nenhum Apartamento encontrado</td>
+                </tr>
+              )}            
             </tbody>
             </Resultado>
         </center>

@@ -5,6 +5,7 @@ import { usePDF, Margin } from 'react-to-pdf';
 import { useFornecedor } from "../../../context/FornecedorContext";
 
 const RelatorioFornecedores = () => {
+    const { fornecedorRelatorio } = useFornecedor();
     const navigate = useNavigate()
     const { toPDF, targetRef } = usePDF({
         method: "open",
@@ -15,7 +16,6 @@ const RelatorioFornecedores = () => {
             margin: Margin.MEDIUM 
         }
     });
-    const { fornecedorRelatorio } = useFornecedor();
     
 
   return (
@@ -32,14 +32,20 @@ const RelatorioFornecedores = () => {
             </tr>
             </thead>
             <tbody>
-            {fornecedorRelatorio?.map((fornecedor, index) => (
+            {(fornecedorRelatorio && fornecedorRelatorio.length > 0) ? (
+                fornecedorRelatorio
+                .map((fornecedor, index) => (
                 <tr key={index}>
                     <td>{fornecedor.numeroControle}</td>
                     <td>{fornecedor.cnpj}</td>
                     <td>{fornecedor.razaoSocial}</td>
                     <td>{fornecedor.responsavel.nome}</td>
                 </tr>
-            ))}       
+            ))) : (
+                <tr>
+                  <td colSpan="4">Nenhum Fornecedor encontrado</td>
+                </tr>
+              )}       
             </tbody>
         </Resultado>
         </center>

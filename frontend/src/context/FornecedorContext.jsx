@@ -19,7 +19,7 @@ export const FornecedorProvider = ({ children}) => {
             setFornecedorRelatorio(response.data);
             navigate("/RelatorioFornecedores")            
         } catch (error) {
-            alert(error.response.mensagem)
+            navigate("/RelatorioFornecedores")
         }
     }
 

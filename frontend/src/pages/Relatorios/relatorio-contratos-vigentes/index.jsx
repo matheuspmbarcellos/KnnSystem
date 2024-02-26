@@ -5,8 +5,8 @@ import { useNavigation } from "../../../context/NavigateContext";
 import { useContrato } from "../../../context/ContratoContext";
 
 const RelatorioContratosVigentes = () => {
-    const navigate = useNavigation()
     const { relatorioContratoVigente } = useContrato();
+    const navigate = useNavigation()
     const { toPDF, targetRef } = usePDF({
         method: "open",
         filename: 'relatorio_apto.pdf',
@@ -40,7 +40,9 @@ const RelatorioContratosVigentes = () => {
             </tr>
             </thead>
             <tbody>
-            {relatorioContratoVigente?.map((contrato, index) => (
+            {(relatorioContratoVigente && relatorioContratoVigente.length > 0) ? (
+                relatorioContratoVigente
+                .map((contrato, index) => (
                 <tr key={index}>
                     <td>{contrato.numeroContrato}</td>
                     <td>{contrato.numeroControleFornecedor}</td>
@@ -55,7 +57,11 @@ const RelatorioContratosVigentes = () => {
                     <td>{contrato.emailSindico}</td>
                     <td>{contrato.percentualMulta}</td>
                 </tr>
-            ))}       
+            ))) : (
+                <tr>
+                  <td colSpan="12">Nenhum Contrato vigente encontrado</td>
+                </tr>
+              )}       
             </tbody>
         </Resultado>
         </center>

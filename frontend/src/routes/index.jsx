@@ -31,6 +31,13 @@ import ResultadoContrato from '../pages/Contratos/Resultado';
 import RelatorioContratosVigentes from '../pages/Relatorios/relatorio-contratos-vigentes';
 import AlterarStatusApartamento from '../pages/Apartamento/AlterarStatus';
 import ExcluirApartamento from '../pages/Apartamento/Deletar';
+import RescindirContrato from '../pages/Contratos/Rescindir';
+import DetalharContrato from '../pages/Contratos/Detalhar';
+import AlterarContrato from '../pages/Contratos/Alterar';
+import AlterarStatusContrato from '../pages/Contratos/Alterar Status';
+import ExcluirContrato from '../pages/Contratos/Deletar';
+import ReajustarContrato from '../pages/Contratos/Reajustar';
+import RelatorioContratosVencidos from '../pages/Relatorios/relatorio-contratos-vencidos';
 
 const MainRoutes = () => {
     return (
@@ -108,17 +115,25 @@ const MainRoutes = () => {
             <Route path="/ResultadoContrato" element={<PrivateRoutes />}>
                 <Route path="/ResultadoContrato" element={<ResultadoContrato />} />
             </Route>
-            {/* 
             <Route path="/DetalharContrato" element={<PrivateRoutes />}>
                 <Route path="/DetalharContrato" element={<DetalharContrato />} />
             </Route>
             <Route path="/AlterarContrato" element={<PrivateRoutes />}>
                 <Route path="/AlterarContrato" element={<AlterarContrato />} />
             </Route>
-            <Route path="/InativarContrato" element={<PrivateRoutes />}>
-                <Route path="/InativarContrato" element={<InativarContrato />} />
+            <Route path="/RescindirContrato" element={<PrivateRoutes />}>
+                <Route path="/RescindirContrato" element={<RescindirContrato />} />
+            </Route>
+            <Route path="/AlterarStatusContrato" element={<PrivateRoutes />}>
+                <Route path="/AlterarStatusContrato" element={<AlterarStatusContrato />} />
+            </Route>
+            <Route path="/ExcluirContrato" element={<PrivateRoutes />}>
+                <Route path="/ExcluirContrato" element={<ExcluirContrato />} />
             </Route> 
-            */}
+            <Route path="/ReajustarContrato" element={<PrivateRoutes />}>
+                <Route path="/ReajustarContrato" element={<ReajustarContrato />} />
+            </Route> 
+            
 
             {/* Relatorios */}
             <Route path="/Relatorios" element={<PrivateRoutes />}>
@@ -132,6 +147,9 @@ const MainRoutes = () => {
             </Route> 
             <Route path="/RelatorioContratosVigentes" element={<PrivateRoutes />}>
                 <Route path="/RelatorioContratosVigentes" element={<RelatorioContratosVigentes />} />                
+            </Route> 
+            <Route path="/RelatorioContratosVencidos" element={<PrivateRoutes />}>
+                <Route path="/RelatorioContratosVencidos" element={<RelatorioContratosVencidos />} />                
             </Route> 
 
             {/* Extrato */}

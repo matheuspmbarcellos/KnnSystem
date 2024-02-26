@@ -4,7 +4,7 @@ import { usePDF, Margin } from 'react-to-pdf';
 import { useNavigation } from "../../../context/NavigateContext";
 import { useContrato } from "../../../context/ContratoContext";
 
-const RelatorioContratosVigentes = () => {
+const RelatorioContratosVencidos = () => {
     const navigate = useNavigation()
     const { relatorioContratoVencido } = useContrato();
     const { toPDF, targetRef } = usePDF({
@@ -40,7 +40,9 @@ const RelatorioContratosVigentes = () => {
             </tr>
             </thead>
             <tbody>
-            {relatorioContratoVencido?.map((contrato, index) => (
+            {(relatorioContratoVencido && relatorioContratoVencido.length > 0) ? (
+                relatorioContratoVencido
+                .map((contrato, index) => (
                 <tr key={index}>
                     <td>{contrato.numeroContrato}</td>
                     <td>{contrato.numeroControleFornecedor}</td>
@@ -55,7 +57,11 @@ const RelatorioContratosVigentes = () => {
                     <td>{contrato.emailSindico}</td>
                     <td>{contrato.percentualMulta}</td>
                 </tr>
-            ))}       
+            ))) : (
+                <tr>
+                  <td colSpan="12">Nenhum Contrato vencido encontrado</td>
+                </tr>
+              )}       
             </tbody>
         </Resultado>
         </center>
@@ -67,4 +73,4 @@ const RelatorioContratosVigentes = () => {
   )
 }
 
-export default RelatorioContratosVigentes;
+export default RelatorioContratosVencidos;

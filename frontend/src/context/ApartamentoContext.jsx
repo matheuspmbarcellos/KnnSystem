@@ -19,13 +19,7 @@ export const ApartamentoProvider = ({ children}) => {
             setApartamentoRelatorio(response.data);
             navigate("/RelatorioApt")            
         } catch (error) {
-            if (error.response) {
-                alert(error.response.data.mensagem);
-              } else if (error.request) {
-                  alert("Erro ao fazer a requisição para o servidor.");
-              } else {
-                  alert("Ocorreu um erro ao processar sua solicitação.");
-              }
+            navigate("/RelatorioApt")
         }
     }
 
