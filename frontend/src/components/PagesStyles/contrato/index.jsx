@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const ResultadoContainer = styled.div`
+export const ArmazenarContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 padding-bottom: 40px;
+margin-top: 30px;
 }
 
 .resultado {
@@ -18,9 +19,9 @@ padding-bottom: 40px;
 `
 
 export const Resultado = styled.table`
-    width: 80%;
+    width: 50%;
     margin-bottom: 30px;
-
+    margin-top: 20px;
     th {
         text-align: center;
         font-weight: bold;
@@ -81,3 +82,25 @@ export const DisableButton = styled.button`
     }
 `;
 
+export const IncluirButton = styled.button`
+border: 5px;
+border-color: #131129;
+background: white;
+color: #131129;
+
+
+&:hover {
+    color: limegreen; 
+    cursor: pointer;
+}
+
+`
+
+export const ButtonContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+`

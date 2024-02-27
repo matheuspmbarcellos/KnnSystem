@@ -14,6 +14,7 @@ import Contratos from '../pages/Contratos';
 import CadastrarContratos from '../pages/Contratos/Cadastrar';
 import NivelServico from '../pages/Contratos/NivelServico';
 import BuscarContratos from '../pages/Contratos/Buscar';
+import ArmazenarContratos from '../pages/Contratos/Armazenar';
 import RescindirContratos from '../pages/Contratos/Rescindir';
 import DetalharContrato from '../pages/Contratos/Detalhar';
 import ResultadoContrato from '../pages/Contratos/Resultado';
@@ -46,6 +47,7 @@ const MainRoutes = () => {
             <Route path="/Contratos" element={<Contratos />} />
             <Route path="/ResultadoContrato" element={<ResultadoContrato />} />
             <Route path="/DetalharContrato" element={<DetalharContrato />} />
+            <Route path="/ArmazenarContratos" element={<ArmazenarContratos />} />
             <Route path="/NivelServico" element={<NivelServico />} />
             <Route path="/RescindirContratos" element={<RescindirContratos />} />
             <Route path="/BuscarContratos" element={<BuscarContratos />} />
