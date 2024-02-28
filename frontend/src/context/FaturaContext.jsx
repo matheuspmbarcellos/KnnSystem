@@ -2,13 +2,13 @@ import { createContext, useContext, useState } from "react";
 import { api } from "../services/api";
 import { useNavigation } from "./NavigateContext";
 
-export const PagamentoContext = createContext();
+export const FaturaContext = createContext();
 
-export const usePagamento = () => useContext(PagamentoContext);
+export const useFatura = () => useContext(FaturaContext);
 
-export const PagamentoProvider = ({ children }) => {
-    const [pagamentoStore, setPagamentoStore] = useState([]);
-    const [pagamentoDetail, setPagamentoDetail] = useState([]);
+export const FaturaProvider = ({ children }) => {
+    const [faturaStore, setFaturaStore] = useState([]);
+    const [faturaDetail, setFaturaDetail] = useState([]);
     const [error, setError] = useState(null);
     const navigate = useNavigation()
 
@@ -23,36 +23,36 @@ export const PagamentoProvider = ({ children }) => {
 
         try {
             const response = await api.get('/fatura/api/consulta', { params });
-            setPagamentoStore(response.data);
+            setFaturaStore(response.data);
             setError(null);
-            navigate("/ResultadoPagamento")
+            navigate("/ResultadoFatura")
         } catch (error) {
-            setError('Nenhum Pagamento encontrado. Tente novamente.');
+            setError('Nenhum Fatura encontrado. Tente novamente.');
         }
     }
 
-    const inativarPagamento = async (id) => {
+    const inativarFatura = async (id) => {
         try {
-            await api.put(`/pagamento/api/inativa/${id}`)
+            await api.put(`/fatura/api/inativa/${id}`)
             buscarParams([])
-            alert("Pagamento inativo!")
+            alert("Fatura inativo!")
         } catch (error) {
-            alert("Erro ao inativar pagamento")
+            alert("Erro ao inativar fatura")
         }
     }
 
 
     return (
-        <PagamentoContext.Provider value={{
-            pagamentoStore,
-            pagamentoDetail,
+        <FaturaContext.Provider value={{
+            faturaStore,
+            faturaDetail,
             error,
             buscarParams,
-            setPagamentoDetail,
+            setFaturaDetail,
             setError,
-            inativarPagamento,
+            inativarFatura,
         }}>
             {children}
-        </PagamentoContext.Provider>
+        </FaturaContext.Provider>
     )
 }

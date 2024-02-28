@@ -1,11 +1,11 @@
 import { ResultadoContainer, Resultado } from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
 import { useNavigation } from "../../../context/NavigateContext";
-import { usePagamento } from "../../../context/PagamentoContext";
+import { useFatura } from "../../../context/FaturaContext";
 import moment from "moment";
 
-const ResultadoPagamento = () => {  
-  const { pagamentoStore } = usePagamento()
+const ResultadoFatura = () => {  
+  const { faturaStore } = useFatura()
   const navigate = useNavigation()
 
 
@@ -26,19 +26,19 @@ const ResultadoPagamento = () => {
         </thead>
         <tbody>
         <>        
-          {pagamentoStore?.map((pagamento, index) => (
+          {faturaStore?.map((fatura, index) => (
             <tr key={index}>
-              <td>{pagamento.numeroDoContrato}</td>
-              <td>{pagamento.numeroDaFatura}</td>
-              <td>{pagamento.cnpjDoFornecedor.replace(
+              <td>{fatura.numeroDoContrato}</td>
+              <td>{fatura.numeroDaFatura}</td>
+              <td>{fatura.cnpjDoFornecedor.replace(
                     /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
                     '$1.$2.$3/$4-$5'
                   )}
               </td>
-              <td>{pagamento.razaoSocial}</td>
-              <td>{pagamento.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
-              <td>{moment(pagamento.competencia).format('DD-MM-YYYY')}</td>
-              <td>{pagamento.status}</td>
+              <td>{fatura.razaoSocial}</td>
+              <td>{fatura.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
+              <td>{moment(fatura.competencia).format('DD-MM-YYYY').replace(/-/g,"/")}</td>
+              <td>{fatura.status}</td>
             </tr>
           ))}
         </>
@@ -49,4 +49,4 @@ const ResultadoPagamento = () => {
   )
 }
 
-export default ResultadoPagamento;
+export default ResultadoFatura;

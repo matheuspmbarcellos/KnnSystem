@@ -1,12 +1,9 @@
 import { ResultadoContainer, Resultado, DetailButton, EditButton, ActivateButton, DeleteButton, InactivateButton } from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
-import { useContext } from "react";
 import { useFornecedor } from "../../../context/FornecedorContext";
-import { AuthContext } from "../../../context/AuthContext";
 import { useNavigation } from "../../../context/NavigateContext";
 
 const ResultadoFornecedor = () => {  
-  const { perfil } = useContext(AuthContext)
   const { fornecedorStore, setFornecedorDetail } = useFornecedor()
   const navigate = useNavigation()
 
@@ -66,7 +63,7 @@ const ResultadoFornecedor = () => {
                 <td>
                   <DetailButton onClick={() => handleExibirDetail(fornecedor)} title="Detalhar" />
                   <EditButton onClick={() => handleEditar(fornecedor)} title="Editar" />
-                  {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(fornecedor)} title="Excluir"/>}
+                  <DeleteButton onClick={() => handleExcluir(fornecedor)} title="Excluir"/>
                   {(fornecedor.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(fornecedor)} title="Desativar"/>}
                   {(fornecedor.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(fornecedor)} title="Ativar"/>}
                 </td>

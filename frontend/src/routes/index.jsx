@@ -22,9 +22,9 @@ import Relatorios from '../pages/Relatorios';
 import RelatorioFornecedores from '../pages/Relatorios/relatorio-fornecedor';
 import RelatorioApt from '../pages/Relatorios/relatorio-apartamento';
 import ExtratosFinanceiros from '../pages/ExtratoFinanceiros';
-import CadastrarPagamento from '../pages/Pagamento/Cadastrar';
-import ConsultarPagamento from '../pages/Pagamento/Buscar';
-import ResultadoPagamento from '../pages/Pagamento/Resultado';
+import CadastrarFatura from '../pages/Fatura/Cadastrar';
+import ConsultarFatura from '../pages/Fatura/Buscar';
+import ResultadoFatura from '../pages/Fatura/Resultado';
 import BuscarContrato from '../pages/Contratos/Buscar';
 import CadastrarContrato from '../pages/Contratos/Cadastrar';
 import ResultadoContrato from '../pages/Contratos/Resultado';
@@ -38,6 +38,7 @@ import AlterarStatusContrato from '../pages/Contratos/Alterar Status';
 import ExcluirContrato from '../pages/Contratos/Deletar';
 import ReajustarContrato from '../pages/Contratos/Reajustar';
 import RelatorioContratosVencidos from '../pages/Relatorios/relatorio-contratos-vencidos';
+import { PrivateRoutesAdmin } from './privateRoutesAdmin';
 
 const MainRoutes = () => {
     return (
@@ -67,42 +68,42 @@ const MainRoutes = () => {
             <Route path="/AlterarStatusFornecedor" element={<PrivateRoutes />}>
                 <Route path="/AlterarStatusFornecedor" element={<AlterarStatusFornecedor />} />
             </Route>
-            <Route path="/ExcluirFornecedor" element={<PrivateRoutes />}>
+            <Route path="/ExcluirFornecedor" element={<PrivateRoutesAdmin />}>
                 <Route path="/ExcluirFornecedor" element={<ExcluirFornecedor />} />
             </Route>
 
             {/* Apartamento */}
-            <Route path="/BuscarApartamento" element={<PrivateRoutes />}>
+            <Route path="/BuscarApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/BuscarApartamento" element={<BuscarApartamento />} />
             </Route>
-            <Route path="/CadastrarApartamento" element={<PrivateRoutes />}>
+            <Route path="/CadastrarApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/CadastrarApartamento" element={<CadastrarApartamento />} />
             </Route>
-            <Route path="/ResultadoApartamento" element={<PrivateRoutes />}>
+            <Route path="/ResultadoApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/ResultadoApartamento" element={<ResultadoApartamento />} />
             </Route>
-            <Route path="/DetalharApartamento" element={<PrivateRoutes />}>
+            <Route path="/DetalharApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/DetalharApartamento" element={<DetalharApartamento />} />
             </Route>
-            <Route path="/AlterarApartamento" element={<PrivateRoutes />}>
+            <Route path="/AlterarApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/AlterarApartamento" element={<AlterarApartamento />} />
             </Route>
-            <Route path="/AlterarStatusApartamento" element={<PrivateRoutes />}>
+            <Route path="/AlterarStatusApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/AlterarStatusApartamento" element={<AlterarStatusApartamento />} />
             </Route>
-            <Route path="/ExcluirApartamento" element={<PrivateRoutes />}>
+            <Route path="/ExcluirApartamento" element={<PrivateRoutesAdmin />}>
                 <Route path="/ExcluirApartamento" element={<ExcluirApartamento />} />
             </Route>
             
-            {/* Pagamentos */}
-            <Route path="/CadastrarPagamento" element={<PrivateRoutes />}>
-                <Route path="/CadastrarPagamento" element={<CadastrarPagamento />} />
+            {/* Faturas */}
+            <Route path="/CadastrarFatura" element={<PrivateRoutes />}>
+                <Route path="/CadastrarFatura" element={<CadastrarFatura />} />
             </Route>
-            <Route path="/ConsultarPagamento" element={<PrivateRoutes />}>
-                <Route path="/ConsultarPagamento" element={<ConsultarPagamento />} />
+            <Route path="/ConsultarFatura" element={<PrivateRoutes />}>
+                <Route path="/ConsultarFatura" element={<ConsultarFatura />} />
             </Route>
-            <Route path="/ResultadoPagamento" element={<PrivateRoutes />}>
-                <Route path="/ResultadoPagamento" element={<ResultadoPagamento />} />
+            <Route path="/ResultadoFatura" element={<PrivateRoutes />}>
+                <Route path="/ResultadoFatura" element={<ResultadoFatura />} />
             </Route>
 
             {/* Contrato */}
@@ -127,7 +128,7 @@ const MainRoutes = () => {
             <Route path="/AlterarStatusContrato" element={<PrivateRoutes />}>
                 <Route path="/AlterarStatusContrato" element={<AlterarStatusContrato />} />
             </Route>
-            <Route path="/ExcluirContrato" element={<PrivateRoutes />}>
+            <Route path="/ExcluirContrato" element={<PrivateRoutesAdmin />}>
                 <Route path="/ExcluirContrato" element={<ExcluirContrato />} />
             </Route> 
             <Route path="/ReajustarContrato" element={<PrivateRoutes />}>

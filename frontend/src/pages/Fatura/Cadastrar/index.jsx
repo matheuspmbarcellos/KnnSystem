@@ -1,11 +1,11 @@
 import { CadastrarContainer, InputContainer,
    BodyContainer } from "../../../components/PagesStyles/cadastrar";
-import MenuPagamentos from "../../../components/MenuCRUD/MenuPagamentos";
+import MenuFaturas from "../../../components/MenuCRUD/MenuFaturas";
 import Button from "../../../components/Button/Button";
 import { useState } from "react";
 import { api } from "../../../services/api";
 
-const CadastrarPagamento = () => {
+const CadastrarFatura = () => {
   const [numeroContrato, setNumeroContrato] = useState("")  
   const [numeroFatura, setnumeroFatura] = useState("")  
   const [percentualJuros, setpercentualJuros] = useState("")  
@@ -72,7 +72,7 @@ const CadastrarPagamento = () => {
   return (
     <CadastrarContainer>
         <h1>PAGAMENTOS</h1>
-        <MenuPagamentos />
+        <MenuFaturas />
        <BodyContainer>
         <InputContainer>
           <input type='text' placeholder='Número do Contrato' value={numeroContrato} onChange={e => setNumeroContrato(e.target.value)} required />
@@ -96,4 +96,4 @@ const CadastrarPagamento = () => {
   )
 }
 
-export default CadastrarPagamento;
+export default CadastrarFatura;

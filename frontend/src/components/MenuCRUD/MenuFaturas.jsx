@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ButtonContainer, MenuButton } from "./styles";
 
-const MenuPagamentos = () => {
+const MenuFaturas = () => {
   return (
           <ButtonContainer>
             <Link to={"/ConsultarPagamento"}>
@@ -14,4 +14,4 @@ const MenuPagamentos = () => {
   )
 }
     
-export default MenuPagamentos;
+export default MenuFaturas;

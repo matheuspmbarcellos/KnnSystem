@@ -1,15 +1,15 @@
 import { PageContainer, InputContainer} from "../../../components/PagesStyles/buscar";
 import Button from "../../../components/Button/Button";
 import { useState } from "react";
-import MenuPagamentos from "../../../components/MenuCRUD/MenuPagamentos";
-import { usePagamento } from "../../../context/PagamentoContext";
+import MenuFaturas from "../../../components/MenuCRUD/MenuFaturas";
+import { useFatura } from "../../../context/FaturaContext";
 
-const ConsultarPagamento = () => {
+const ConsultarFatura = () => {
   const [cnpjFornecedor, setcnpjFornecedor] = useState('');
   const [razaoSocial, setRazaoSocial] = useState('');
   const [numeroContrato, setNumeroContrato] = useState('');
   const [numeroFaturaconsulta, setnumeroFaturaconsulta] = useState('');
-  const { buscarParams, error, setError } = usePagamento()
+  const { buscarParams, error, setError } = useFatura()
 
   const handleExibirResultado = (e) => {
       e.preventDefault();
@@ -24,8 +24,8 @@ const ConsultarPagamento = () => {
 
   return (
     <PageContainer>
-        <h1>PAGAMENTOS</h1>
-        <MenuPagamentos/>
+        <h1>FATURAS</h1>
+        <MenuFaturas/>
         <form onSubmit={handleExibirResultado}>
         <InputContainer> 
           <input type='text' placeholder='CNPJ Fornecedor' value={cnpjFornecedor} onChange={(e) => setcnpjFornecedor(e.target.value)} onFocus={() => setError(null)} />
@@ -41,4 +41,4 @@ const ConsultarPagamento = () => {
   )
 }
 
-export default ConsultarPagamento;
+export default ConsultarFatura;

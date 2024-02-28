@@ -1,13 +1,10 @@
 import { ResultadoContainer, Resultado, DetailButton, EditButton, TerminateButton, DeleteButton, ActivateButton, InactivateButton, ReadjustButton } from "../../../components/PagesStyles/resultado";
 import Button from "../../../components/Button/Button";
-import { useContext } from "react";
-import { AuthContext } from "../../../context/AuthContext";
 import { useContrato } from "../../../context/ContratoContext";
 import moment from "moment";
 import { useNavigation } from "../../../context/NavigateContext";
 
 const ResultadoContrato = () => {  
-  const { perfil } = useContext(AuthContext)
   const { contratoStore, setContratoDetail } = useContrato()
   const navigate = useNavigation()
 
@@ -74,7 +71,7 @@ const ResultadoContrato = () => {
                 {(contrato.status === "RESCINDIDO") ?  (
                   <TerminateButton onClick={() => handleRescindir(contrato)} disabled />
                 ) : (<TerminateButton onClick={() => handleRescindir(contrato)} title="Rescindir" />)}
-                {(perfil === "Administrador") && <DeleteButton onClick={() => handleExcluir(contrato)} title="Excluir" />}
+                <DeleteButton onClick={() => handleExcluir(contrato)} title="Excluir" />
                 {(contrato.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(contrato)} title="Desativar"/>}
                 {(contrato.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(contrato)} title="Ativar"/>}
                 {(contrato.status === "RESCINDIDO") && <InactivateButton onClick={() => handleAlterarStatus(contrato)} disabled/>}

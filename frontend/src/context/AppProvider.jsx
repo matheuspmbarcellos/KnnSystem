@@ -4,7 +4,7 @@ import { ContratoProvider } from "./ContratoContext"
 import { ExtratoProvider } from "./ExtratoContext"
 import { FornecedorProvider } from "./FornecedorContext"
 import { NavigationProvider } from "./NavigateContext"
-import { PagamentoProvider } from "./PagamentoContext"
+import { FaturaProvider } from "./FaturaContext"
 
 export const AppProvider = ({children}) => {
 
@@ -14,13 +14,13 @@ export const AppProvider = ({children}) => {
             <NavigationProvider>
                 <FornecedorProvider>
                     <ApartamentoProvider>
-                        <PagamentoProvider>
+                        <FaturaProvider>
                             <ExtratoProvider>
                                 <ContratoProvider>
                                 {children}
                                 </ContratoProvider>
                             </ExtratoProvider>
-                        </PagamentoProvider>                        
+                        </FaturaProvider>                        
                     </ApartamentoProvider>
                 </FornecedorProvider>
             </NavigationProvider>

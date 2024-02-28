@@ -2,17 +2,21 @@ import { Link } from 'react-router-dom';
 import { NavbarContainer, NavbarContent } from './styles'
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
+import { useNavigation } from '../../context/NavigateContext';
 
 const Navbar = () => {
-  const {signed} = useContext(AuthContext);
+  const {signed} = useContext(AuthContext)
+  const navigate = useNavigation()
+
+
 
   if (signed) {
       return (
-        <NavbarContainer>
+        <NavbarContainer> 
           <hr/> 
           <NavbarContent> 
             <div className="dropdown">
-              <button className="dropbtn"><Link to={"/BuscarFornecedor"}>Fornecedores</Link></button>
+              <button className="dropbtn" onClick={() => navigate("/BuscarFornecedor")}>Fornecedores</button>
               <div className="dropdown-content">
                   <Link to={"/BuscarFornecedor"}>Buscar</Link><hr/>
                   <Link to={"/CadastrarFornecedor"}>Cadastrar</Link><hr/>            
@@ -23,23 +27,23 @@ const Navbar = () => {
       
       
             <div className="dropdown">
-                <button className="dropbtn"><Link to={"/ConsultarPagamento"}>Pagamento</Link></button>
+                <button className="dropbtn" onClick={() => navigate("/ConsultarFatura")}>Faturas</button>
                 <div className="dropdown-content">
-                    <Link to={"/ConsultarPagamento"}>Consultar</Link><hr/>
-                    <Link to={"/CadastrarPagamento"}>Incluir</Link><hr/>    
+                    <Link to={"/ConsultarFatura"}>Consultar</Link><hr/>
+                    <Link to={"/CadastrarFatura"}>Incluir</Link><hr/>    
                 </div>
             </div>
           
             <div className="dropdown">
-                <button className="dropbtn"><Link to={"/BuscarContrato"}>Contratos</Link></button>
+                <button className="dropbtn" onClick={() => navigate("/BuscarContrato")}>Contratos</button>
                 <div className="dropdown-content">
                     <Link to={"/BuscarContrato"}>Buscar</Link><hr/>
                     <Link to={"/CadastrarContrato"}>Cadastrar</Link><hr/>  
                 </div>
             </div>
       
-            <div className="dropdown">
-                <button className="dropbtn"><Link to={"/BuscarApartamento"}>Apartamentos</Link></button>
+            <div className="dropdown" id='pagamento'>
+                <button className="dropbtn" onClick={() => navigate("/BuscarApartamento")}>Apartamentos</button>
                 <div className="dropdown-content">
                     <Link to={"/BuscarApartamento"}>Buscar</Link><hr/>
                     <Link to={"/CadastrarApartamento"}>Cadastrar</Link><hr/>   
