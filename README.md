@@ -6,7 +6,7 @@ Repositório do front-end para o sistema KnnSystem, desenvolvido como trabalho f
 
 
 ### Pré-requisitos:
-Certifique-se de ter o npm instalado.
+Certifique-se de ter um editor de código (vscode) e o npm instalado.
 
 #### Como Inicializar a Aplicação:
 
