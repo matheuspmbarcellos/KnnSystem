@@ -8,6 +8,7 @@ import Esqueci from '../pages/Login/Esqueci';
 import BuscarUsuario from '../pages/Usuarios/Buscar';
 import CadastrarUsuario from '../pages/Usuarios/Cadastrar';
 import ResultadoBuscar from '../pages/Usuarios/ResultadoBuscar';
+import AlterarUsuario from '../pages/Usuarios/Alterar';
 import InativarUsuario from '../pages/Usuarios/Inativar';
 import BuscarFornecedor from '../pages/Fornecedores/Buscar';
 import CadastrarFornecedor from '../pages/Fornecedores/Cadastrar';
@@ -42,6 +43,7 @@ const MainRoutes = () => {
             <Route path="/BuscarUsuario" element={<BuscarUsuario />}/>
             <Route path="/CadastrarUsuario" element={<CadastrarUsuario />}/>
             <Route path="/ResultadoBuscar" element={<ResultadoBuscar />}/>
+            <Route path="/AlterarUsuario" element={<AlterarUsuario />}/>
             <Route path="/InativarUsuario" element={<InativarUsuario />}/>
             <Route path="/BuscarFornecedor" element={<BuscarFornecedor />} />
             <Route path="/CadastrarFornecedor" element={<CadastrarFornecedor />} />
