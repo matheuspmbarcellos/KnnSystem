@@ -5,6 +5,10 @@ import Informacoes from '../pages/Home/Informacoes';
 import QuemSomos from '../pages/Home/QuemSomos';
 import Login from '../pages/Login';
 import Esqueci from '../pages/Login/Esqueci';
+import BuscarUsuario from '../pages/Usuarios/Buscar';
+import CadastrarUsuario from '../pages/Usuarios/Cadastrar';
+import ResultadoBuscar from '../pages/Usuarios/ResultadoBuscar';
+import InativarUsuario from '../pages/Usuarios/Inativar';
 import BuscarFornecedor from '../pages/Fornecedores/Buscar';
 import CadastrarFornecedor from '../pages/Fornecedores/Cadastrar';
 import ResultadoFornecedor from '../pages/Fornecedores/Resultado';
@@ -35,6 +39,10 @@ const MainRoutes = () => {
             <Route path="/QuemSomos" element={<QuemSomos />}/>
             <Route path="/Login" element={<Login />} />
             <Route path="/Esqueci" element={<Esqueci />}/>
+            <Route path="/BuscarUsuario" element={<BuscarUsuario />}/>
+            <Route path="/CadastrarUsuario" element={<CadastrarUsuario />}/>
+            <Route path="/ResultadoBuscar" element={<ResultadoBuscar />}/>
+            <Route path="/InativarUsuario" element={<InativarUsuario />}/>
             <Route path="/BuscarFornecedor" element={<BuscarFornecedor />} />
             <Route path="/CadastrarFornecedor" element={<CadastrarFornecedor />} />
             <Route path="/ResultadoFornecedor" element={<ResultadoFornecedor />} />

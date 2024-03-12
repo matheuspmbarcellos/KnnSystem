@@ -7,7 +7,18 @@ const Navbar = () => {
       return (
         <NavbarContainer>
           <hr/> 
+            
           <NavbarContent> 
+          <div className="dropdown">
+              <button className="dropbtn"><Link to={"/BuscarUsuario"}>Usuários</Link></button>
+              <div className="dropdown-content">
+                  <Link to={"/BuscarUsuario"}>Buscar</Link><hr/>
+                  <Link to={"/CadastrarUsuario"}>Cadastrar</Link><hr/>
+                  <Link to={"/AlterarUsuario"}>Alterar</Link><hr/>
+                  <Link to={"/InativarUsuario"}>Inativar</Link><hr/>              
+              </div>
+            </div>
+
             <div className="dropdown">
               <button className="dropbtn"><Link to={"/BuscarFornecedor"}>Fornecedores</Link></button>
               <div className="dropdown-content">
