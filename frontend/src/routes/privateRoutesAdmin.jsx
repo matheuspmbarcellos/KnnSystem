@@ -8,5 +8,5 @@ export const PrivateRoutesAdmin = () => {
     const {signed, perfil} = useContext(AuthContext)
     const navigate = useNavigation()
 
-    return (signed && perfil === "Administrador") ? <Outlet /> : (alert("Acesso não autorizado")) + (navigate(-1));
+    return (signed && perfil === "Administrador") ? <Outlet /> : (navigate("/acessoBloqueado"));
 }

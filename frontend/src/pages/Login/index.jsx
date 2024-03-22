@@ -43,7 +43,9 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}  
           required   
-          autoComplete='current-password'    
+          autoComplete='current-password'  
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+          title="Senha deve possuir no mínimo 8 posições, com letras e números"  
           />
         <ButtonContainer>
             <ButtonSecondary onClick={() => navigate("/Esqueci")}>Esqueci minha senha</ButtonSecondary> 

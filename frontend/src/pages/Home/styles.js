@@ -9,9 +9,9 @@ export const HomeContainer = styled.div`
 
 export const Banner = styled.div`
 width: 100%;
-height: 15em;
-background:no-repeat 80% url(./predio.png);
-margin-bottom:15px;
+height: 300px;
+background: no-repeat url(./predio.png) center;
+object-fit: cover;
 `
 
 export const InfosContainer = styled.div`

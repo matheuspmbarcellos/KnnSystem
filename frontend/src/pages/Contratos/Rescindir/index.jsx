@@ -43,13 +43,13 @@ const RescindirContrato = () => {
                         <input type='date' value={dataRescisao} onChange={e => setDataRescisao(e.target.value)} required/>
                     </FormContainer>
                     <input 
-                        type="checkbox"
+                        type="radio"
                         checked={selecionado === 'CONTRATANTE'}
                         onChange={() => handleCheckboxChange('CONTRATANTE')}
                     /> 
                     <label>Pelo contratante</label>  
                     <input 
-                        type="checkbox" 
+                        type="radio" 
                         checked={selecionado === 'FORNECEDOR'}
                         onChange={() => handleCheckboxChange('FORNECEDOR')}
                     /> 

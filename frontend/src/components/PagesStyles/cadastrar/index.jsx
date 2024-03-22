@@ -42,6 +42,22 @@ input {
         color: limegreen;
         outline: none;
     }
+}
+select {
+    width: 92%;
+    color: #131129;
+    height: 30px;
+    padding: 6px;
+    border-bottom: 1px solid #131129;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:focus {
+        color: limegreen;
+        outline: none;
+    }
+}
 `
 
 export const InputContainerRow= styled.div`

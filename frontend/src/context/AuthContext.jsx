@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { api } from "../services/api";
-import { Navigate } from "react-router-dom";
 
 export const AuthContext = createContext()
 
@@ -57,7 +56,9 @@ export const AuthProvider = ({children}) => {
     const signOut = () => {
         sessionStorage.clear();
         setUsuario(null);
-        return <Navigate to="/" />
+        setNome(null);
+        setPerfil(null);
+        return window.location.href = "/Login";
     }
 
     return (

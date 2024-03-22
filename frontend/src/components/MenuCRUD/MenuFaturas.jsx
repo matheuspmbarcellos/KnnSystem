@@ -4,10 +4,10 @@ import { ButtonContainer, MenuButton } from "./styles";
 const MenuFaturas = () => {
   return (
           <ButtonContainer>
-            <Link to={"/ConsultarPagamento"}>
+            <Link to={"/ConsultarFatura"}>
               <MenuButton>CONSULTAR</MenuButton>
             </Link>
-            <Link to={"/CadastrarPagamento"}>
+            <Link to={"/CadastrarFatura"}>
               <MenuButton>INCLUIR</MenuButton>
             </Link>
         </ButtonContainer>

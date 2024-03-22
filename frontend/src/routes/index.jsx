@@ -39,6 +39,14 @@ import ExcluirContrato from '../pages/Contratos/Deletar';
 import ReajustarContrato from '../pages/Contratos/Reajustar';
 import RelatorioContratosVencidos from '../pages/Relatorios/relatorio-contratos-vencidos';
 import { PrivateRoutesAdmin } from './privateRoutesAdmin';
+import { NoAuthorization } from '../pages/NoAuthorization';
+import CadastrarUsuario from '../pages/Usuario/Cadastrar';
+import BuscarUsuario from '../pages/Usuario/Buscar';
+import ResultadoUsuario from '../pages/Usuario/Resultado';
+import DetalharUsuario from '../pages/Usuario/Detalhar';
+import AlterarStatusUsuario from '../pages/Usuario/AlterarStatus';
+import ExcluirUsuario from '../pages/Usuario/Deletar';
+import AlterarUsuario from '../pages/Usuario/Alterar';
 
 const MainRoutes = () => {
     return (
@@ -48,6 +56,30 @@ const MainRoutes = () => {
             <Route path="/QuemSomos" element={<QuemSomos />}/>
             <Route path="/Login" element={<Login />} />
             <Route path="/Esqueci" element={<Esqueci />}/>
+            <Route path="/acessoBloqueado" element={<NoAuthorization />}/>
+
+            {/* Usuario */}
+            <Route path="/BuscarUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/BuscarUsuario" element={<BuscarUsuario />} />
+            </Route>
+            <Route path="/CadastrarUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/CadastrarUsuario" element={<CadastrarUsuario />} />
+            </Route>
+            <Route path="/ResultadoUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/ResultadoUsuario" element={<ResultadoUsuario />} />
+            </Route>
+            <Route path="/DetalharUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/DetalharUsuario" element={<DetalharUsuario />} />
+            </Route>
+            <Route path="/AlterarUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/AlterarUsuario" element={<AlterarUsuario />} />
+            </Route>
+            <Route path="/AlterarStatusUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/AlterarStatusUsuario" element={<AlterarStatusUsuario />} />
+            </Route>
+            <Route path="/ExcluirUsuario" element={<PrivateRoutesAdmin />}>
+                <Route path="/ExcluirUsuario" element={<ExcluirUsuario />} />
+            </Route> 
 
             {/* Fornecedor */}
             <Route path="/BuscarFornecedor" element={<PrivateRoutes />}>
@@ -71,6 +103,7 @@ const MainRoutes = () => {
             <Route path="/ExcluirFornecedor" element={<PrivateRoutesAdmin />}>
                 <Route path="/ExcluirFornecedor" element={<ExcluirFornecedor />} />
             </Route>
+
 
             {/* Apartamento */}
             <Route path="/BuscarApartamento" element={<PrivateRoutesAdmin />}>

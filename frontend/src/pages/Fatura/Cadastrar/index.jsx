@@ -71,7 +71,7 @@ const CadastrarFatura = () => {
 
   return (
     <CadastrarContainer>
-        <h1>PAGAMENTOS</h1>
+        <h1>FATURAS</h1>
         <MenuFaturas />
        <BodyContainer>
         <InputContainer>

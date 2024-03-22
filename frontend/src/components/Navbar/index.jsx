@@ -16,6 +16,14 @@ const Navbar = () => {
           <hr/> 
           <NavbarContent> 
             <div className="dropdown">
+              <button className="dropbtn" onClick={() => navigate("/BuscarUsuario")}>Usuários</button>
+              <div className="dropdown-content">
+                  <Link to={"/BuscarUsuario"}>Buscar</Link><hr/>
+                  <Link to={"/CadastrarUsuario"}>Cadastrar</Link><hr/>            
+              </div>
+            </div>
+      
+            <div className="dropdown">
               <button className="dropbtn" onClick={() => navigate("/BuscarFornecedor")}>Fornecedores</button>
               <div className="dropdown-content">
                   <Link to={"/BuscarFornecedor"}>Buscar</Link><hr/>
