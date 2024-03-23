@@ -29,11 +29,11 @@ const AlterarStatusUsuario = () => {
                       '$1.$2.$3-$4'
                 )}
                 </Dado>
-              </CorpoContent>    
+              </CorpoContent>       
               <CorpoContent>
-                <Titulo>Telefone</Titulo>
-                <Dado>{usuarioDetail.telefone}</Dado>
-              </CorpoContent>    
+                <Titulo>E-mail</Titulo>
+                <Dado>{usuarioDetail.email}</Dado>
+              </CorpoContent>      
             </CorpoContainer>
 
             <CorpoContainer>
@@ -44,10 +44,6 @@ const AlterarStatusUsuario = () => {
               <CorpoContent>
                 <Titulo>Data de Nascimento</Titulo>
                 <Dado>{moment(usuarioDetail.dataNascimento).format('DD-MM-YYYY').replace(/-/g,"/")}</Dado>
-              </CorpoContent>       
-              <CorpoContent>
-                <Titulo>E-mail</Titulo>
-                <Dado>{usuarioDetail.email}</Dado>
               </CorpoContent>    
               </CorpoContainer>  
             <CorpoContainer>

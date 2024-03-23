@@ -43,18 +43,34 @@ const ResultadoUsuario = () => {
           </tr>
         </thead>
         <tbody> 
-              <tr>
-                <td>{usuarioStore.nome}<span className={`${usuarioStore.status}`}> {usuarioStore.status}</span></td>
-                <td>{usuarioStore.cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/,'$1.$2.$3-$4')}</td>
-                <td>{usuarioStore.cargo}</td>
+          {(usuarioStore && usuarioStore.length > 0) ? (
+            usuarioStore
+            .sort((a, b) => {
+              const statusComparison = a.status.localeCompare(b.status);
+              if (statusComparison !== 0) {
+                return statusComparison;
+              }
+              return a.nome.localeCompare(b.nome);
+            })
+            .map((usuario, index) => (
+              <tr key={index}>
+                <td>{usuario.nome}<span className={`${usuario.status}`}> {usuario.status}</span></td>
+                <td>{usuario.cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/,'$1.$2.$3-$4')}</td>
+                <td>{usuario.cargo}</td>
                 <td>
-                    <DetailButton onClick={() => handleExibirDetail(usuarioStore)} title="Detalhar" />
-                    <EditButton onClick={() => handleEditar(usuarioStore)} title="Editar" />
-                    <DeleteButton onClick={() => handleExcluir(usuarioStore)} title="Excluir"/>
-                    {(usuarioStore.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(usuarioStore)} title="Inativar"/>}
-                    {(usuarioStore.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(usuarioStore)} title="Ativar"/>}
+                    <DetailButton onClick={() => handleExibirDetail(usuario)} title="Detalhar" />
+                    <EditButton onClick={() => handleEditar(usuario)} title="Editar" />
+                    <DeleteButton onClick={() => handleExcluir(usuario)} title="Excluir"/>
+                    {(usuario.status === "ATIVO") && <ActivateButton onClick={() => handleAlterarStatus(usuario)} title="Inativar"/>}
+                    {(usuario.status === "INATIVO") && <InactivateButton onClick={() => handleAlterarStatus(usuario)} title="Ativar"/>}
                 </td>
               </tr>
+            ))
+            ) : (
+              <tr>
+                <td colSpan="4">Nenhum usuário encontrado</td>
+              </tr>
+            )}
         </tbody>
       </Resultado>
       <Button onClick={() => navigate("/BuscarUsuario")}>Voltar</Button>

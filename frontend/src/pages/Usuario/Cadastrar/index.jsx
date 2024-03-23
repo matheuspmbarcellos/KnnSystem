@@ -80,7 +80,7 @@ const CadastrarUsuario = () => {
           <select value={cargo} onChange={e => setCargo(e.target.value)} required>
             <option value="" disabled hidden>Selecione o Cargo</option>
             <option value="ADMINISTRADOR">Administrador</option>
-            <option value="SÍNDICO">Sindico</option>
+            <option value="SINDICO">Sindico</option>
             <option value="FUNCIONARIO">Funcionario</option>
           </select>
           <input type='password' placeholder='Senha' value={senha}  onChange={e => setSenha(e.target.value)} pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Senha deve possuir no mínimo 8 posições, com letras e números" required />

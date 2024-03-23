@@ -29,6 +29,7 @@ const RelatorioFornecedores = () => {
             <th>CNPJ</th>
             <th>Razão social</th>
             <th>Nome do responsável</th>
+            <th>Telefone do responsável</th>
             </tr>
             </thead>
             <tbody>
@@ -40,10 +41,11 @@ const RelatorioFornecedores = () => {
                     <td>{fornecedor.cnpj}</td>
                     <td>{fornecedor.razaoSocial}</td>
                     <td>{fornecedor.responsavel.nome}</td>
+                    <td>{fornecedor.responsavel.telefone}</td>
                 </tr>
             ))) : (
                 <tr>
-                  <td colSpan="4">Nenhum Fornecedor encontrado</td>
+                  <td colSpan="5">Nenhum Fornecedor encontrado</td>
                 </tr>
               )}       
             </tbody>

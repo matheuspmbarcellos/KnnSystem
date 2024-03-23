@@ -28,10 +28,10 @@ const DetalharUsuario = () => {
                       '$1.$2.$3-$4'
                 )}
                 </Dado>
-              </CorpoContent>    
+              </CorpoContent>       
               <CorpoContent>
-                <Titulo>Telefone</Titulo>
-                <Dado>{usuarioDetail.telefone}</Dado>
+                <Titulo>E-mail</Titulo>
+                <Dado>{usuarioDetail.email}</Dado>
               </CorpoContent>    
             </CorpoContainer>
 
@@ -43,10 +43,6 @@ const DetalharUsuario = () => {
               <CorpoContent>
                 <Titulo>Data de Nascimento</Titulo>
                 <Dado>{moment(usuarioDetail.dataNascimento).format('DD-MM-YYYY').replace(/-/g,"/")}</Dado>
-              </CorpoContent>       
-              <CorpoContent>
-                <Titulo>E-mail</Titulo>
-                <Dado>{usuarioDetail.email}</Dado>
               </CorpoContent>    
               </CorpoContainer>  
               <CorpoContainer>

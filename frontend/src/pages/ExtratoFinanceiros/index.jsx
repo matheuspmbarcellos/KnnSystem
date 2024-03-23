@@ -3,8 +3,11 @@ import Button from "../../components/Button/Button"
 import { useContext, useState } from "react";
 import { ExtratoContext } from "../../context/ExtratoContext";
 import { ListaTransacoes, ResumoTransacoes } from "./model";
+import { Margin, usePDF } from "react-to-pdf";
+import { useNavigation } from "../../context/NavigateContext";
 
 const ExtratosFinanceiros = () => {
+  const navigate = useNavigation()
   const { extrato, erroBusca, loadExtrato } = useContext(ExtratoContext)
   const [mesAnoInicio, setMesAnoInicio] = useState('');
   const [mesAnoFim, setMesAnoFim] = useState('');
@@ -39,6 +42,16 @@ const ExtratosFinanceiros = () => {
     loadExtrato(params);
   }
 
+  const { toPDF, targetRef } = usePDF({
+    method: "open",
+    filename: 'relatorio_apto.pdf',
+    page: { 
+        format: 'A4',
+        orientation: 'landscape',
+        margin: Margin.MEDIUM 
+    }
+});
+
   
   
 
@@ -58,12 +71,20 @@ const ExtratosFinanceiros = () => {
         </BuscaContainer>
         
         {extrato ?
-        (<ResultadoExtratoContainer>
-          <p>Demonstrativo de Entradas e Saídas</p>
-          <ListaTransacoes transacoes={extrato.transacoes} tipo="RECEITA" />
-          <ListaTransacoes transacoes={extrato.transacoes} tipo="DESPESA" />
-          <ResumoTransacoes resultado={extrato} />
-        </ResultadoExtratoContainer>) : null }
+        (
+        <>
+          <ResultadoExtratoContainer ref={targetRef}>
+            <p>{`Demonstrativo de Entradas e Saídas: ${mesAnoInicio.split('-').reverse().join('-')} à ${mesAnoFim.split('-').reverse().join('-')}`}</p>
+            <ListaTransacoes transacoes={extrato.transacoes} tipo="RECEITA" />
+            <ListaTransacoes transacoes={extrato.transacoes} tipo="DESPESA" />
+            <ResumoTransacoes resultado={extrato} />
+          </ResultadoExtratoContainer>
+            <div className="buttons">
+              <Button onClick={() => navigate(-1)}>Voltar</Button>
+              <Button onClick={() => toPDF()}>Salvar</Button>
+            </div>
+        </>
+        ) : null }
 
         {erroBusca ? <h1>{erroBusca}</h1> : null }
 

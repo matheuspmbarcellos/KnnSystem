@@ -12,20 +12,24 @@ export const UsuarioProvider = ({ children}) => {
     const [error, setError] = useState(null);
     const navigate = useNavigation()
 
-    const buscarParams = async (cpf) => {
+    const buscarParams = async (input) => {
+        const params = {};
+        if (input.cpf) {params.cpf = input.cpf} else {params.cpf = null};
+
         try {
-            const response = await api.get(`/usuario/api/${cpf}`)
+            const response = await api.get("/usuario/api/consulta", { params })
             setUsuarioStore(response.data);
             navigate("/ResultadoUsuario")
         } catch (error) {
             if (error.response) {
-                alert("Não encontrado ou não existe.")
+                setError(error.response.data.mensagem);
             } else if (error.request) {
-                alert("Erro ao fazer a requisição para o servidor.");
+                setError("Erro ao fazer a requisição para o servidor.");
             } else {
-                alert("Ocorreu um erro ao processar sua solicitação.");
+                setError("Ocorreu um erro ao processar sua solicitação.");
             }
         }
+        
     }
 
     const inativarUsuario = async (cpf) => {

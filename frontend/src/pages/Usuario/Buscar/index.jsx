@@ -10,7 +10,9 @@ const BuscarUsuario = () => {
 
   const handleExibirResultado = (e) => {
       e.preventDefault();
-      const input = cpf;
+      const input = {
+        cpf
+      }
       buscarParams(input);
   };
 
@@ -20,7 +22,7 @@ const BuscarUsuario = () => {
         <MenuUsuarios/>
         <form onSubmit={handleExibirResultado}>
         <InputContainer> 
-          <input type='text' placeholder='CPF' value={cpf} onChange={(e) => setCpf(e.target.value)} onFocus={() => setError(null)} required/>        
+          <input type='text' placeholder='CPF (somente números)' value={cpf} onChange={(e) => setCpf(e.target.value)} onFocus={() => setError(null)}/>        
           <Button type="submit">Exibir</Button>
           {error && <p>{error}</p>}
         </InputContainer>

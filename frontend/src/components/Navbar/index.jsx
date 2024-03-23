@@ -23,6 +23,14 @@ const Navbar = () => {
               </div>
             </div>
       
+            <div className="dropdown" id='pagamento'>
+                <button className="dropbtn" onClick={() => navigate("/BuscarApartamento")}>Apartamentos</button>
+                <div className="dropdown-content">
+                    <Link to={"/BuscarApartamento"}>Buscar</Link><hr/>
+                    <Link to={"/CadastrarApartamento"}>Cadastrar</Link><hr/>   
+                </div>
+            </div>
+      
             <div className="dropdown">
               <button className="dropbtn" onClick={() => navigate("/BuscarFornecedor")}>Fornecedores</button>
               <div className="dropdown-content">
@@ -31,8 +39,13 @@ const Navbar = () => {
               </div>
             </div>
       
-            <Link to={"/ExtratosFinanceiros"}>Extratos Financeiros</Link>
-      
+            <div className="dropdown">
+                <button className="dropbtn" onClick={() => navigate("/BuscarContrato")}>Contratos</button>
+                <div className="dropdown-content">
+                    <Link to={"/BuscarContrato"}>Buscar</Link><hr/>
+                    <Link to={"/CadastrarContrato"}>Cadastrar</Link><hr/>  
+                </div>
+            </div>
       
             <div className="dropdown">
                 <button className="dropbtn" onClick={() => navigate("/ConsultarFatura")}>Faturas</button>
@@ -42,23 +55,9 @@ const Navbar = () => {
                 </div>
             </div>
           
-            <div className="dropdown">
-                <button className="dropbtn" onClick={() => navigate("/BuscarContrato")}>Contratos</button>
-                <div className="dropdown-content">
-                    <Link to={"/BuscarContrato"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarContrato"}>Cadastrar</Link><hr/>  
-                </div>
-            </div>
-      
-            <div className="dropdown" id='pagamento'>
-                <button className="dropbtn" onClick={() => navigate("/BuscarApartamento")}>Apartamentos</button>
-                <div className="dropdown-content">
-                    <Link to={"/BuscarApartamento"}>Buscar</Link><hr/>
-                    <Link to={"/CadastrarApartamento"}>Cadastrar</Link><hr/>   
-                </div>
-            </div>
-    
             <Link to={"/Relatorios"}>Relatórios</Link>
+    
+            <Link to={"/ExtratosFinanceiros"}>Extratos Financeiros</Link>
           </NavbarContent>
       </NavbarContainer>  
     )

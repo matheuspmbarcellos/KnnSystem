@@ -74,18 +74,18 @@ const AlterarUsuario = () => {
                 )}
               </CorpoContent>    
               <CorpoContent>
-                <Titulo>Telefone</Titulo>
+                <Titulo>E-mail</Titulo>
                 {editing ? (
                   <InputContainer>                  
                      <input
                        type="text"
-                       name="telefone"
-                       value={formData.telefone || usuarioDetail.telefone}
+                       name="email"
+                       value={formData.email || usuarioDetail.email}
                        onChange={handleInputChange}
                      />
                    </InputContainer>
                  ) : (
-                <Dado>{usuarioDetail.telefone}</Dado>
+                <Dado>{usuarioDetail.email}</Dado>
                 )}
               </CorpoContent>    
             </CorpoContainer>
@@ -124,22 +124,7 @@ const AlterarUsuario = () => {
                  ) : (
                 <Dado>{moment(usuarioDetail.dataNascimento).format('DD-MM-YYYY').replace(/-/g,"/")}</Dado>
                 )}
-              </CorpoContent>       
-              <CorpoContent>
-                <Titulo>E-mail</Titulo>
-                {editing ? (
-                  <InputContainer>                  
-                     <input
-                       type="text"
-                       name="email"
-                       value={formData.email || usuarioDetail.email}
-                       onChange={handleInputChange}
-                     />
-                   </InputContainer>
-                 ) : (
-                <Dado>{usuarioDetail.email}</Dado>
-                )}
-              </CorpoContent>    
+              </CorpoContent>
               </CorpoContainer> 
 
             <CorpoContainer>

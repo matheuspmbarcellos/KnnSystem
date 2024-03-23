@@ -10,14 +10,35 @@ const CadastrarFatura = () => {
   const [numeroFatura, setnumeroFatura] = useState("")  
   const [percentualJuros, setpercentualJuros] = useState("")  
   const [razaoSocial, setrazaoSocial] = useState("")  
-  const [dataCadastro, setdataCadastro] = useState("")  
-  const [dataPagamento, setdataPagamento] = useState("")  
+  const [dataCadastro, setDataCadastro] = useState("")  
+  const [dataPagamento, setDataPagamento] = useState("")  
   const [valor, setvalor] = useState("")  
   const [agencia, setagencia] = useState("") 
   const [contaCorrente, setcontaCorrente] = useState("")  
   const [banco, setbanco] = useState("")  
   const [pix, setpix] = useState("")  
   const [cnpjFornecedor, setcnpjFornecedor] = useState("")
+  const [tipoDataCadastro, setTipoDataCadastro] = useState('text');
+  const [tipoDataPagamento, setTipoDataPagamento] = useState('text');
+
+  const handleDataCadastroClick = () => {
+    setTipoDataCadastro('date');
+  };
+
+  const handleDataCadastroBlur = () => {
+    if (!dataCadastro) {
+      setTipoDataCadastro('text');
+    }
+  };
+  const handleDataPagamentoClick = () => {
+    setTipoDataPagamento('date');
+  };
+
+  const handleDataPagamentoBlur = () => {
+    if (!dataPagamento) {
+      setTipoDataPagamento('text');
+    }
+  };
 
   const submit = async () => {
     try {
@@ -37,8 +58,8 @@ const CadastrarFatura = () => {
             pix
         }    
       });
-      console.log('Pagamento cadastrado com sucesso:', response.data);
-      alert('Pagamento cadastrado com sucesso!')
+      console.log('Fatura cadastrada com sucesso:', response.data);
+      alert('Fatura cadastrada com sucesso!')
       handleLimparFormulario();
     } catch (error) {
         if (error.response) {
@@ -57,8 +78,8 @@ const CadastrarFatura = () => {
     setnumeroFatura("")
     setpercentualJuros("")
     setrazaoSocial("")
-    setdataCadastro("")
-    setdataPagamento("")
+    setDataCadastro("")
+    setDataPagamento("")
     setvalor("")
     setagencia("")
     setcontaCorrente("")
@@ -77,8 +98,24 @@ const CadastrarFatura = () => {
         <InputContainer>
           <input type='text' placeholder='Número do Contrato' value={numeroContrato} onChange={e => setNumeroContrato(e.target.value)} required />
           <input type='text' placeholder='Número da Fatura' value={numeroFatura} onChange={e => setnumeroFatura(e.target.value)} required />
-          <input type='text' placeholder='Data Cadastro' value={dataCadastro} onChange={e => setdataCadastro(e.target.value)} required />
-          <input type='text' placeholder='Data Pagamento' value={dataPagamento} onChange={e => setdataPagamento(e.target.value)} required />
+          <input
+            type={tipoDataCadastro}
+            placeholder='Data Cadastro'
+            value={dataCadastro}
+            onChange={e => setDataCadastro(e.target.value)}
+            onFocus={handleDataCadastroClick}
+            onBlur={handleDataCadastroBlur}
+            required
+          />
+          <input
+            type={tipoDataPagamento}
+            placeholder='Data Pagamento'
+            value={dataPagamento}
+            onChange={e => setDataPagamento(e.target.value)}
+            onFocus={handleDataPagamentoClick}
+            onBlur={handleDataPagamentoBlur}
+            required
+          />
           <input type='text' placeholder='Valor' value={valor} onChange={e => setvalor(e.target.value)} required />
           <input type='text' placeholder='Percentual Juros' value={percentualJuros} onChange={e => setpercentualJuros(e.target.value)} required />
         </InputContainer> 

@@ -6,8 +6,8 @@ import { api } from "../../../services/api";
 
 const CadastrarContrato = () => {
   const [numeroControleFornecedor, setNumeroControleFornecedor] = useState("")  
-  const [vigenciaInicial, setEvigenciaInicial] = useState("")  
-  const [vigenciaFinal, setEvigenciaFinal] = useState("")  
+  const [vigenciaInicial, setVigenciaInicial] = useState("")  
+  const [vigenciaFinal, setVigenciaFinal] = useState("")  
   const [valorMensalAtual, setValorMensalAtual] = useState("")  
   const [valorMensalInicial, setValorMensalInicial] = useState("")  
   const [objetoContratual, setObjetoContratual] = useState("")  
@@ -16,6 +16,27 @@ const CadastrarContrato = () => {
   const [email, setEmail] = useState("")  
   const [percentualMulta, setPercentualMulta] = useState("")   
   const [emailSindico, setEmailSindico] = useState("")  
+  const [tipoVigenciaInicial, setTipoVigenciaInicial] = useState('text');
+  const [tipoVigenciaFinal, setTipoVigenciaFinal] = useState('text');
+
+  const handleVigenciaInicialClick = () => {
+    setTipoVigenciaInicial('date');
+  };
+
+  const handleVigenciaInicialBlur = () => {
+    if (!vigenciaInicial) {
+      setTipoVigenciaInicial('text');
+    }
+  };
+  const handleVigenciaFinalClick = () => {
+    setTipoVigenciaFinal('date');
+  };
+
+  const handleVigenciaFinalBlur = () => {
+    if (!vigenciaFinal) {
+      setTipoVigenciaFinal('text');
+    }
+  };
 
   const submit = async () => {
     try {
@@ -49,8 +70,8 @@ const CadastrarContrato = () => {
 
   const handleLimparFormulario = () => {
     setNumeroControleFornecedor("")
-    setEvigenciaInicial("")
-    setEvigenciaFinal("")
+    setVigenciaInicial("")
+    setVigenciaFinal("")
     setValorMensalAtual("")
     setValorMensalInicial("")
     setObjetoContratual("")
@@ -72,8 +93,24 @@ const CadastrarContrato = () => {
         <InputContainer> 
           <input type='text' placeholder='Código Fornecedor' value={numeroControleFornecedor} onChange={e => setNumeroControleFornecedor(e.target.value)} required/>
           <InputContainerRow>
-            <input type='text' placeholder='vigenciaInicial' value={vigenciaInicial} onChange={e => setEvigenciaInicial(e.target.value)} required/>
-            <input type='text' placeholder='vigenciaFinal' value={vigenciaFinal} onChange={e => setEvigenciaFinal(e.target.value)} required/>
+          <input
+            type={tipoVigenciaInicial}
+            placeholder='Vigência Inicial'
+            value={vigenciaInicial}
+            onChange={e => setVigenciaInicial(e.target.value)}
+            onFocus={handleVigenciaInicialClick}
+            onBlur={handleVigenciaInicialBlur}
+            required
+          />
+          <input
+            type={tipoVigenciaFinal}
+            placeholder='Vigência Final'
+            value={vigenciaFinal}
+            onChange={e => setVigenciaFinal(e.target.value)}
+            onFocus={handleVigenciaFinalClick}
+            onBlur={handleVigenciaFinalBlur}
+            required
+          />
           </InputContainerRow>
           <input type='text' placeholder='Valor Mensal Inicial' value={valorMensalInicial} onChange={e => setValorMensalInicial(e.target.value)} required/>
           <input type='text' placeholder='Valor Mensal Atual' value={valorMensalAtual} onChange={e => setValorMensalAtual(e.target.value)} required/>

@@ -1,0 +1,578 @@
+[
+
+// /auth/api/login
+{
+    //administrador
+    "cpf": "90475727770",
+    "senha": "1973rm03"
+},
+{
+    //sincico
+    "cpf": "53686981785",
+    "senha": "1967ng21"
+},
+{
+    //funcionario
+    "cpf": "05898846700",
+    "senha": "1951as02"
+},
+{
+    //funcionario
+    "cpf": "17197977738",
+    "senha": "1967asp1"
+},
+{
+    "cpf": "09707304707",
+    "senha": "1984ic19"
+},
+{
+    "cpf": "42371539759",
+    "senha": "1990fbc13"
+},
+{
+    "cpf": "91304625761",
+    "senha": "1986jvs21"
+},
+
+
+
+// usuario/api/cadastro
+{
+    "cpf": "90475727770",
+    "nome": "Renato Nascimento Campos",
+    "email": "renato.campos@knncondominios.com.br",
+    "dataNascimento": "1973-03-08",
+    "cargo": "ADMINISTRADOR",
+    "senha": "1973rm03"
+},
+{
+    "cpf": "53686981785",
+    "nome": "Nathan Peixoto Brito",
+    "email": "nathan.brito@knncondominios.com.br",
+    "dataNascimento": "1967-01-21",
+    "cargo": "SINDICO",
+    "senha": "1967ng21"
+},
+{
+    "cpf": "05898846700",
+    "nome": "Ana Silvana da Silva",
+    "email": "ana_silvana@knncondominios.com.br",
+    "dataNascimento": "1951-01-02",
+    "cargo": "FUNCIONARIO",
+    "senha": "1951as02"
+},
+{
+    "cpf": "17197977738",
+    "nome": "Aurora Pereira",
+    "email": "aurorapereira@knncondominios.com.br",
+    "dataNascimento": "1967-03-01",
+    "cargo": "FUNCIONARIO",
+    "senha": "1967asp1"
+},
+{
+    "cpf": "09707304707",
+    "nome": "Igor Lorenzo Campos",
+    "email": "igor_campos@knncondominios.com.br",
+    "dataNascimento": "1984-01-19",
+    "cargo": "FUNCIONARIO",
+    "senha": "1984ic19"
+},
+{
+    "cpf": "42371539759",
+    "nome": "Felipe Benedito Caldeira",
+    "email": "felipe.caldeira@knncondominios.com.br",
+    "dataNascimento": "1990-03-13",
+    "cargo": "FUNCIONARIO",
+    "senha": "1990fbc13"
+},
+{
+    "cpf": "91304625761",
+    "nome": "Juliana Vieira Santos",
+    "email": "juliana_vieira@knncondominios.com.br",
+    "dataNascimento": "1986-01-21",
+    "cargo": "FUNCIONARIO",
+    "senha": "1986jvs21"
+},
+
+
+
+
+
+
+// /fornecedor/api/cadastra
+
+{
+    "razaoSocial": "Alícia e Yuri Gráfica Ltda",
+    "cnpj": "11952137000162",
+    "domicilioBancario": {
+        "agencia": "3058",
+        "contaCorrente": "52046-5",
+        "banco": "341",
+        "pix": "11952137000162"
+    },
+    "responsavel": {
+        "nome": "Débora Stefany Nascimento",
+        "cpf": "04072261769",
+        "telefone": "21983449241",
+        "email": "deborastefany@gmail.com"
+    },
+    "enderecoCompleto": "Rua Maria Campos de Carvalho 617",
+    "naturezaDoServico": "Gráfica",
+    "emailCorporativo": "contato@aliciaeyurigraficaltda.com.br"
+},
+{
+    "razaoSocial": "Gramavale Servicos De Jardinagem Ltda",
+    "cnpj": "33002288000192",
+    "domicilioBancario": {
+        "agencia": "5408",
+        "contaCorrente": "05768-4",
+        "banco": "341",
+        "pix": "33002288000192"
+    },
+    "responsavel": {
+        "nome": "Caleb Ramos",
+        "cpf": "79220213214",
+        "telefone": "91987472809",
+        "email": "caleb-ramos@gamavale.com.br"
+    },
+    "enderecoCompleto": "Rua Valparaiso 443 Sala 4",
+    "naturezaDoServico": "Jardinagem",
+    "emailCorporativo": "contato@gramavale.com.br"
+},
+{
+    "razaoSocial": "Elevadores Salta Ltda",
+    "cnpj": "30695746000128",
+    "domicilioBancario": {
+        "agencia": "2295",
+        "contaCorrente": "17411-4",
+        "banco": "001",
+        "pix": "30695746000128"
+    },
+    "responsavel": {
+        "nome": "Sebastiana Carolina Gabriela Assis",
+        "cpf": "09784819414",
+        "telefone": "63998619196",
+        "email": "sebastianaassis@gmail.com"
+    },
+    "enderecoCompleto": "Rua Sacadura Cabral, 369 e 369 A",
+    "naturezaDoServico": "Manutenção Elevadores",
+    "emailCorporativo": "contato@elevadoressalta.com.br"
+},
+{
+    "razaoSocial": "So Entulho Transportes Ltda",
+    "cnpj": "08738894000123",
+    "domicilioBancario": {
+        "agencia": "3946",
+        "contaCorrente": "1027943-1",
+        "banco": "001",
+        "pix": "08738894000123"
+    },
+    "responsavel": {
+        "nome": "Lucas da Silva",
+        "cpf": "32637409703",
+        "telefone": "21994713417",
+        "email": "lucasdasilva@nipbr.com"
+    },
+    "enderecoCompleto": "Rua Doutor Olinto de Magalhaes, 62, Casa",
+    "naturezaDoServico": "Retirada de entulho",
+    "emailCorporativo": "contato@soentulho.com.br"
+},
+{
+    "razaoSocial": "Extincenter Comercio E Recarga De Extintores Ltda",
+    "cnpj": "03551500000100",
+    "domicilioBancario": {
+        "agencia": "1529",
+        "contaCorrente": "01367820-0",
+        "banco": "033",
+        "pix": "03551500000100"
+    },
+    "responsavel": {
+        "nome": "Gabrielly Elza da Rosa",
+        "cpf": "23227942798",
+        "telefone": "21996676414",
+        "email": "gabriellydarosa70@agacapital.com.br"
+    },
+    "enderecoCompleto": "Rua São Bento 21",
+    "naturezaDoServico": "Prevenção de Incêndio",
+    "emailCorporativo": "contato@extincenter.com.br"
+},
+
+
+
+
+
+
+// /contrato/api/cadastra (precisa substituir o valor de numeroControleFornecedor pelo que for gerado no POST anterior)
+{
+    "numeroControleFornecedor": "7086075511",
+    "vigenciaInicial": "2022-01-01",
+    "vigenciaFinal": "2026-12-31",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "Serviço fornecedor A",
+    "gestor": {
+        "cpf": "29487672028",
+        "nome": "Gestor do Contrato A",
+        "email": "emailgestora@knnsystem.com.br"
+    },
+    "emailSindico": "emaildosindico@knnsytem.com",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "7994447004",
+    "vigenciaInicial": "2024-01-01",
+    "vigenciaFinal": "2025-12-31",
+    "valorMensalAtual": 150,
+    "valorMensalInicial": 150,
+    "objetoContratual": "Jardinagem",
+    "gestor": {
+        "cpf": "75264303770",
+        "nome": "Amanda Figueiredo",
+        "email": "amanda_figueiredo@icloud.com"
+    },
+    "emailSindico": "nathan.brito@knncondominios.com.br",
+    "percentualMulta": 10
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+{
+    "numeroControleFornecedor": "XXXXXXXXXX",
+    "vigenciaInicial": "AAAA-MM-DD",
+    "vigenciaFinal": "AAAA-MM-DD",
+    "valorMensalAtual": 100,
+    "valorMensalInicial": 90,
+    "objetoContratual": "XXXXXXXXXX",
+    "gestor": {
+        "cpf": "XXXXXXXXXX",
+        "nome": "XXXXXXXXXX",
+        "email": "XXXXXXXXXX"
+    },
+    "emailSindico": "XXXXXXXXXX",
+    "percentualMulta": 30
+},
+
+
+
+
+
+
+
+
+// /fatura/api/cadastra 
+// (precisa substituir o valor de numeroContrato pelo que for gerado no POST anterior
+// também tem tanta regra de data, no código e no bd, que é quase impossível arrumar uma janela de pagamento
+// retirei para testar o cadastro a constraint no banco de dados
+// alter table sch_financeiro.fatura
+// drop constraint fatura_vencimento_check;
+// )
+
+{
+    "numeroContrato": "5042767931",
+    "numeroFatura": 10004321,
+    "percentualJuros": 2,
+    "cnpjFornecedor": "33002288000192",
+    "razaoSocial": "Gramavale Servicos De Jardinagem Ltda",
+    "dataCadastro": "2024-03-23",
+    "dataPagamento": "2024-03-31",
+    "valor": 150,
+    "domicilioBancario": {
+        "agencia": "5408",
+        "contaCorrente": "05768-4",
+        "banco": "341",
+        "pix": "33002288000192"
+    }    
+},
+
+
+
+
+// /apartamento/api/cadastra (precisa cadastrar no BD manualmente antes o proprietário)
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "45643254778",
+        "nome": "Caroline Lúcia Aurora Rocha",
+        "email": "carolineluciarocha@lajescobre.com",
+        "telefone": "21996127577",
+        "blocoDoApartamento": "A",
+        "numeroDoApartamento": 101
+        },
+        "proprietario": {
+            "registroImovel": 58456932,
+            "telefone": "21989385484",
+            "nome": "Kauê José Costa",
+            "cpf": "83685999702",
+            "email": "kaue_costa@cartovale.com.br"
+            }
+},
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "12695511752",
+        "nome": "Mateus José Jesus",
+        "email": "mateus_jose_jesus@eletrotex.com.br",
+        "telefone": "21987193672",
+        "blocoDoApartamento": "B",
+        "numeroDoApartamento": 101
+        },
+        "proprietario": {
+            "registroImovel": 48228932,
+            "telefone": "68994538866",
+            "nome": "Isabella Bianca Ribeiro",
+            "cpf": "59630196565",
+            "email": "isabella.bianca.ribeiro@solviagens.com"
+            }
+},
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "81004343795",
+        "nome": "Maitê Lorena Aparício",
+        "email": "maite-aparicio93@infortec.com.br",
+        "telefone": "21998344532",
+        "blocoDoApartamento": "A",
+        "numeroDoApartamento": 102
+        },
+        "proprietario": {
+            "registroImovel": 34576456,
+            "telefone": "21988729549",
+            "nome": "Ricardo Caio Teixeira",
+            "cpf": "43134840782",
+            "email": "ricardo.caio.teixeira@tera.com.br"
+            }
+},
+
+
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "68645544733",
+        "nome": "Fábio Nicolas Araújo",
+        "email": "fabio_erick_araujo@gmaill.com",
+        "telefone": "21998483602",
+        "blocoDoApartamento": "B",
+        "numeroDoApartamento": 102
+        },
+        "proprietario": {
+            "registroImovel": 18228452,
+            "telefone": "21991713752",
+            "nome": "Manuela Vera Assis",
+            "cpf": "11620457792",
+            "email": "manuela-assis72@dafitex.com.br"
+            }
+},
+
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "38467690704",
+        "nome": "Luís Monteiro",
+        "email": "luis-monteiro92@torrez.com.br",
+        "telefone": "21991023411",
+        "blocoDoApartamento": "A",
+        "numeroDoApartamento": 201
+        },
+        "proprietario": {
+            "registroImovel": 28928431,
+            "telefone": "21984546308",
+            "nome": "Sara Allana Marcela da Rocha",
+            "cpf": "46966735701",
+            "email": "sara-darocha70@ohms.com.br"
+            }
+},
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "51701518708",
+        "nome": "Oliver Guilherme Farias",
+        "email": "oliver-farias98@santacasasjc.com.br",
+        "telefone": "21993927313",
+        "blocoDoApartamento": "B",
+        "numeroDoApartamento": 201
+        },
+        "proprietario": {
+            "registroImovel": 93421232,
+            "telefone": "21982450553",
+            "nome": "Marli Malu Aragão",
+            "cpf": "18562733776",
+            "email": "marli-aragao96@terrabrasil.com.br"
+            }
+},
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "69360119776",
+        "nome": "Cláudia Rita Campos",
+        "email": "claudia-campos80@bol.com",
+        "telefone": "21992752862",
+        "blocoDoApartamento": "A",
+        "numeroDoApartamento": 202
+        },
+        "proprietario": {
+            "registroImovel": 70211932,
+            "telefone": "21989154884",
+            "nome": "Marcos Vinicius de Paula",
+            "cpf": "64069667750",
+            "email": "marcos_depaula@oas.com"
+            }
+},
+{
+    "metragemDoImovel": 95,
+    "morador": {
+        "cpf": "84997137774",
+        "nome": "Caio Renan da Luz",
+        "email": "caio_renan_daluz@libbero.com.br",
+        "telefone": "21989299329",
+        "blocoDoApartamento": "B",
+        "numeroDoApartamento": 202
+        },
+        "proprietario": {
+            "registroImovel": 14668976,
+            "telefone": "21997707570",
+            "nome": "Osvaldo Sérgio Martins",
+            "cpf": "60685577740",
+            "email": "osvaldo_martins@triunfante.com.br"
+            }
+},
+
+{
+    "metragemDoImovel": 190,
+    "morador": {
+        "cpf": "84461111792",
+        "nome": "Stefany Eduarda da Cunha",
+        "email": "stefanydacunha@unitau.br",
+        "telefone": "21989711653",
+        "blocoDoApartamento": "A",
+        "numeroDoApartamento": 301
+        },
+        "proprietario": {
+            "registroImovel": 82336510,
+            "telefone": "21985578595",
+            "nome": "Alessandra Betina Jesus",
+            "cpf": "12498310754",
+            "email": "alessandrabetinajesus@malizia.com.br"
+            }
+},
+{
+    "metragemDoImovel": 190,
+    "morador": {
+        "cpf": "66913535791",
+        "nome": "Bruno Raul Bernardes",
+        "email": "brunobernardes@metalplasma.com.br",
+        "telefone": "21982748573",
+        "blocoDoApartamento": "B",
+        "numeroDoApartamento": 301
+        },
+        "proprietario": {
+            "registroImovel": 73689853,
+            "telefone": "21996909304",
+            "nome": "Bárbara Silvana Mendes",
+            "cpf": "97654602790",
+            "email": "barbara.mendes@patrezao.com.br"
+            }
+}
+
+]
